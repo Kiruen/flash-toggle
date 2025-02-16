@@ -548,14 +548,14 @@ class MainWindow(QMainWindow):
                     self._hotkey_manager.unregister_hotkey(hotkey.default)
                 
                 # 强制清理所有keyboard库的钩子
-                keyboard._listener.stop_if_exists()
-                keyboard._listener = None
-                keyboard._pressed_events.clear()
-                keyboard._physically_pressed_keys.clear()
-                keyboard._logically_pressed_keys.clear()
-                keyboard._hotkeys.clear()
-                keyboard._word_listeners.clear()
-                keyboard._word_buffer.clear()
+                keyboard.unhook_all()  # 解除所有钩子
+                if hasattr(keyboard, '_listener') and keyboard._listener:
+                    keyboard._listener.stop()  # 停止监听器
+                    keyboard._listener = None
+                keyboard._hotkeys.clear()  # 清理所有快捷键
+                keyboard._pressed_events.clear()  # 清理按键事件
+                keyboard._physically_pressed_keys.clear()  # 清理物理按键状态
+                keyboard._logically_pressed_keys.clear()  # 清理逻辑按键状态
                 
                 self._logger.info("快捷键已清理")
             except Exception as e:

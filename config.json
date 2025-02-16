@@ -16,8 +16,8 @@
         ]
     },
     "saved_windows": {
-        "gui.py - flash-toggle - Cursor": {
-            "hotkey": "alt+q",
+        "README.md - flash-toggle - Cursor": {
+            "hotkey": "",
             "is_visible": true,
             "is_topmost": false
         }

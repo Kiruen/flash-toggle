@@ -34,9 +34,9 @@ class AppConfig:
         """初始化默认值"""
         if self.global_hotkeys is None:
             self.global_hotkeys = {
-                "toggle_main": "space+shift+space",  # 显示/隐藏主窗口
-                "capture": "space+shift+c",          # 捕获窗口
-                "toggle_topmost": "space+shift+t"    # 切换窗口置顶状态
+                "toggle_main": "ctrl+shift+c",    # 显示/隐藏主窗口
+                "capture": "space+c",             # 捕获窗口
+                "toggle_topmost": "space+t"       # 切换窗口置顶状态
             }
         if self.main_window is None:
             self.main_window = {
