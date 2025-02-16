@@ -94,7 +94,7 @@ class WindowManager:
             target_thread_id = win32process.GetWindowThreadProcessId(handle)[0]
             
             # 连接输入状态
-            win32api.AttachThreadInput(target_thread_id, foreground_thread_id, True)
+            win32process.AttachThreadInput(target_thread_id, foreground_thread_id, True)
             
             try:
                 # 显示窗口并尝试激活
@@ -103,25 +103,63 @@ class WindowManager:
                 # 如果窗口不在当前虚拟桌面，先切换一次显示状态
                 if self._is_window_in_other_desktop(handle):
                     self._logger.info("窗口在其他虚拟桌面，尝试切换...")
+                    # 记录当前状态
+                    self._logger.debug(f"切换前状态: {win32gui.GetWindowRect(handle)}")
+                    
+                    # 尝试切换
                     win32gui.ShowWindow(handle, win32con.SW_HIDE)
                     time.sleep(0.1)
                     win32gui.ShowWindow(handle, win32con.SW_SHOW)
+                    
+                    # 尝试使用虚拟桌面 API 将窗口移动到当前桌面
+                    current_desktop_id = self._virtual_desktop.get_window_desktop_id(handle)
+                    if current_desktop_id:
+                        self._logger.debug(f"窗口当前在虚拟桌面: {current_desktop_id}")
+                        # 获取当前桌面的 ID 并移动窗口
+                        active_window = win32gui.GetForegroundWindow()
+                        if active_window:
+                            target_desktop_id = self._virtual_desktop.get_window_desktop_id(active_window)
+                            if target_desktop_id:
+                                self._logger.debug(f"尝试移动到虚拟桌面: {target_desktop_id}")
+                                self._virtual_desktop.move_window_to_desktop(handle, target_desktop_id)
                 
-                win32gui.SetWindowPos(handle, win32con.HWND_TOP, 0, 0, 0, 0,
-                                    win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
+                # 设置窗口位置和状态
+                win32gui.SetWindowPos(
+                    handle,
+                    win32con.HWND_TOP,
+                    0, 0, 0, 0,
+                    win32con.SWP_NOMOVE | win32con.SWP_NOSIZE | win32con.SWP_SHOWWINDOW
+                )
                 win32gui.BringWindowToTop(handle)
                 
                 # 尝试多次设置前台窗口
                 for _ in range(3):
                     if win32gui.SetForegroundWindow(handle):
+                        # 记录成功状态
+                        self._logger.debug(
+                            f"窗口激活成功:\n"
+                            f"  - 位置: {win32gui.GetWindowRect(handle)}\n"
+                            f"  - 可见性: {win32gui.IsWindowVisible(handle)}\n"
+                            f"  - 是否最小化: {win32gui.IsIconic(handle)}\n"
+                            f"  - 是否最大化: {win32gui.IsZoomed(handle)}"
+                        )
                         return True
                     time.sleep(0.1)
                     
+                # 如果仍然失败，记录详细信息
+                self._logger.debug(
+                    f"窗口激活失败:\n"
+                    f"  - 位置: {win32gui.GetWindowRect(handle)}\n"
+                    f"  - 可见性: {win32gui.IsWindowVisible(handle)}\n"
+                    f"  - 是否最小化: {win32gui.IsIconic(handle)}\n"
+                    f"  - 是否最大化: {win32gui.IsZoomed(handle)}\n"
+                    f"  - 窗口样式: 0x{win32gui.GetWindowLong(handle, win32con.GWL_STYLE):08x}"
+                )
                 return False
                 
             finally:
                 # 断开输入状态连接
-                win32api.AttachThreadInput(target_thread_id, foreground_thread_id, False)
+                win32process.AttachThreadInput(target_thread_id, foreground_thread_id, False)
                 
         except Exception as e:
             self._logger.debug(f"设置前台窗口失败: {str(e)}")
@@ -145,18 +183,6 @@ class WindowManager:
             is_on_current = self._virtual_desktop.is_window_on_current_desktop(handle)
             if not is_on_current:
                 self._logger.debug(f"虚拟桌面 API 检测到窗口不在当前桌面 (handle={handle})")
-                return True
-                
-            # 如果 API 显示窗口在当前桌面，但窗口不可见，
-            # 使用备用方法再次检查
-            if not win32gui.IsWindowVisible(handle):
-                # 检查窗口是否被最小化
-                placement = win32gui.GetWindowPlacement(handle)
-                if placement[1] == win32con.SW_SHOWMINIMIZED:
-                    self._logger.debug(f"窗口已最小化 (handle={handle})")
-                    return False  # 最小化的窗口不认为在其他桌面
-                    
-                self._logger.debug(f"窗口不可见且未最小化 (handle={handle})")
                 return True
                 
             return False

@@ -8,8 +8,8 @@
         "always_on_top": true,
         "minimize_to_tray": false,
         "position": [
-            960,
-            394
+            718,
+            555
         ],
         "size": [
             500,
@@ -17,15 +17,9 @@
         ]
     },
     "saved_windows": {
-        "virtual_desktop.py - flash-toggle - Cursor": {
-            "handle": 1843200,
-            "hotkey": "",
-            "is_visible": true,
-            "is_topmost": false
-        },
         "Debug - 文件资源管理器": {
-            "handle": 3606862,
-            "hotkey": "alt+q",
+            "handle": 1253012,
+            "hotkey": "alt+4",
             "is_visible": true,
             "is_topmost": false
         }

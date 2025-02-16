@@ -5,6 +5,10 @@ __pycache__/
 *.so
 .Python
 env/
+*bin/
+bin/
+*/obj/
+obj/
 build/
 develop-eggs/
 dist/

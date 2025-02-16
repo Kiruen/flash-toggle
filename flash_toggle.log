@@ -3094,3 +3094,959 @@ TypeError: No method matches given arguments for VirtualDesktopManager.IsWindowO
 2025-02-16 18:33:38,645 - gui - INFO - 主窗口已关闭
 2025-02-16 18:33:38,646 - gui - INFO - 8. 退出应用程序...
 2025-02-16 18:33:38,646 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 18:35:05,648 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 18:35:05,693 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 18:35:05,704 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 18:35:06,728 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 18:35:06,728 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 18:35:06,728 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 18:35:07,211 - config_manager - INFO - 配置已保存
+2025-02-16 18:35:07,229 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 18:35:07,229 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 18:35:09,502 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:09,502 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:35:09,515 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:09,516 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 18:35:09,516 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:09,517 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:09,756 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:10,070 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:35:10,070 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:35:10,855 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:10,856 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:35:10,856 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:10,856 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:35:10,867 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:35:17,771 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:17,772 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:35:17,772 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:17,773 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 18:35:17,773 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:17,773 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:17,875 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:35:17,875 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:35:25,128 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:25,129 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:35:25,129 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:25,129 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 18:35:25,130 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:25,130 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:25,331 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:25,654 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:35:25,655 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:35:26,974 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:26,975 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:35:26,976 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 不在当前桌面
+2025-02-16 18:35:26,976 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=3606862)
+2025-02-16 18:35:26,976 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:26,976 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:27,174 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:27,544 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:35:27,544 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:35:29,250 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:29,251 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:35:29,251 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 不在当前桌面
+2025-02-16 18:35:29,251 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=3606862)
+2025-02-16 18:35:29,253 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:29,253 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:29,410 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:29,814 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:35:29,814 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:35:30,266 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:30,267 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:35:30,268 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:30,268 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:35:30,268 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:35:30,268 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:35:30,269 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:35:30,839 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:30,839 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:35:30,840 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:30,840 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:35:30,852 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:35:31,830 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:31,830 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:35:31,832 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:31,832 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 18:35:31,832 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:31,832 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:31,933 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:35:31,933 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:35:32,303 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:32,303 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:35:32,304 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:32,304 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 18:35:32,304 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:32,305 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:32,405 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:35:32,405 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:35:39,144 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:39,145 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:35:39,145 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:39,146 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 18:35:39,146 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:39,146 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:39,343 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:39,650 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:35:39,650 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:35:41,354 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:35:41,354 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:35:41,355 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 不在当前桌面
+2025-02-16 18:35:41,355 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=3606862)
+2025-02-16 18:35:41,355 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:35:41,355 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:35:41,482 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:35:41,887 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:35:41,888 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:37:43,190 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 18:37:43,226 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 18:37:43,235 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 18:37:44,189 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 18:37:44,189 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 18:37:44,190 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 18:37:44,626 - config_manager - INFO - 配置已保存
+2025-02-16 18:38:01,709 - config_manager - INFO - 配置已保存
+2025-02-16 18:38:01,710 - config_manager - INFO - 配置已保存
+2025-02-16 18:38:22,552 - window_manager - INFO - 捕获窗口: Debug - 文件资源管理器 (handle: 1253012)
+2025-02-16 18:38:34,756 - window_manager - INFO - 为窗口 Debug - 文件资源管理器 设置快捷键: alt+4
+2025-02-16 18:38:34,757 - hotkey_manager - INFO - 成功注册快捷键: alt+4
+2025-02-16 18:38:35,988 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:38:35,989 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:38:35,998 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:38:35,998 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:38:36,017 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:38:36,411 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:38:36,412 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:38:36,413 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:38:36,413 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=1253012)
+2025-02-16 18:38:36,414 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:38:36,414 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:38:36,515 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:38:36,515 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:38:41,553 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:38:41,554 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:38:41,554 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:38:41,555 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=1253012)
+2025-02-16 18:38:41,555 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:38:41,555 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:38:41,656 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:38:41,656 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:38:42,273 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:38:42,273 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:38:42,274 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:38:42,274 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=1253012)
+2025-02-16 18:38:42,274 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:38:42,274 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:38:42,376 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:38:42,376 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:38:42,714 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:38:42,714 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:38:42,715 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:38:42,715 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=1253012)
+2025-02-16 18:38:42,715 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:38:42,715 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:38:42,817 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:38:42,817 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:39:53,446 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 18:39:53,448 - gui - INFO - 1. 停止定时器...
+2025-02-16 18:39:53,448 - gui - INFO - 定时器已停止
+2025-02-16 18:39:53,448 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 18:39:53,449 - config_manager - INFO - 配置已保存
+2025-02-16 18:39:53,450 - gui - INFO - 窗口配置已保存
+2025-02-16 18:39:53,450 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 18:39:53,654 - gui - INFO - 已显示窗口: Debug - 文件资源管理器
+2025-02-16 18:39:53,654 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 18:39:53,655 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+4
+2025-02-16 18:39:53,655 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 18:39:53,655 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 18:39:53,655 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 18:39:53,656 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 18:39:53,656 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 18:39:53,658 - config_manager - INFO - 配置已保存
+2025-02-16 18:39:53,659 - config_manager - INFO - 配置已保存
+2025-02-16 18:39:53,659 - gui - INFO - 主窗口状态已保存
+2025-02-16 18:39:53,659 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 18:39:53,727 - gui - INFO - 托盘图标已移除
+2025-02-16 18:39:53,728 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 18:39:53,744 - gui - INFO - 主窗口已关闭
+2025-02-16 18:39:53,745 - gui - INFO - 8. 退出应用程序...
+2025-02-16 18:39:53,745 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 18:40:06,546 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 18:40:06,584 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 18:40:06,596 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 18:40:07,732 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 18:40:07,732 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 18:40:07,733 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 18:40:08,230 - config_manager - INFO - 配置已保存
+2025-02-16 18:40:08,246 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 18:40:08,247 - hotkey_manager - INFO - 成功注册快捷键: alt+4
+2025-02-16 18:40:08,247 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:08,248 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:40:08,395 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:08,395 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:08,397 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:08,901 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:40:08,901 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:08,902 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:15,030 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:15,030 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:40:15,032 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:15,032 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:15,039 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:15,896 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:15,896 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:40:15,897 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:15,897 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:15,913 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:16,224 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:40:16,226 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:16,226 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:16,386 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:16,387 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:40:16,387 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:16,387 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:16,397 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:19,557 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:19,557 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:40:19,558 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:19,558 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:19,558 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:40:19,558 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:19,568 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:21,729 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:21,730 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:21,731 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:21,731 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:21,771 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:22,099 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:22,101 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:40:22,101 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:22,102 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:22,102 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:40:22,102 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:22,121 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:23,755 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:23,757 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:23,757 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:40:23,758 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:40:23,758 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:40:23,758 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:40:23,992 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:40:23,992 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:40:24,704 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:24,704 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:40:24,705 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:24,705 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:24,705 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:25,143 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:25,144 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:40:25,144 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:25,144 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:25,166 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:25,492 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:40:25,492 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:25,493 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:27,204 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:27,205 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:27,206 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:40:27,206 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:40:27,206 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:40:27,206 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:40:27,342 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:27,693 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:40:27,694 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:40:30,270 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:30,270 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:30,271 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:40:30,272 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:40:30,272 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:40:30,272 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:40:30,397 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:30,714 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:40:30,715 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:40:32,627 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:32,627 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:32,628 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:40:32,628 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:40:32,628 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:40:32,628 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:40:32,751 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:33,164 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:40:33,165 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:40:33,725 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:33,725 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:33,726 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:33,726 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:33,734 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:35,174 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:35,175 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:40:35,176 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:35,176 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:35,176 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:40:35,177 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:35,190 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:36,452 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:36,452 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:36,453 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:36,453 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:36,485 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:36,865 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:36,866 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:40:36,866 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:36,867 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:36,867 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:40:36,867 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:36,876 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:40,581 - window_manager - INFO - 置顶窗口: Debug - 文件资源管理器
+2025-02-16 18:40:45,688 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:45,688 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:45,688 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:45,689 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:45,700 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:47,373 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:47,374 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:40:47,374 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:47,374 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:47,375 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:40:47,375 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:47,388 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:48,118 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:48,118 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:48,119 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:48,119 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:48,130 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:40:49,006 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:49,007 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:40:49,008 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:49,008 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:40:49,126 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:49,436 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:40:49,436 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:40:49,437 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:40:49,517 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:40:49,518 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:40:49,518 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:40:49,518 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:40:49,529 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:43:50,464 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:43:50,464 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:43:50,465 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:43:50,465 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:43:50,576 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:43:50,892 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:43:50,892 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:43:50,892 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:43:51,282 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:43:51,284 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:43:51,284 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:43:51,284 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:43:51,297 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:44:00,385 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+4
+2025-02-16 18:44:00,386 - window_manager - INFO - 为窗口 Debug - 文件资源管理器 设置快捷键: ctrl+4
+2025-02-16 18:44:00,386 - hotkey_manager - INFO - 成功注册快捷键: ctrl+4
+2025-02-16 18:44:02,354 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:02,355 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:44:02,355 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:02,355 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:44:02,459 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:02,766 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:44:02,766 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:44:02,766 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:44:02,799 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:02,799 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:44:02,800 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:02,800 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:44:02,812 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:44:04,622 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:04,622 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:44:04,623 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:04,623 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:44:04,623 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:44:04,623 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:44:04,730 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:44:05,660 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:05,660 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:44:05,661 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:05,661 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:44:05,668 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:44:09,694 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:09,694 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:44:09,695 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:09,695 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:44:09,773 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:10,089 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:44:10,090 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:44:10,090 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:44:10,233 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:10,233 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:44:10,235 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:10,235 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:44:10,246 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:44:13,120 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:13,121 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:44:13,121 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:13,121 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:44:13,261 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:13,589 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:44:13,589 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:44:13,589 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:44:14,645 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:14,645 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:44:14,646 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:14,646 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:44:14,654 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:44:17,075 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:17,075 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:44:17,076 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:17,076 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:44:17,182 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:17,497 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:44:17,498 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:44:17,498 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:44:18,588 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:44:18,588 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:44:18,589 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:44:18,589 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:44:18,597 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:47:04,136 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+4
+2025-02-16 18:47:04,136 - window_manager - INFO - 为窗口 Debug - 文件资源管理器 设置快捷键: alt+4
+2025-02-16 18:47:04,137 - hotkey_manager - INFO - 成功注册快捷键: alt+4
+2025-02-16 18:47:04,919 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:04,920 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:47:04,921 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:04,921 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:47:05,055 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:05,403 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:47:05,403 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:47:05,403 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:47:05,444 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:05,444 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:47:05,445 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:05,445 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:47:05,455 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:47:06,738 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:06,739 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:47:06,740 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:06,740 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:47:06,855 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:07,166 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:47:07,166 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:47:07,166 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:47:10,496 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:10,499 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:47:10,501 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:47:10,501 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:47:10,501 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:47:10,502 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:47:10,771 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:47:10,771 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:47:10,772 - window_manager - INFO - 窗口在其他虚拟桌面，尝试切换...
+2025-02-16 18:47:10,772 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:47:10,909 - virtual_desktop - DEBUG - 获取窗口虚拟桌面 ID 成功 (hwnd=1253012): b1bf2c5b-89a6-4022-87b5-d9e205396f1d
+2025-02-16 18:47:10,909 - window_manager - DEBUG - 窗口当前在虚拟桌面: b1bf2c5b-89a6-4022-87b5-d9e205396f1d
+2025-02-16 18:47:10,910 - virtual_desktop - DEBUG - 获取窗口虚拟桌面 ID 成功 (hwnd=263916): 3c31c755-ca0d-4584-aad3-349737d94cc5
+2025-02-16 18:47:10,910 - window_manager - DEBUG - 尝试移动到虚拟桌面: 3c31c755-ca0d-4584-aad3-349737d94cc5
+2025-02-16 18:47:10,945 - virtual_desktop - ERROR - 移动窗口到虚拟桌面失败: No method matches given arguments for VirtualDesktopManager.MoveWindowToDesktop: (<class 'System.IntPtr'>, <class 'str'>)
+Python.Runtime.PythonException: 'str' value cannot be converted to System.Guid
+
+The above exception was the direct cause of the following exception:
+
+System.ArgumentException: 'str' value cannot be converted to System.Guid in method Void MoveWindowToDesktop(IntPtr, System.Guid) ---> Python.Runtime.PythonException: 'str' value cannot be converted to System.Guid
+   --- 内部异常堆栈跟踪的结尾 ---
+
+The above exception was the direct cause of the following exception:
+
+System.AggregateException: 发生一个或多个错误。 ---> System.ArgumentException: 'str' value cannot be converted to System.Guid in method Void MoveWindowToDesktop(IntPtr, System.Guid) ---> Python.Runtime.PythonException: 'str' value cannot be converted to System.Guid
+   --- 内部异常堆栈跟踪的结尾 ---
+   --- 内部异常堆栈跟踪的结尾 ---
+---> (内部异常 #0) System.ArgumentException: 'str' value cannot be converted to System.Guid in method Void MoveWindowToDesktop(IntPtr, System.Guid) ---> Python.Runtime.PythonException: 'str' value cannot be converted to System.Guid
+   --- 内部异常堆栈跟踪的结尾 ---<---
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\flash-toggle\virtual_desktop.py", line 228, in move_window_to_desktop
+    self._manager.MoveWindowToDesktop(handle, desktop_id)
+TypeError: No method matches given arguments for VirtualDesktopManager.MoveWindowToDesktop: (<class 'System.IntPtr'>, <class 'str'>)
+2025-02-16 18:47:11,361 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:47:11,363 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:47:12,938 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:12,939 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:47:12,940 - virtual_desktop - WARNING - 虚拟桌面管理器无效，尝试重新初始化...
+2025-02-16 18:47:12,940 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 18:47:12,941 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 18:47:12,947 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:12,947 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:47:12,957 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:47:15,432 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:15,433 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:47:15,434 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:15,434 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:47:15,584 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:15,893 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:47:15,893 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:47:15,894 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:47:18,055 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:18,056 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:47:18,057 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:18,057 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:47:18,068 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:47:18,716 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:18,716 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:47:18,717 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:18,717 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:47:18,717 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:47:18,717 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:47:18,801 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:47:23,914 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:23,915 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:47:23,916 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:47:23,916 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:47:23,916 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:47:23,916 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:47:24,211 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:24,523 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:47:24,523 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:47:29,775 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:29,775 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:47:29,776 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 不在当前桌面
+2025-02-16 18:47:29,776 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=1253012)
+2025-02-16 18:47:29,776 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:47:29,777 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:47:30,004 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:30,315 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:47:30,315 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 1
+2025-02-16 18:47:30,987 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:47:30,988 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:47:30,989 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:47:30,989 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:47:31,005 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:48:48,818 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:48:48,818 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:48:48,819 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:48:48,819 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:48:48,933 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:48:49,241 - window_manager - DEBUG - 设置前台窗口失败: module 'win32gui' has no attribute 'IsZoomed'
+2025-02-16 18:48:49,241 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:48:49,241 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:48:49,579 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:48:49,579 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:48:49,581 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:48:49,581 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:48:49,594 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:48:50,549 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 1253012) 的显示状态
+2025-02-16 18:48:50,550 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 18:48:50,552 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=1253012): 在当前桌面
+2025-02-16 18:48:50,552 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:48:50,552 - window_manager - DEBUG - 设置前台窗口失败: (87, 'AttachThreadInput', '参数错误。')
+2025-02-16 18:48:50,552 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:48:50,703 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:48:59,761 - window_manager - INFO - 取消置顶窗口: Debug - 文件资源管理器
+2025-02-16 18:49:23,212 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 18:49:23,212 - gui - INFO - 1. 停止定时器...
+2025-02-16 18:49:23,212 - gui - INFO - 定时器已停止
+2025-02-16 18:49:23,212 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 18:49:23,213 - config_manager - INFO - 配置已保存
+2025-02-16 18:49:23,214 - gui - INFO - 窗口配置已保存
+2025-02-16 18:49:23,214 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 18:49:23,214 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 18:49:23,214 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+4
+2025-02-16 18:49:23,215 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 18:49:23,215 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 18:49:23,215 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 18:49:23,215 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 18:49:23,215 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 18:49:23,216 - config_manager - INFO - 配置已保存
+2025-02-16 18:49:23,217 - config_manager - INFO - 配置已保存
+2025-02-16 18:49:23,217 - gui - INFO - 主窗口状态已保存
+2025-02-16 18:49:23,217 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 18:49:23,223 - gui - INFO - 托盘图标已移除
+2025-02-16 18:49:23,223 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 18:49:23,277 - gui - INFO - 主窗口已关闭
+2025-02-16 18:49:23,278 - gui - INFO - 8. 退出应用程序...
+2025-02-16 18:49:23,278 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 19:02:27,483 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 19:02:27,559 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 19:02:27,571 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 19:02:28,676 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 19:02:28,676 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 19:02:28,677 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 19:02:29,131 - config_manager - INFO - 配置已保存
+2025-02-16 19:02:29,138 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 19:02:29,139 - hotkey_manager - INFO - 成功注册快捷键: alt+4
+2025-02-16 19:02:45,752 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 19:02:45,752 - gui - INFO - 1. 停止定时器...
+2025-02-16 19:02:45,753 - gui - INFO - 定时器已停止
+2025-02-16 19:02:45,753 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 19:02:45,754 - config_manager - INFO - 配置已保存
+2025-02-16 19:02:45,754 - gui - INFO - 窗口配置已保存
+2025-02-16 19:02:45,755 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 19:02:45,755 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 19:02:45,755 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+4
+2025-02-16 19:02:45,755 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 19:02:45,755 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 19:02:45,755 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 19:02:45,756 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 19:02:45,756 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 19:02:45,757 - config_manager - INFO - 配置已保存
+2025-02-16 19:02:45,758 - config_manager - INFO - 配置已保存
+2025-02-16 19:02:45,758 - gui - INFO - 主窗口状态已保存
+2025-02-16 19:02:45,758 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 19:02:45,760 - gui - INFO - 托盘图标已移除
+2025-02-16 19:02:45,760 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 19:02:45,798 - gui - INFO - 主窗口已关闭
+2025-02-16 19:02:45,799 - gui - INFO - 8. 退出应用程序...
+2025-02-16 19:02:45,800 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 19:03:14,802 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 19:03:14,827 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 19:03:14,836 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 19:03:15,621 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 19:03:15,621 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 19:03:15,621 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 19:03:16,142 - config_manager - INFO - 配置已保存
+2025-02-16 19:03:16,161 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 19:03:16,162 - hotkey_manager - INFO - 成功注册快捷键: alt+4
+2025-02-16 19:05:03,367 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 19:05:03,368 - gui - INFO - 1. 停止定时器...
+2025-02-16 19:05:03,368 - gui - INFO - 定时器已停止
+2025-02-16 19:05:03,368 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 19:05:03,369 - config_manager - INFO - 配置已保存
+2025-02-16 19:05:03,369 - gui - INFO - 窗口配置已保存
+2025-02-16 19:05:03,369 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 19:05:03,369 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 19:05:03,370 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+4
+2025-02-16 19:05:03,370 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 19:05:03,370 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 19:05:03,370 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 19:05:03,370 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 19:05:03,370 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 19:05:03,371 - config_manager - INFO - 配置已保存
+2025-02-16 19:05:03,372 - config_manager - INFO - 配置已保存
+2025-02-16 19:05:03,372 - gui - INFO - 主窗口状态已保存
+2025-02-16 19:05:03,372 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 19:05:03,374 - gui - INFO - 托盘图标已移除
+2025-02-16 19:05:03,375 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 19:05:03,425 - gui - INFO - 主窗口已关闭
+2025-02-16 19:05:03,425 - gui - INFO - 8. 退出应用程序...
+2025-02-16 19:05:03,425 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
