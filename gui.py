@@ -511,12 +511,15 @@ class MainWindow(QMainWindow):
         """设置系统托盘图标"""
         self.tray_icon = QSystemTrayIcon(self)
         self.tray_icon.setIcon(self.style().standardIcon(self.style().SP_ComputerIcon))
-        self.tray_icon.setToolTip("Flash-Toggle - 快捷窗口管理工具")  # 添加托盘图标提示
+        self.tray_icon.setToolTip("Flash-Toggle - 快捷窗口管理工具")
+        
+        # 连接双击信号
+        self.tray_icon.activated.connect(self._on_tray_icon_activated)
         
         # 创建托盘菜单
         tray_menu = QMenu()
         show_action = tray_menu.addAction("显示")
-        show_action.triggered.connect(self.show_and_activate)  # 使用新方法
+        show_action.triggered.connect(self.show_and_activate)
         quit_action = tray_menu.addAction("退出")
         quit_action.triggered.connect(self._on_quit)
         
@@ -869,4 +872,14 @@ class MainWindow(QMainWindow):
         """处理最小化到托盘设置变更"""
         is_minimize = state == Qt.Checked
         self._config_manager.update_main_window_config("minimize_to_tray", is_minimize)
-        self.show_status("设置已保存") 
+        self.show_status("设置已保存")
+
+    def _on_tray_icon_activated(self, reason):
+        """
+        处理托盘图标激活事件
+        
+        Args:
+            reason: 激活原因
+        """
+        if reason == QSystemTrayIcon.DoubleClick:
+            self.show_and_activate()  # 双击时显示主窗口 
