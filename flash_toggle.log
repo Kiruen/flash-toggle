@@ -1,0 +1,68 @@
+2025-02-16 13:54:33,699 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 13:54:34,094 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 13:54:38,667 - window_manager - INFO - 捕获窗口: Flash-Toggle (handle: 793846)
+2025-02-16 13:54:56,889 - window_manager - INFO - 为窗口 Flash-Toggle 设置快捷键: alt+3
+2025-02-16 13:54:56,890 - hotkey_manager - INFO - 成功注册快捷键: alt+3
+2025-02-16 13:54:59,689 - window_manager - INFO - 隐藏窗口: Flash-Toggle
+2025-02-16 13:55:00,343 - window_manager - INFO - 显示窗口: Flash-Toggle
+2025-02-16 13:55:01,451 - window_manager - INFO - 隐藏窗口: Flash-Toggle
+2025-02-16 13:55:01,715 - window_manager - INFO - 显示窗口: Flash-Toggle
+2025-02-16 13:55:10,042 - window_manager - INFO - 为窗口 Flash-Toggle 设置快捷键: alt+4
+2025-02-16 13:55:10,043 - hotkey_manager - INFO - 成功注册快捷键: alt+4
+2025-02-16 13:55:11,224 - window_manager - INFO - 隐藏窗口: Flash-Toggle
+2025-02-16 13:55:11,564 - window_manager - INFO - 显示窗口: Flash-Toggle
+2025-02-16 13:55:11,925 - window_manager - INFO - 隐藏窗口: Flash-Toggle
+2025-02-16 13:55:12,236 - window_manager - INFO - 显示窗口: Flash-Toggle
+2025-02-16 14:04:07,172 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:04:08,325 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+space
+2025-02-16 14:04:08,327 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:05:13,935 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:05:14,833 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+space
+2025-02-16 14:05:14,833 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:06:26,419 - window_manager - INFO - 捕获窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome (handle: 329044)
+2025-02-16 14:07:52,039 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:07:53,139 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+space
+2025-02-16 14:07:53,139 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:08:00,475 - window_manager - INFO - 捕获窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome (handle: 329044)
+2025-02-16 14:08:05,689 - window_manager - INFO - 为窗口 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome 设置快捷键: alt+3
+2025-02-16 14:08:05,690 - hotkey_manager - INFO - 成功注册快捷键: alt+3
+2025-02-16 14:08:07,828 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:09,388 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:11,074 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:11,705 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:14,665 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:16,891 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:18,497 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:22,256 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:08:32,740 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+3
+2025-02-16 14:08:32,740 - window_manager - INFO - 为窗口 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome 设置快捷键: 
+2025-02-16 14:08:44,572 - window_manager - INFO - 为窗口 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome 设置快捷键: alt+q
+2025-02-16 14:08:44,573 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 14:09:05,741 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:07,347 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:10,704 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:13,721 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:16,492 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:17,736 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:18,935 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:49,211 - window_manager - INFO - 显示窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:09:50,123 - window_manager - INFO - 隐藏窗口: 光标 - 人工智能代码编辑器 --- Cursor - The AI Code Editor - Google Chrome
+2025-02-16 14:10:13,790 - hotkey_manager - INFO - 成功注册快捷键: shift+space
+2025-02-16 14:10:13,790 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+space
+2025-02-16 14:10:16,887 - hotkey_manager - INFO - 成功注册快捷键: ctrl
+2025-02-16 14:10:16,888 - hotkey_manager - INFO - 成功解除快捷键绑定: shift+space
+2025-02-16 14:10:28,913 - hotkey_manager - INFO - 成功注册快捷键: shift+space
+2025-02-16 14:10:28,913 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl
+2025-02-16 14:10:48,428 - window_manager - INFO - 捕获窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome (handle: 1120472)
+2025-02-16 14:11:08,308 - window_manager - INFO - 为窗口 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome 设置快捷键: space+1
+2025-02-16 14:11:08,310 - hotkey_manager - INFO - 成功注册快捷键: space+1
+2025-02-16 14:11:10,316 - window_manager - INFO - 隐藏窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:10,746 - window_manager - INFO - 显示窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:11,304 - window_manager - INFO - 隐藏窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:11,646 - window_manager - INFO - 显示窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:12,769 - window_manager - INFO - 隐藏窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:13,740 - window_manager - INFO - 显示窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:15,343 - window_manager - INFO - 隐藏窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:18,463 - window_manager - INFO - 显示窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
+2025-02-16 14:11:25,150 - hotkey_manager - INFO - 成功解除快捷键绑定: space+1
+2025-02-16 14:11:25,150 - window_manager - INFO - 为窗口 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome 设置快捷键: 
