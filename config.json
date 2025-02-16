@@ -6,9 +6,10 @@
     },
     "main_window": {
         "always_on_top": true,
+        "minimize_to_tray": true,
         "position": [
             960,
-            361
+            394
         ],
         "size": [
             500,
@@ -16,8 +17,9 @@
         ]
     },
     "saved_windows": {
-        "README.md - flash-toggle - Cursor": {
-            "hotkey": "",
+        "config_manager.py - flash-toggle - Cursor": {
+            "handle": 532412,
+            "hotkey": "alt+q",
             "is_visible": true,
             "is_topmost": false
         }

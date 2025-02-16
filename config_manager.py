@@ -41,6 +41,7 @@ class AppConfig:
         if self.main_window is None:
             self.main_window = {
                 "always_on_top": True,
+                "minimize_to_tray": True,  # 关闭时最小化到托盘
                 "position": None,
                 "size": None
             }
@@ -72,6 +73,16 @@ class ConfigManager:
             if os.path.exists(self._config_file):
                 with open(self._config_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
+                    # 确保main_window中包含所有必要的字段
+                    if 'main_window' in data:
+                        default_main_window = {
+                            "always_on_top": True,
+                            "minimize_to_tray": True,
+                            "position": None,
+                            "size": None
+                        }
+                        # 使用默认值更新现有配置
+                        data['main_window'] = {**default_main_window, **data['main_window']}
                     return AppConfig(**data)
         except Exception as e:
             self._logger.error(f"加载配置文件失败: {str(e)}")
@@ -124,8 +135,17 @@ class ConfigManager:
         
         Args:
             title: 窗口标题
-            config: 窗口配置
+            config: 窗口配置，包含：
+                   - handle: 窗口句柄
+                   - hotkey: 快捷键
+                   - is_visible: 可见性
+                   - is_topmost: 置顶状态
         """
+        # 确保配置中包含所有必要字段
+        if 'handle' not in config:
+            self._logger.warning(f"保存窗口配置时缺少句柄信息: {title}")
+            config['handle'] = 0  # 使用0表示无效句柄
+            
         self._config.saved_windows[title] = config
         self.save_config()
         

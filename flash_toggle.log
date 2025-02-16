@@ -384,3 +384,232 @@
 2025-02-16 14:56:53,331 - gui - INFO - 主窗口已关闭
 2025-02-16 14:56:53,331 - gui - INFO - 8. 退出应用程序...
 2025-02-16 14:56:53,332 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 15:01:14,902 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 15:01:16,115 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 15:01:16,117 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 15:01:16,117 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 15:01:16,598 - config_manager - INFO - 配置已保存
+2025-02-16 15:01:21,557 - config_manager - INFO - 配置已保存
+2025-02-16 15:01:30,676 - window_manager - INFO - 捕获窗口: config_manager.py - flash-toggle - Cursor (handle: 532412)
+2025-02-16 15:01:44,997 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 15:01:44,997 - gui - INFO - 1. 停止定时器...
+2025-02-16 15:01:44,999 - gui - INFO - 定时器已停止
+2025-02-16 15:01:45,000 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 15:01:45,002 - config_manager - INFO - 配置已保存
+2025-02-16 15:01:45,003 - gui - INFO - 窗口配置已保存
+2025-02-16 15:01:45,003 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 15:01:45,005 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 15:01:45,005 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 15:01:45,005 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 15:01:45,005 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 15:01:45,006 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 15:01:45,006 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 15:01:45,006 - config_manager - INFO - 配置已保存
+2025-02-16 15:01:45,008 - config_manager - INFO - 配置已保存
+2025-02-16 15:01:45,008 - gui - INFO - 主窗口状态已保存
+2025-02-16 15:01:45,008 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 15:01:45,058 - gui - INFO - 托盘图标已移除
+2025-02-16 15:01:45,059 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 15:01:45,073 - config_manager - INFO - 配置已保存
+2025-02-16 15:01:45,074 - config_manager - INFO - 配置已保存
+2025-02-16 15:01:45,075 - gui - INFO - 主窗口已关闭
+2025-02-16 15:01:45,075 - gui - INFO - 8. 退出应用程序...
+2025-02-16 15:01:45,076 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 15:01:58,350 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 15:01:59,703 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 15:01:59,703 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 15:01:59,704 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 15:02:00,202 - config_manager - INFO - 配置已保存
+2025-02-16 15:02:00,203 - gui - INFO - 通过句柄找到窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:10,032 - window_manager - INFO - 为窗口 config_manager.py - flash-toggle - Cursor 设置快捷键: alt+q
+2025-02-16 15:02:10,033 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 15:02:11,457 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:19,979 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 15:02:19,980 - gui - INFO - 1. 停止定时器...
+2025-02-16 15:02:19,981 - gui - INFO - 定时器已停止
+2025-02-16 15:02:19,984 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 15:02:19,985 - config_manager - INFO - 配置已保存
+2025-02-16 15:02:19,986 - gui - INFO - 窗口配置已保存
+2025-02-16 15:02:19,986 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 15:02:20,020 - gui - INFO - 已显示窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:20,021 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 15:02:20,021 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 15:02:20,021 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 15:02:20,021 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 15:02:20,021 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 15:02:20,022 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 15:02:20,022 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 15:02:20,023 - config_manager - INFO - 配置已保存
+2025-02-16 15:02:20,024 - config_manager - INFO - 配置已保存
+2025-02-16 15:02:20,024 - gui - INFO - 主窗口状态已保存
+2025-02-16 15:02:20,024 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 15:02:20,042 - gui - INFO - 托盘图标已移除
+2025-02-16 15:02:20,043 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 15:02:20,051 - config_manager - INFO - 配置已保存
+2025-02-16 15:02:20,052 - config_manager - INFO - 配置已保存
+2025-02-16 15:02:20,052 - gui - INFO - 主窗口已关闭
+2025-02-16 15:02:20,052 - gui - INFO - 8. 退出应用程序...
+2025-02-16 15:02:20,053 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 15:02:30,729 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 15:02:31,753 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 15:02:31,754 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 15:02:31,754 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 15:02:32,258 - config_manager - INFO - 配置已保存
+2025-02-16 15:02:32,258 - gui - INFO - 通过句柄找到窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:32,258 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 15:02:32,260 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:33,941 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:34,907 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:36,371 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:36,780 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:37,936 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:38,201 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:39,978 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:40,288 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:40,679 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:41,626 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:42,091 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:42,535 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:42,832 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:02:43,732 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:04:45,968 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 15:04:45,968 - gui - INFO - 1. 停止定时器...
+2025-02-16 15:04:45,969 - gui - INFO - 定时器已停止
+2025-02-16 15:04:45,969 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 15:04:45,970 - config_manager - INFO - 配置已保存
+2025-02-16 15:04:45,971 - gui - INFO - 窗口配置已保存
+2025-02-16 15:04:45,971 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 15:04:45,971 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 15:04:45,971 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 15:04:45,971 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 15:04:45,972 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 15:04:45,972 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 15:04:45,972 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 15:04:45,972 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 15:04:45,973 - config_manager - INFO - 配置已保存
+2025-02-16 15:04:45,974 - config_manager - INFO - 配置已保存
+2025-02-16 15:04:45,975 - gui - INFO - 主窗口状态已保存
+2025-02-16 15:04:45,975 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 15:04:45,989 - gui - INFO - 托盘图标已移除
+2025-02-16 15:04:45,989 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 15:04:45,994 - config_manager - INFO - 配置已保存
+2025-02-16 15:04:45,995 - config_manager - INFO - 配置已保存
+2025-02-16 15:04:45,996 - gui - INFO - 主窗口已关闭
+2025-02-16 15:04:45,996 - gui - INFO - 8. 退出应用程序...
+2025-02-16 15:04:45,996 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 15:06:17,940 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 15:06:18,278 - __main__ - ERROR - 程序运行出错: 'minimize_to_tray'
+Traceback (most recent call last):
+  File "C:\Projects\flash-toggle\main.py", line 54, in main
+    main_window = MainWindow(window_manager, hotkey_manager)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\flash-toggle\gui.py", line 185, in __init__
+    self._init_ui()
+  File "C:\Projects\flash-toggle\gui.py", line 231, in _init_ui
+    self._init_settings_tab(settings_tab)
+  File "C:\Projects\flash-toggle\gui.py", line 322, in _init_settings_tab
+    self._config_manager.get_config().main_window["minimize_to_tray"]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'minimize_to_tray'
+2025-02-16 15:06:56,946 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 15:06:58,317 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 15:06:58,318 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 15:06:58,318 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 15:06:58,782 - config_manager - INFO - 配置已保存
+2025-02-16 15:06:58,782 - gui - INFO - 通过句柄找到窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:06:58,784 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 15:07:00,679 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:07:01,058 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:07:07,711 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:08,449 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:08,450 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:14,055 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 15:07:14,056 - gui - INFO - 1. 停止定时器...
+2025-02-16 15:07:14,057 - gui - INFO - 定时器已停止
+2025-02-16 15:07:14,057 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 15:07:14,058 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:14,058 - gui - INFO - 窗口配置已保存
+2025-02-16 15:07:14,058 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 15:07:14,059 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 15:07:14,059 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 15:07:14,059 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 15:07:14,059 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 15:07:14,060 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 15:07:14,060 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 15:07:14,060 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 15:07:14,061 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:14,062 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:14,063 - gui - INFO - 主窗口状态已保存
+2025-02-16 15:07:14,063 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 15:07:14,164 - gui - INFO - 托盘图标已移除
+2025-02-16 15:07:14,164 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 15:07:14,166 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:14,167 - config_manager - INFO - 配置已保存
+2025-02-16 15:07:14,167 - gui - INFO - 主窗口已关闭
+2025-02-16 15:07:14,167 - gui - INFO - 8. 退出应用程序...
+2025-02-16 15:07:14,168 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 15:09:56,544 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 15:09:57,892 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 15:09:57,892 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 15:09:57,892 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 15:09:58,374 - config_manager - INFO - 配置已保存
+2025-02-16 15:09:58,391 - gui - INFO - 通过句柄找到窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:09:58,391 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 15:10:02,161 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 15:10:02,162 - gui - INFO - 1. 停止定时器...
+2025-02-16 15:10:02,162 - gui - INFO - 定时器已停止
+2025-02-16 15:10:02,163 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 15:10:02,164 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:02,164 - gui - INFO - 窗口配置已保存
+2025-02-16 15:10:02,165 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 15:10:02,165 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 15:10:02,165 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 15:10:02,165 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 15:10:02,166 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 15:10:02,166 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 15:10:02,166 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 15:10:02,167 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 15:10:02,168 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:02,168 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:02,169 - gui - INFO - 主窗口状态已保存
+2025-02-16 15:10:02,169 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 15:10:02,170 - gui - INFO - 托盘图标已移除
+2025-02-16 15:10:02,171 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 15:10:02,229 - gui - INFO - 主窗口已关闭
+2025-02-16 15:10:02,229 - gui - INFO - 8. 退出应用程序...
+2025-02-16 15:10:02,230 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 15:10:08,869 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 15:10:10,716 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 15:10:10,716 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 15:10:10,716 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 15:10:11,235 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:11,254 - gui - INFO - 通过句柄找到窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:10:11,255 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 15:10:18,679 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:33,463 - window_manager - INFO - 隐藏窗口: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:10:33,770 - window_manager - WARNING - 窗口已显示但无法激活: config_manager.py - flash-toggle - Cursor
+2025-02-16 15:10:39,587 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 15:10:39,587 - gui - INFO - 1. 停止定时器...
+2025-02-16 15:10:39,589 - gui - INFO - 定时器已停止
+2025-02-16 15:10:39,590 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 15:10:39,591 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:39,591 - gui - INFO - 窗口配置已保存
+2025-02-16 15:10:39,591 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 15:10:39,591 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 15:10:39,592 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 15:10:39,592 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 15:10:39,592 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 15:10:39,592 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 15:10:39,592 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 15:10:39,593 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 15:10:39,594 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:39,594 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:39,595 - gui - INFO - 主窗口状态已保存
+2025-02-16 15:10:39,595 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 15:10:39,657 - gui - INFO - 托盘图标已移除
+2025-02-16 15:10:39,657 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 15:10:39,658 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:39,658 - config_manager - INFO - 配置已保存
+2025-02-16 15:10:39,658 - gui - INFO - 主窗口已关闭
+2025-02-16 15:10:39,660 - gui - INFO - 8. 退出应用程序...
+2025-02-16 15:10:39,660 - gui - INFO - === 程序退出流程完成，即将强制退出 ===

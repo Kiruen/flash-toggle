@@ -225,6 +225,11 @@ class MainWindow(QMainWindow):
         tab_widget.addTab(hotkey_tab, "快捷键设置")
         self._init_hotkey_tab(hotkey_tab)
         
+        # 添加其他设置标签页
+        settings_tab = QWidget()
+        tab_widget.addTab(settings_tab, "其他设置")
+        self._init_settings_tab(settings_tab)
+        
     def _init_window_tab(self, tab: QWidget):
         """初始化窗口管理标签页"""
         layout = QVBoxLayout(tab)
@@ -302,6 +307,29 @@ class MainWindow(QMainWindow):
             
         # 添加弹性空间
         layout.setRowStretch(row, 1)
+        
+    def _init_settings_tab(self, tab: QWidget):
+        """初始化其他设置标签页"""
+        layout = QVBoxLayout(tab)
+        
+        # 添加关闭行为设置
+        close_group = QWidget()
+        close_layout = QHBoxLayout(close_group)
+        close_layout.setContentsMargins(0, 0, 0, 0)
+        
+        self.minimize_to_tray_checkbox = QCheckBox("关闭窗口时最小化到托盘")
+        self.minimize_to_tray_checkbox.setChecked(
+            self._config_manager.get_config().main_window["minimize_to_tray"]
+        )
+        self.minimize_to_tray_checkbox.stateChanged.connect(self._on_minimize_to_tray_changed)
+        close_layout.addWidget(self.minimize_to_tray_checkbox)
+        
+        # 添加说明标签
+        close_layout.addWidget(QLabel("（取消勾选则直接退出程序）"))
+        close_layout.addStretch()
+        
+        layout.addWidget(close_group)
+        layout.addStretch()
         
     def _setup_global_hotkeys(self):
         """设置全局快捷键"""
@@ -450,8 +478,7 @@ class MainWindow(QMainWindow):
         if self.isVisible():
             self.hide()
         else:
-            self.show()
-            self.activateWindow()
+            self.show_and_activate()  # 使用新方法
             
     def _on_capture_window(self):
         """处理窗口捕获事件"""
@@ -484,17 +511,26 @@ class MainWindow(QMainWindow):
         """设置系统托盘图标"""
         self.tray_icon = QSystemTrayIcon(self)
         self.tray_icon.setIcon(self.style().standardIcon(self.style().SP_ComputerIcon))
+        self.tray_icon.setToolTip("Flash-Toggle - 快捷窗口管理工具")  # 添加托盘图标提示
         
         # 创建托盘菜单
         tray_menu = QMenu()
         show_action = tray_menu.addAction("显示")
-        show_action.triggered.connect(self.show)
+        show_action.triggered.connect(self.show_and_activate)  # 使用新方法
         quit_action = tray_menu.addAction("退出")
         quit_action.triggered.connect(self._on_quit)
         
         self.tray_icon.setContextMenu(tray_menu)
         self.tray_icon.show()
-        
+
+    def show_and_activate(self):
+        """显示并激活窗口，确保窗口正确显示"""
+        if not self.isVisible():
+            self.show()
+        self.setWindowState(self.windowState() & ~Qt.WindowMinimized)  # 取消最小化状态
+        self.activateWindow()  # 激活窗口
+        self.raise_()  # 将窗口置于最前
+
     def _on_quit(self):
         """处理退出事件，确保程序完全退出并清理所有资源"""
         try:
@@ -511,6 +547,7 @@ class MainWindow(QMainWindow):
             self._logger.info("2. 保存窗口配置...")
             for handle, window in self._window_manager._windows.items():
                 self._config_manager.save_window_config(window.title, {
+                    "handle": handle,  # 保存窗口句柄
                     "hotkey": window.hotkey,
                     "is_visible": window.is_visible,
                     "is_topmost": window.is_topmost
@@ -602,10 +639,15 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event: QCloseEvent):
         """处理窗口关闭事件"""
         if event.spontaneous():  # 用户点击关闭按钮
-            if self.tray_icon.isVisible():
+            minimize_to_tray = self._config_manager.get_config().main_window["minimize_to_tray"]
+            if minimize_to_tray and self.tray_icon.isVisible():
                 self.hide()
                 event.ignore()
-                return
+            else:
+                # 如果不最小化到托盘，则直接调用退出逻辑
+                self._on_quit()
+                event.accept()
+            return
                 
         # 程序真正退出时保存窗口状态
         self._save_window_state()
@@ -651,12 +693,28 @@ class MainWindow(QMainWindow):
             config: 应用程序配置
         """
         for title, window_config in config.saved_windows.items():
-            # 尝试找到窗口
-            hwnd = win32gui.FindWindow(None, title)
-            if hwnd and win32gui.IsWindow(hwnd):
+            # 首先通过句柄查找窗口
+            handle = window_config.get('handle', 0)
+            found = False
+            
+            if handle and win32gui.IsWindow(handle):
+                # 验证句柄对应的窗口标题是否匹配
+                current_title = win32gui.GetWindowText(handle)
+                if current_title == title:
+                    found = True
+                    self._logger.info(f"通过句柄找到窗口: {title}")
+            
+            # 如果通过句柄未找到，尝试通过标题查找
+            if not found:
+                handle = win32gui.FindWindow(None, title)
+                if handle and win32gui.IsWindow(handle):
+                    found = True
+                    self._logger.info(f"通过标题找到窗口: {title}")
+            
+            if found:
                 # 创建窗口信息
                 window_info = WindowInfo(
-                    handle=hwnd,
+                    handle=handle,
                     title=title,
                     hotkey=window_config.get("hotkey", ""),
                     is_visible=window_config.get("is_visible", True),
@@ -664,21 +722,21 @@ class MainWindow(QMainWindow):
                 )
                 
                 # 添加到管理器
-                self._window_manager._windows[hwnd] = window_info
+                self._window_manager._windows[handle] = window_info
                 self._add_window_to_list(window_info)
                 
                 # 注册快捷键
                 if window_info.hotkey:
                     self._hotkey_manager.register_hotkey(
                         window_info.hotkey,
-                        lambda h=hwnd: self._window_manager.toggle_window_visibility(h)
+                        lambda h=handle: self._window_manager.toggle_window_visibility(h)
                     )
                     
                 # 恢复窗口状态
                 if window_info.is_topmost:
-                    self._window_manager.toggle_window_topmost(hwnd)
+                    self._window_manager.toggle_window_topmost(handle)
                 if not window_info.is_visible:
-                    self._window_manager.toggle_window_visibility(hwnd)
+                    self._window_manager.toggle_window_visibility(handle)
             else:
                 # 将未找到的窗口也添加到列表，但标记为无效
                 item = QListWidgetItem(f"{title} (未找到)")
@@ -735,16 +793,21 @@ class MainWindow(QMainWindow):
             window_info = self._window_manager.get_window_info(handle)
             
             if not window_info or not win32gui.IsWindow(handle):
-                # 尝试通过标题重新查找窗口
-                title = item.text().split(" (")[0]  # 获取原始标题
-                new_hwnd = win32gui.FindWindow(None, title)
+                # 获取原始标题（移除可能的状态标记）
+                title = item.text().split(" (")[0]
                 
-                if new_hwnd and win32gui.IsWindow(new_hwnd):
+                # 尝试通过标题重新查找窗口
+                new_handle = win32gui.FindWindow(None, title)
+                if new_handle and win32gui.IsWindow(new_handle):
                     # 更新窗口句柄
-                    window_info.handle = new_hwnd
-                    self._window_manager._windows[new_hwnd] = window_info
+                    window_info.handle = new_handle
+                    self._window_manager._windows[new_handle] = window_info
                     del self._window_manager._windows[handle]
-                    item.setData(Qt.UserRole, new_hwnd)
+                    item.setData(Qt.UserRole, new_handle)
+                    # 更新配置中的句柄
+                    if title in self._config_manager.get_config().saved_windows:
+                        self._config_manager.get_config().saved_windows[title]['handle'] = new_handle
+                        self._config_manager.save_config()
                     self.show_status(f"已更新窗口句柄: {title}")
                 else:
                     # 标记为无效窗口
@@ -764,8 +827,8 @@ class MainWindow(QMainWindow):
             
             if not win32gui.IsWindow(handle):
                 # 尝试通过标题重新查找窗口
-                new_hwnd = win32gui.FindWindow(None, title)
-                if not new_hwnd or not win32gui.IsWindow(new_hwnd):
+                new_handle = win32gui.FindWindow(None, title)
+                if not new_handle or not win32gui.IsWindow(new_handle):
                     # 删除无效窗口
                     self.window_list.takeItem(i)
                     if handle in self._window_manager._windows:
@@ -800,4 +863,10 @@ class MainWindow(QMainWindow):
             
         # 从列表中移除
         self.window_list.takeItem(self.window_list.row(item))
-        self.show_status("已删除选中窗口") 
+        self.show_status("已删除选中窗口")
+
+    def _on_minimize_to_tray_changed(self, state):
+        """处理最小化到托盘设置变更"""
+        is_minimize = state == Qt.Checked
+        self._config_manager.update_main_window_config("minimize_to_tray", is_minimize)
+        self.show_status("设置已保存") 
