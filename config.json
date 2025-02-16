@@ -6,7 +6,7 @@
     },
     "main_window": {
         "always_on_top": true,
-        "minimize_to_tray": true,
+        "minimize_to_tray": false,
         "position": [
             960,
             394
@@ -17,8 +17,14 @@
         ]
     },
     "saved_windows": {
-        "config_manager.py - flash-toggle - Cursor": {
-            "handle": 532412,
+        "virtual_desktop.py - flash-toggle - Cursor": {
+            "handle": 1843200,
+            "hotkey": "",
+            "is_visible": true,
+            "is_topmost": false
+        },
+        "Debug - 文件资源管理器": {
+            "handle": 3606862,
             "hotkey": "alt+q",
             "is_visible": true,
             "is_topmost": false

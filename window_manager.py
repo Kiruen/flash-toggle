@@ -9,6 +9,7 @@
 1. 获取活动窗口信息
 2. 控制窗口的显示和隐藏
 3. 管理窗口列表
+4. 虚拟桌面相关操作
 
 作者：AI Assistant
 创建日期：2024-03-20
@@ -19,10 +20,13 @@ import win32con
 import win32api
 import win32process
 import ctypes
+from ctypes import wintypes, POINTER, Structure, c_ulong, c_void_p, c_bool
 from typing import Dict, Tuple, Optional
 import logging
 from dataclasses import dataclass
 import time
+
+from virtual_desktop import VirtualDesktopManager
 
 @dataclass
 class WindowInfo:
@@ -44,6 +48,7 @@ class WindowManager:
         """初始化窗口管理器"""
         self._windows: Dict[int, WindowInfo] = {}
         self._logger = logging.getLogger(__name__)
+        self._virtual_desktop = VirtualDesktopManager()
         
     def capture_active_window(self) -> Optional[WindowInfo]:
         """
@@ -94,6 +99,14 @@ class WindowManager:
             try:
                 # 显示窗口并尝试激活
                 win32gui.ShowWindow(handle, win32con.SW_SHOW)
+                
+                # 如果窗口不在当前虚拟桌面，先切换一次显示状态
+                if self._is_window_in_other_desktop(handle):
+                    self._logger.info("窗口在其他虚拟桌面，尝试切换...")
+                    win32gui.ShowWindow(handle, win32con.SW_HIDE)
+                    time.sleep(0.1)
+                    win32gui.ShowWindow(handle, win32con.SW_SHOW)
+                
                 win32gui.SetWindowPos(handle, win32con.HWND_TOP, 0, 0, 0, 0,
                                     win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
                 win32gui.BringWindowToTop(handle)
@@ -113,6 +126,83 @@ class WindowManager:
         except Exception as e:
             self._logger.debug(f"设置前台窗口失败: {str(e)}")
             return False
+
+    def _is_window_in_other_desktop(self, handle: int) -> bool:
+        """
+        检查窗口是否在其他虚拟桌面
+        
+        该方法使用 Windows 虚拟桌面 API 直接检查窗口是否在当前虚拟桌面。
+        如果 API 调用失败，会回退到基于窗口可见性的检查方法。
+        
+        Args:
+            handle: 窗口句柄
+            
+        Returns:
+            bool: 是否在其他虚拟桌面
+        """
+        try:
+            # 首先尝试使用虚拟桌面 API
+            is_on_current = self._virtual_desktop.is_window_on_current_desktop(handle)
+            if not is_on_current:
+                self._logger.debug(f"虚拟桌面 API 检测到窗口不在当前桌面 (handle={handle})")
+                return True
+                
+            # 如果 API 显示窗口在当前桌面，但窗口不可见，
+            # 使用备用方法再次检查
+            if not win32gui.IsWindowVisible(handle):
+                # 检查窗口是否被最小化
+                placement = win32gui.GetWindowPlacement(handle)
+                if placement[1] == win32con.SW_SHOWMINIMIZED:
+                    self._logger.debug(f"窗口已最小化 (handle={handle})")
+                    return False  # 最小化的窗口不认为在其他桌面
+                    
+                self._logger.debug(f"窗口不可见且未最小化 (handle={handle})")
+                return True
+                
+            return False
+            
+        except Exception as e:
+            self._logger.warning(f"虚拟桌面 API 检查失败，使用备用方法 (handle={handle}): {str(e)}")
+            
+            # 如果 API 调用失败，回退到基于可见性的检查方法
+            try:
+                # 检查窗口是否被最小化
+                placement = win32gui.GetWindowPlacement(handle)
+                if placement[1] == win32con.SW_SHOWMINIMIZED:
+                    self._logger.debug(f"窗口已最小化 (handle={handle})")
+                    return False  # 最小化的窗口不认为在其他桌面
+                    
+                # 获取窗口位置
+                rect = win32gui.GetWindowRect(handle)
+                
+                # 获取主屏幕分辨率
+                screen_width = win32api.GetSystemMetrics(win32con.SM_CXSCREEN)
+                screen_height = win32api.GetSystemMetrics(win32con.SM_CYSCREEN)
+                
+                # 检查窗口是否完全在屏幕外
+                # 窗口完全在屏幕左侧或右侧
+                if rect[2] <= 0 or rect[0] >= screen_width:
+                    self._logger.debug(f"窗口在屏幕水平范围外 (handle={handle})")
+                    return True
+                    
+                # 窗口完全在屏幕上方或下方
+                if rect[3] <= 0 or rect[1] >= screen_height:
+                    self._logger.debug(f"窗口在屏幕垂直范围外 (handle={handle})")
+                    return True
+                    
+                # 记录调试信息
+                self._logger.debug(
+                    f"窗口状态检查 (handle={handle}):\n"
+                    f"  - 位置: {rect}\n"
+                    f"  - 屏幕大小: {screen_width}x{screen_height}\n"
+                    f"  - Placement: {placement}"
+                )
+                
+                return False  # 窗口可见且在屏幕范围内，认为在当前桌面
+                
+            except Exception as e:
+                self._logger.error(f"备用检查方法也失败 (handle={handle}): {str(e)}")
+                return False  # 发生异常时，假定窗口在当前桌面
             
     def toggle_window_visibility(self, handle: int) -> bool:
         """
@@ -126,36 +216,74 @@ class WindowManager:
         """
         try:
             if handle not in self._windows:
+                self._logger.warning(f"窗口未被管理: {handle}")
                 return False
                 
             window = self._windows[handle]
+            self._logger.info(f"准备切换窗口 {window.title} (handle: {handle}) 的显示状态")
             
             # 检查窗口是否仍然有效
             if not win32gui.IsWindow(handle):
                 self._logger.warning(f"窗口已失效: {window.title}")
                 return False
                 
+            # 记录当前窗口状态
+            current_placement = win32gui.GetWindowPlacement(handle)
+            current_rect = win32gui.GetWindowRect(handle)
+            current_style = win32gui.GetWindowLong(handle, win32con.GWL_STYLE)
+            
+            self._logger.debug(
+                f"当前窗口状态:\n"
+                f"  - Placement: {current_placement}\n"
+                f"  - Rect: {current_rect}\n"
+                f"  - Style: 0x{current_style:08x}\n"
+                f"  - IsVisible: {bool(current_style & win32con.WS_VISIBLE)}"
+            )
+            
+            # 如果窗口在其他虚拟桌面，尝试将其带到当前桌面
+            if self._is_window_in_other_desktop(handle):
+                self._logger.info(f"窗口 {window.title} 在其他虚拟桌面，尝试切换...")
+                # 先记录一下当前状态
+                self._logger.debug(f"切换前状态: {win32gui.GetWindowRect(handle)}")
+                
+                # 尝试切换
+                win32gui.ShowWindow(handle, win32con.SW_HIDE)
+                time.sleep(0.1)
+                result = self._try_set_foreground_window(handle)
+                
+                # 记录切换后状态
+                self._logger.debug(
+                    f"切换后状态:\n"
+                    f"  - 结果: {result}\n"
+                    f"  - 位置: {win32gui.GetWindowRect(handle)}\n"
+                    f"  - 可见性: {win32gui.IsWindowVisible(handle)}"
+                )
+                return result
+                
             if window.is_visible:
                 # 隐藏窗口
+                self._logger.info(f"准备隐藏窗口: {window.title}")
                 win32gui.ShowWindow(handle, win32con.SW_HIDE)
                 window.is_visible = False
-                self._logger.info(f"隐藏窗口: {window.title}")
+                self._logger.info(f"隐藏窗口成功: {window.title}")
                 return True
             else:
                 # 显示并激活窗口
+                self._logger.info(f"准备显示并激活窗口: {window.title}")
                 if self._try_set_foreground_window(handle):
                     window.is_visible = True
-                    self._logger.info(f"显示窗口: {window.title}")
+                    self._logger.info(f"显示并激活窗口成功: {window.title}")
                     return True
                 else:
                     # 如果无法激活，至少尝试显示窗口
+                    self._logger.warning(f"无法激活窗口，尝试仅显示: {window.title}")
                     win32gui.ShowWindow(handle, win32con.SW_SHOW)
                     window.is_visible = True
-                    self._logger.warning(f"窗口已显示但无法激活: {window.title}")
+                    self._logger.info(f"窗口已显示但无法激活: {window.title}")
                     return True
                     
         except Exception as e:
-            self._logger.error(f"切换窗口可见性失败: {str(e)}")
+            self._logger.error(f"切换窗口可见性失败: {str(e)}", exc_info=True)
             return False
             
     def set_window_hotkey(self, handle: int, hotkey: str) -> bool:

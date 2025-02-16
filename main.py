@@ -26,11 +26,11 @@ from gui import MainWindow
 def setup_logging():
     """配置日志系统"""
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.DEBUG,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.StreamHandler(),
-            logging.FileHandler('flash_toggle.log')
+            logging.FileHandler('flash_toggle.log', encoding='utf-8')
         ]
     )
 

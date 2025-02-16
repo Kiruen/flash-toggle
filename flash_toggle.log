@@ -652,3 +652,2445 @@ KeyError: 'minimize_to_tray'
 2025-02-16 15:38:55,759 - gui - INFO - �������ѹر�
 2025-02-16 15:38:55,759 - gui - INFO - 8. �˳�Ӧ�ó���...
 2025-02-16 15:38:55,759 - gui - INFO - === �����˳�������ɣ�����ǿ���˳� ===
+2025-02-16 15:57:13,552 - __main__ - INFO - Flash-Toggle ����
+2025-02-16 15:57:14,845 - hotkey_manager - INFO - �ɹ�ע���ݼ�: ctrl+shift+c
+2025-02-16 15:57:14,847 - hotkey_manager - INFO - �ɹ�ע���ݼ�: space+c
+2025-02-16 15:57:14,847 - hotkey_manager - INFO - �ɹ�ע���ݼ�: space+t
+2025-02-16 15:57:15,418 - config_manager - INFO - �����ѱ���
+2025-02-16 15:57:18,793 - config_manager - INFO - �����ѱ���
+2025-02-16 15:57:21,771 - window_manager - INFO - ���񴰿�: window_manager.py - flash-toggle - Cursor (handle: 532412)
+2025-02-16 15:57:25,905 - window_manager - INFO - Ϊ���� window_manager.py - flash-toggle - Cursor ���ÿ�ݼ�: alt+q
+2025-02-16 15:57:25,905 - hotkey_manager - INFO - �ɹ�ע���ݼ�: alt+q
+2025-02-16 15:57:27,650 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:28,008 - window_manager - ERROR - ��鴰����������״̬ʧ��: exception: access violation writing 0x00007FFB05213FDA
+2025-02-16 15:57:28,025 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:29,974 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:30,726 - window_manager - ERROR - ��鴰����������״̬ʧ��: exception: access violation writing 0x00007FFB05213FDA
+2025-02-16 15:57:30,747 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:31,639 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:32,457 - window_manager - ERROR - ��鴰����������״̬ʧ��: exception: access violation writing 0x00007FFB05213FDA
+2025-02-16 15:57:32,478 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:36,680 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:38,321 - window_manager - ERROR - ��鴰����������״̬ʧ��: exception: access violation writing 0x00007FFB05213FDA
+2025-02-16 15:57:38,334 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:46,327 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:46,673 - window_manager - ERROR - ��鴰����������״̬ʧ��: exception: access violation writing 0x00007FFB05213FDA
+2025-02-16 15:57:46,687 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:49,132 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:57:49,423 - window_manager - ERROR - ��鴰����������״̬ʧ��: exception: access violation writing 0x00007FFB05213FDA
+2025-02-16 15:57:49,443 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 15:58:06,686 - gui - INFO - === ��ʼ�����˳����� ===
+2025-02-16 15:58:06,686 - gui - INFO - 1. ֹͣ��ʱ��...
+2025-02-16 15:58:06,688 - gui - INFO - ��ʱ����ֹͣ
+2025-02-16 15:58:06,688 - gui - INFO - 2. ���洰������...
+2025-02-16 15:58:06,689 - config_manager - INFO - �����ѱ���
+2025-02-16 15:58:06,689 - gui - INFO - ���������ѱ���
+2025-02-16 15:58:06,689 - gui - INFO - 3. �ָ����д���״̬...
+2025-02-16 15:58:06,689 - gui - INFO - 4. �������п�ݼ�...
+2025-02-16 15:58:06,689 - hotkey_manager - INFO - �ɹ������ݼ���: alt+q
+2025-02-16 15:58:06,690 - hotkey_manager - INFO - �ɹ������ݼ���: ctrl+shift+c
+2025-02-16 15:58:06,690 - hotkey_manager - INFO - �ɹ������ݼ���: space+c
+2025-02-16 15:58:06,690 - hotkey_manager - INFO - �ɹ������ݼ���: space+t
+2025-02-16 15:58:06,690 - gui - ERROR - ������ݼ�ʱ��������: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 15:58:06,690 - gui - INFO - 5. ����������״̬...
+2025-02-16 15:58:06,691 - config_manager - INFO - �����ѱ���
+2025-02-16 15:58:06,693 - config_manager - INFO - �����ѱ���
+2025-02-16 15:58:06,693 - gui - INFO - ������״̬�ѱ���
+2025-02-16 15:58:06,693 - gui - INFO - 6. �Ƴ�����ͼ��...
+2025-02-16 15:58:06,825 - gui - INFO - ����ͼ�����Ƴ�
+2025-02-16 15:58:06,825 - gui - INFO - 7. �ر�������...
+2025-02-16 15:58:06,826 - config_manager - INFO - �����ѱ���
+2025-02-16 15:58:06,827 - config_manager - INFO - �����ѱ���
+2025-02-16 15:58:06,828 - gui - INFO - �������ѹر�
+2025-02-16 15:58:06,828 - gui - INFO - 8. �˳�Ӧ�ó���...
+2025-02-16 15:58:06,828 - gui - INFO - === �����˳�������ɣ�����ǿ���˳� ===
+2025-02-16 16:00:10,765 - __main__ - INFO - Flash-Toggle ����
+2025-02-16 16:00:12,176 - hotkey_manager - INFO - �ɹ�ע���ݼ�: ctrl+shift+c
+2025-02-16 16:00:12,176 - hotkey_manager - INFO - �ɹ�ע���ݼ�: space+c
+2025-02-16 16:00:12,176 - hotkey_manager - INFO - �ɹ�ע���ݼ�: space+t
+2025-02-16 16:00:12,698 - config_manager - INFO - �����ѱ���
+2025-02-16 16:00:12,730 - gui - INFO - ͨ������ҵ�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:12,731 - hotkey_manager - INFO - �ɹ�ע���ݼ�: alt+q
+2025-02-16 16:00:14,432 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:17,085 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:19,485 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:20,825 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:23,835 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:25,284 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:38,276 - window_manager - INFO - ���ش���: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:39,440 - window_manager - WARNING - ��������ʾ���޷�����: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:00:45,620 - config_manager - INFO - �����ѱ���
+2025-02-16 16:00:46,708 - gui - INFO - === ��ʼ�����˳����� ===
+2025-02-16 16:00:46,708 - gui - INFO - 1. ֹͣ��ʱ��...
+2025-02-16 16:00:46,708 - gui - INFO - ��ʱ����ֹͣ
+2025-02-16 16:00:46,709 - gui - INFO - 2. ���洰������...
+2025-02-16 16:00:46,709 - config_manager - INFO - �����ѱ���
+2025-02-16 16:00:46,710 - gui - INFO - ���������ѱ���
+2025-02-16 16:00:46,710 - gui - INFO - 3. �ָ����д���״̬...
+2025-02-16 16:00:46,710 - gui - INFO - 4. �������п�ݼ�...
+2025-02-16 16:00:46,710 - hotkey_manager - INFO - �ɹ������ݼ���: alt+q
+2025-02-16 16:00:46,711 - hotkey_manager - INFO - �ɹ������ݼ���: ctrl+shift+c
+2025-02-16 16:00:46,711 - hotkey_manager - INFO - �ɹ������ݼ���: space+c
+2025-02-16 16:00:46,711 - hotkey_manager - INFO - �ɹ������ݼ���: space+t
+2025-02-16 16:00:46,711 - gui - ERROR - ������ݼ�ʱ��������: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 16:00:46,711 - gui - INFO - 5. ����������״̬...
+2025-02-16 16:00:46,713 - config_manager - INFO - �����ѱ���
+2025-02-16 16:00:46,713 - config_manager - INFO - �����ѱ���
+2025-02-16 16:00:46,713 - gui - INFO - ������״̬�ѱ���
+2025-02-16 16:00:46,715 - gui - INFO - 6. �Ƴ�����ͼ��...
+2025-02-16 16:00:46,721 - gui - INFO - ����ͼ�����Ƴ�
+2025-02-16 16:00:46,721 - gui - INFO - 7. �ر�������...
+2025-02-16 16:00:46,783 - gui - INFO - �������ѹر�
+2025-02-16 16:00:46,783 - gui - INFO - 8. �˳�Ӧ�ó���...
+2025-02-16 16:00:46,785 - gui - INFO - === �����˳�������ɣ�����ǿ���˳� ===
+2025-02-16 16:03:59,026 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:04:02,522 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:04:02,522 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:04:02,522 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:04:03,324 - config_manager - INFO - 配置已保存
+2025-02-16 16:04:03,346 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:03,347 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:04:07,877 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:07,878 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:07,878 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:07,879 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:07,879 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:07,879 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:07,880 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:07,880 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:07,880 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:07,914 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:09,131 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:09,132 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:09,132 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:09,132 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:09,133 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:09,133 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:09,150 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:18,220 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:18,221 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:18,221 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:18,222 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:18,222 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:18,222 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:18,222 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:18,223 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:18,223 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:18,288 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:19,291 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:19,292 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:19,292 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:19,292 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:19,292 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:19,293 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:19,311 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:25,859 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:25,861 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:25,861 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:25,861 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:25,862 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:25,862 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:25,862 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:25,862 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:25,862 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:25,883 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:27,084 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:27,087 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:27,087 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:27,087 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:27,087 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:27,088 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:27,135 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:27,653 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:27,654 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:27,654 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:27,654 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:27,654 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:27,655 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:27,655 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:27,655 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:27,655 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:27,704 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:31,961 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:31,979 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:31,980 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:31,981 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:31,981 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:31,981 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:32,022 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:33,296 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:33,296 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:33,297 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:33,297 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:33,297 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:33,297 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:33,298 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:33,298 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:33,298 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:33,329 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:37,134 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:37,135 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:37,135 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:37,135 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:37,135 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:37,136 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:37,155 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:41,002 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:41,004 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:41,004 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:41,004 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:41,005 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:41,005 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:41,005 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:41,005 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:41,005 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:41,037 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:43,659 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:43,660 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:43,660 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:43,661 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:43,661 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:43,661 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:43,763 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:44,941 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:44,941 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:44,942 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:44,942 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:44,942 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:44,942 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:44,942 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:44,943 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:44,943 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:44,970 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:46,013 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:46,013 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:46,013 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:46,014 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:46,014 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:46,015 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:46,029 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:48,555 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:48,555 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:04:48,557 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:04:48,557 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:04:48,557 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:04:48,558 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:04:48,558 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:04:48,558 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:04:48,558 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:48,621 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:56,216 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:04:56,229 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:04:56,229 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:04:56,230 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:56,230 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:04:56,230 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:04:56,334 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:15,127 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:05:15,127 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:05:15,128 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:05:15,128 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:05:15,128 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:05:15,129 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:05:15,129 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:05:15,129 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:05:15,129 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:15,150 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:15,703 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:05:15,705 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:05:15,705 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:05:15,706 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:15,706 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:05:15,706 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:15,726 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:18,483 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:05:18,483 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:05:18,483 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:05:18,485 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:05:18,485 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:05:18,485 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:05:18,485 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:05:18,486 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:05:18,486 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:18,505 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:22,358 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:05:22,359 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:05:22,359 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:05:22,360 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:22,360 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:05:22,360 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:22,410 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:05:37,351 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 16:05:37,351 - window_manager - INFO - 为窗口 window_manager.py - flash-toggle - Cursor 设置快捷键: 
+2025-02-16 16:05:47,915 - window_manager - INFO - 捕获窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760)
+2025-02-16 16:05:52,456 - window_manager - INFO - 为窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) 设置快捷键: alt+q
+2025-02-16 16:05:52,457 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:05:53,873 - window_manager - INFO - 准备切换窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760) 的显示状态
+2025-02-16 16:05:53,874 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (415, 255, 1415, 1028))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cfc000
+  - IsVisible: True
+2025-02-16 16:05:53,874 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:05:53,874 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:05:53,874 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:05:53,874 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:05:53,874 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15cfc000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:05:53,876 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:05:53,876 - window_manager - INFO - 准备隐藏窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:53,908 - window_manager - INFO - 隐藏窗口成功: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:54,271 - window_manager - INFO - 准备切换窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760) 的显示状态
+2025-02-16 16:05:54,271 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (415, 255, 1415, 1028))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cfc000
+  - IsVisible: False
+2025-02-16 16:05:54,272 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:05:54,272 - window_manager - INFO - 准备显示并激活窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:54,272 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:05:54,272 - window_manager - WARNING - 无法激活窗口，尝试仅显示: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:54,294 - window_manager - INFO - 窗口已显示但无法激活: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:54,883 - window_manager - INFO - 准备切换窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760) 的显示状态
+2025-02-16 16:05:54,883 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (415, 255, 1415, 1028))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cfc000
+  - IsVisible: True
+2025-02-16 16:05:54,884 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:05:54,884 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:05:54,884 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:05:54,884 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:05:54,885 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15cfc000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:05:54,885 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:05:54,885 - window_manager - INFO - 准备隐藏窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:54,890 - window_manager - INFO - 隐藏窗口成功: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:55,516 - window_manager - INFO - 准备切换窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760) 的显示状态
+2025-02-16 16:05:55,517 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (415, 255, 1415, 1028))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cfc000
+  - IsVisible: False
+2025-02-16 16:05:55,517 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:05:55,517 - window_manager - INFO - 准备显示并激活窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:55,517 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:05:55,518 - window_manager - WARNING - 无法激活窗口，尝试仅显示: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:55,537 - window_manager - INFO - 窗口已显示但无法激活: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:56,718 - window_manager - INFO - 准备切换窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760) 的显示状态
+2025-02-16 16:05:56,718 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (415, 255, 1415, 1028))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cfc000
+  - IsVisible: True
+2025-02-16 16:05:56,719 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:05:56,719 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:05:56,719 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:05:56,719 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:05:56,720 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15cfc000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:05:56,720 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:05:56,720 - window_manager - INFO - 准备隐藏窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:56,725 - window_manager - INFO - 隐藏窗口成功: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:57,140 - window_manager - INFO - 准备切换窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760) 的显示状态
+2025-02-16 16:05:57,141 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (415, 255, 1415, 1028))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cfc000
+  - IsVisible: False
+2025-02-16 16:05:57,142 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:05:57,142 - window_manager - INFO - 准备显示并激活窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:57,142 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:05:57,142 - window_manager - WARNING - 无法激活窗口，尝试仅显示: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:05:57,169 - window_manager - INFO - 窗口已显示但无法激活: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:06:00,100 - window_manager - INFO - 准备切换窗口 ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School) (handle: 2626760) 的显示状态
+2025-02-16 16:06:00,102 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (415, 255, 1415, 1028))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cfc000
+  - IsVisible: True
+2025-02-16 16:06:00,102 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:06:00,102 - window_manager - DEBUG - 窗口位置: (-8, -8, 2568, 1395)
+2025-02-16 16:06:00,102 - window_manager - DEBUG - 显示器信息: [(0, 0, 2560, 1440), (-1080, 0, 0, 1920)]
+2025-02-16 16:06:00,102 - window_manager - DEBUG - 总屏幕边界: (-1080, 0, 2560, 1920)
+2025-02-16 16:06:00,102 - window_manager - DEBUG - 窗口状态检查:
+  - 完全在屏幕外: False
+  - 是否最小化: False
+  - 窗口样式: 0x15cfc000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:06:00,102 - window_manager - DEBUG - 判断结果: 窗口不在其他虚拟桌面
+2025-02-16 16:06:00,102 - window_manager - INFO - 准备隐藏窗口: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:06:00,107 - window_manager - INFO - 隐藏窗口成功: ★阿里云ECS-Ubuntu - root@iZuf6fp0fnsdjqr4dx83yjZ: ~/capable - Xshell 7 (Free for Home/School)
+2025-02-16 16:08:12,785 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:08:12,835 - window_manager - ERROR - 初始化 COM 对象失败: name 'IServiceProvider' is not defined
+2025-02-16 16:08:12,836 - window_manager - ERROR - 初始化虚拟桌面 API 失败: name 'IServiceProvider' is not defined
+2025-02-16 16:08:13,852 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:08:13,853 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:08:13,854 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:08:14,379 - config_manager - INFO - 配置已保存
+2025-02-16 16:08:14,407 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:08:14,411 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:11:21,226 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 16:11:21,226 - gui - INFO - 1. 停止定时器...
+2025-02-16 16:11:21,226 - gui - INFO - 定时器已停止
+2025-02-16 16:11:21,227 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 16:11:21,228 - config_manager - INFO - 配置已保存
+2025-02-16 16:11:21,228 - gui - INFO - 窗口配置已保存
+2025-02-16 16:11:21,228 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 16:11:21,228 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 16:11:21,229 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 16:11:21,229 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 16:11:21,229 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 16:11:21,229 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 16:11:21,230 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 16:11:21,230 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 16:11:21,231 - config_manager - INFO - 配置已保存
+2025-02-16 16:11:21,234 - config_manager - INFO - 配置已保存
+2025-02-16 16:11:21,234 - gui - INFO - 主窗口状态已保存
+2025-02-16 16:11:21,234 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 16:11:21,241 - gui - INFO - 托盘图标已移除
+2025-02-16 16:11:21,241 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 16:11:21,242 - config_manager - INFO - 配置已保存
+2025-02-16 16:11:21,244 - config_manager - INFO - 配置已保存
+2025-02-16 16:11:21,244 - gui - INFO - 主窗口已关闭
+2025-02-16 16:11:21,245 - gui - INFO - 8. 退出应用程序...
+2025-02-16 16:11:21,245 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 16:11:21,245 - comtypes - DEBUG - Calling CoUninitialize()
+2025-02-16 16:11:21,246 - comtypes - DEBUG - CoUninitialize() done.
+2025-02-16 16:13:29,575 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:13:29,605 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:13:30,278 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:13:30,279 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:13:30,279 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:13:30,724 - config_manager - INFO - 配置已保存
+2025-02-16 16:13:30,731 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:30,732 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:13:52,305 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:13:52,305 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:13:52,306 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:13:52,306 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:13:52,306 - window_manager - ERROR - 检查窗口虚拟桌面状态失败: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:13:52,306 - window_manager - DEBUG - 虚拟桌面 API 检查结果: 窗口不在其他虚拟桌面
+2025-02-16 16:13:52,306 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:52,311 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:54,214 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:13:54,215 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:13:54,215 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:13:54,215 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:54,216 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:13:54,216 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:54,225 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:58,560 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:13:58,561 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:13:58,561 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:13:58,561 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:13:58,561 - window_manager - ERROR - 检查窗口虚拟桌面状态失败: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:13:58,562 - window_manager - DEBUG - 虚拟桌面 API 检查结果: 窗口不在其他虚拟桌面
+2025-02-16 16:13:58,562 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:58,566 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:59,241 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:13:59,242 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:13:59,242 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:13:59,242 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:59,242 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:13:59,242 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:13:59,254 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:14:47,046 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:14:47,046 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:14:47,046 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:14:47,047 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:14:47,047 - window_manager - ERROR - 检查窗口虚拟桌面状态失败: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:14:47,047 - window_manager - DEBUG - 虚拟桌面 API 检查结果: 窗口不在其他虚拟桌面
+2025-02-16 16:14:47,047 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:14:47,052 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:14:47,608 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:14:47,609 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:14:47,609 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:14:47,609 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:14:47,609 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:14:47,609 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:14:47,621 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:14:52,961 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:14:52,962 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:14:52,962 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:14:52,962 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:14:52,963 - window_manager - ERROR - 检查窗口虚拟桌面状态失败: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:14:52,963 - window_manager - DEBUG - 虚拟桌面 API 检查结果: 窗口不在其他虚拟桌面
+2025-02-16 16:14:52,963 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:14:52,969 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:15:01,872 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:15:01,872 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:15:01,873 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:15:01,873 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:15:01,873 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:15:01,873 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:15:01,884 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:16:05,664 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:16:05,666 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:16:05,666 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:16:05,666 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:16:05,667 - window_manager - ERROR - 检查窗口虚拟桌面状态失败: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:16:05,667 - window_manager - DEBUG - 虚拟桌面 API 检查结果: 窗口不在其他虚拟桌面
+2025-02-16 16:16:05,667 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:16:05,671 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:16:06,055 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:16:06,055 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:16:06,056 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:16:06,056 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:16:06,056 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:16:06,056 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:16:06,069 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:19:38,991 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:19:39,028 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:19:39,677 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:19:39,678 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:19:39,678 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:19:40,099 - config_manager - INFO - 配置已保存
+2025-02-16 16:19:40,123 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:19:40,124 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:19:45,435 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:19:45,436 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:19:45,436 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:19:45,437 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:19:45,437 - window_manager - ERROR - 检查窗口虚拟桌面状态失败: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:19:45,437 - window_manager - DEBUG - 虚拟桌面 API 检查结果: 窗口不在其他虚拟桌面
+2025-02-16 16:19:45,437 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:19:45,442 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:19:46,251 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:19:46,252 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:19:46,252 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:19:46,252 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:19:46,253 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:19:46,253 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:19:46,265 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:21:09,311 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 16:21:09,311 - gui - INFO - 1. 停止定时器...
+2025-02-16 16:21:09,313 - gui - INFO - 定时器已停止
+2025-02-16 16:21:09,313 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 16:21:09,315 - config_manager - INFO - 配置已保存
+2025-02-16 16:21:09,315 - gui - INFO - 窗口配置已保存
+2025-02-16 16:21:09,315 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 16:21:09,315 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 16:21:09,315 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 16:21:09,317 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 16:21:09,317 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 16:21:09,317 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 16:21:09,317 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 16:21:09,317 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 16:21:09,319 - config_manager - INFO - 配置已保存
+2025-02-16 16:21:09,320 - config_manager - INFO - 配置已保存
+2025-02-16 16:21:09,320 - gui - INFO - 主窗口状态已保存
+2025-02-16 16:21:09,320 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 16:21:09,387 - gui - INFO - 托盘图标已移除
+2025-02-16 16:21:09,387 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 16:21:09,399 - config_manager - INFO - 配置已保存
+2025-02-16 16:21:09,400 - config_manager - INFO - 配置已保存
+2025-02-16 16:21:09,401 - gui - INFO - 主窗口已关闭
+2025-02-16 16:21:09,401 - gui - INFO - 8. 退出应用程序...
+2025-02-16 16:21:09,401 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 16:21:12,305 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:21:12,340 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:21:13,272 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:21:13,272 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:21:13,273 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:21:13,759 - config_manager - INFO - 配置已保存
+2025-02-16 16:21:13,772 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:21:13,774 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:21:19,757 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:21:19,757 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:21:19,758 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:21:19,758 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:21:19,758 - window_manager - ERROR - 获取窗口虚拟桌面 ID 失败: exception: access violation writing 0x000001D97DCB14D0
+Traceback (most recent call last):
+  File "C:\Projects\flash-toggle\window_manager.py", line 168, in get_window_desktop_id
+    ret = self._manager.contents.GetWindowDesktopId(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: exception: access violation writing 0x000001D97DCB14D0
+2025-02-16 16:21:19,760 - window_manager - ERROR - 检查窗口虚拟桌面状态失败: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+Traceback (most recent call last):
+  File "C:\Projects\flash-toggle\window_manager.py", line 133, in is_window_on_current_desktop
+    ret = self._manager.contents.IsWindowOnCurrentVirtualDesktop(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:21:19,760 - window_manager - DEBUG - 虚拟桌面检查结果:
+  - 窗口所在桌面: 未知
+  - 是否在当前桌面: 是
+2025-02-16 16:21:19,760 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:21:19,764 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:21:20,416 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:21:20,416 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:21:20,417 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:21:20,417 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:21:20,417 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:21:20,417 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:21:20,429 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:22:45,816 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 16:22:45,816 - gui - INFO - 1. 停止定时器...
+2025-02-16 16:22:45,819 - gui - INFO - 定时器已停止
+2025-02-16 16:22:45,819 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 16:22:45,820 - config_manager - INFO - 配置已保存
+2025-02-16 16:22:45,820 - gui - INFO - 窗口配置已保存
+2025-02-16 16:22:45,821 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 16:22:45,821 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 16:22:45,821 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 16:22:45,821 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 16:22:45,821 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 16:22:45,821 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 16:22:45,822 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 16:22:45,822 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 16:22:45,823 - config_manager - INFO - 配置已保存
+2025-02-16 16:22:45,824 - config_manager - INFO - 配置已保存
+2025-02-16 16:22:45,825 - gui - INFO - 主窗口状态已保存
+2025-02-16 16:22:45,825 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 16:22:45,853 - gui - INFO - 托盘图标已移除
+2025-02-16 16:22:45,854 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 16:22:45,865 - config_manager - INFO - 配置已保存
+2025-02-16 16:22:45,866 - config_manager - INFO - 配置已保存
+2025-02-16 16:22:45,867 - gui - INFO - 主窗口已关闭
+2025-02-16 16:22:45,867 - gui - INFO - 8. 退出应用程序...
+2025-02-16 16:22:45,867 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 16:22:48,393 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:22:48,435 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:22:49,476 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:22:49,476 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:22:49,477 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:22:49,938 - config_manager - INFO - 配置已保存
+2025-02-16 16:22:49,948 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:22:49,954 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:22:53,850 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:22:53,850 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:22:53,851 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=1
+2025-02-16 16:22:53,851 - window_manager - DEBUG - 窗口状态检查:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - 是否可见: True
+2025-02-16 16:22:53,852 - window_manager - ERROR - COM 接口调用失败: exception: access violation writing 0x000001B6404EA300
+2025-02-16 16:22:53,852 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:22:53,852 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:22:53,852 - window_manager - ERROR - COM 接口调用失败: exception: access violation writing 0x00000000FFFFFFFF
+2025-02-16 16:22:53,853 - window_manager - DEBUG - 虚拟桌面检查结果:
+  - 窗口所在桌面: 未知
+  - 是否在当前桌面: 是
+2025-02-16 16:22:53,853 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:22:53,857 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:22:54,366 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 532412) 的显示状态
+2025-02-16 16:22:54,367 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:22:54,367 - window_manager - DEBUG - 窗口可见性检查: IsWindowVisible=0
+2025-02-16 16:22:54,367 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:22:54,367 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:22:54,368 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:22:54,377 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:41:19,920 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:41:19,981 - window_manager - ERROR - 初始化 COM 对象失败: [WinError 1] 函数不正确。
+2025-02-16 16:41:19,981 - window_manager - ERROR - 初始化虚拟桌面 API 失败: [WinError 1] 函数不正确。
+2025-02-16 16:41:21,719 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:41:21,720 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:41:21,720 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:41:22,449 - config_manager - INFO - 配置已保存
+2025-02-16 16:41:22,466 - gui - INFO - 通过标题找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:41:22,468 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:48:02,010 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 16:48:02,010 - gui - INFO - 1. 停止定时器...
+2025-02-16 16:48:02,011 - gui - INFO - 定时器已停止
+2025-02-16 16:48:02,011 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 16:48:02,013 - config_manager - INFO - 配置已保存
+2025-02-16 16:48:02,013 - gui - INFO - 窗口配置已保存
+2025-02-16 16:48:02,013 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 16:48:02,013 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 16:48:02,013 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 16:48:02,013 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 16:48:02,013 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 16:48:02,014 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 16:48:02,014 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 16:48:02,014 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 16:48:02,015 - config_manager - INFO - 配置已保存
+2025-02-16 16:48:02,016 - config_manager - INFO - 配置已保存
+2025-02-16 16:48:02,016 - gui - INFO - 主窗口状态已保存
+2025-02-16 16:48:02,016 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 16:48:02,105 - gui - INFO - 托盘图标已移除
+2025-02-16 16:48:02,106 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 16:48:02,108 - config_manager - INFO - 配置已保存
+2025-02-16 16:48:02,109 - config_manager - INFO - 配置已保存
+2025-02-16 16:48:02,109 - gui - INFO - 主窗口已关闭
+2025-02-16 16:48:02,109 - gui - INFO - 8. 退出应用程序...
+2025-02-16 16:48:02,109 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 16:52:42,625 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:52:42,660 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:52:42,663 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:52:43,645 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:52:43,645 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:52:43,646 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:52:44,141 - config_manager - INFO - 配置已保存
+2025-02-16 16:52:44,149 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:52:44,150 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:52:59,377 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:52:59,378 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:52:59,379 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - IsWindowVisible: 1
+2025-02-16 16:52:59,379 - window_manager - DEBUG - 窗口详细信息:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x15c70000
+  - 扩展样式: 0x00000100
+  - WS_VISIBLE: True
+2025-02-16 16:52:59,379 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 16:52:59,379 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:52:59,379 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:52:59,380 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:52:59,380 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x000002588F0022F0
+2025-02-16 16:52:59,380 - window_manager - DEBUG - 虚拟桌面检查结果:
+  - 是否在当前桌面: True
+  - 所在桌面 ID: 未知
+2025-02-16 16:52:59,380 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:52:59,394 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:53:03,413 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:53:03,414 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:53:03,414 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - IsWindowVisible: 0
+2025-02-16 16:53:03,414 - window_manager - DEBUG - 窗口详细信息:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x05c70000
+  - 扩展样式: 0x00000100
+  - WS_VISIBLE: False
+2025-02-16 16:53:03,415 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:03,415 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:03,415 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:03,415 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x0000000000000000
+2025-02-16 16:53:03,415 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:03,416 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:03,416 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:03,416 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x000002588F002170
+2025-02-16 16:53:03,416 - window_manager - DEBUG - 虚拟桌面检查结果:
+  - 是否在当前桌面: True
+  - 所在桌面 ID: 未知
+2025-02-16 16:53:03,417 - window_manager - DEBUG - COM API 检查显示窗口在当前桌面，但窗口不可见，可能在其他桌面
+2025-02-16 16:53:03,417 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 16:53:03,417 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 16:53:03,518 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:53:03,518 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 16:53:05,350 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:53:05,350 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:53:05,350 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - IsWindowVisible: 0
+2025-02-16 16:53:05,351 - window_manager - DEBUG - 窗口详细信息:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x05c70000
+  - 扩展样式: 0x00000100
+  - WS_VISIBLE: False
+2025-02-16 16:53:05,351 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:05,351 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:05,352 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:05,353 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): [WinError -1384611840] Windows Error 0xad788000
+2025-02-16 16:53:05,353 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:05,354 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:05,354 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:05,354 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x000002588F001B30
+2025-02-16 16:53:05,355 - window_manager - DEBUG - 虚拟桌面检查结果:
+  - 是否在当前桌面: True
+  - 所在桌面 ID: 未知
+2025-02-16 16:53:05,355 - window_manager - DEBUG - COM API 检查显示窗口在当前桌面，但窗口不可见，可能在其他桌面
+2025-02-16 16:53:05,355 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 16:53:05,356 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 16:53:05,457 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:53:05,457 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 16:53:05,810 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:53:05,811 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:53:05,811 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - IsWindowVisible: 0
+2025-02-16 16:53:05,811 - window_manager - DEBUG - 窗口详细信息:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x05c70000
+  - 扩展样式: 0x00000100
+  - WS_VISIBLE: False
+2025-02-16 16:53:05,811 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:05,812 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:05,812 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:05,812 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x0000000000000000
+2025-02-16 16:53:05,812 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:05,812 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:05,813 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:05,813 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x000002588F001F30
+2025-02-16 16:53:05,813 - window_manager - DEBUG - 虚拟桌面检查结果:
+  - 是否在当前桌面: True
+  - 所在桌面 ID: 未知
+2025-02-16 16:53:05,813 - window_manager - DEBUG - COM API 检查显示窗口在当前桌面，但窗口不可见，可能在其他桌面
+2025-02-16 16:53:05,813 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 16:53:05,814 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 16:53:05,914 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:53:05,914 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 16:53:08,027 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:53:08,028 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:53:08,028 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - IsWindowVisible: 0
+2025-02-16 16:53:08,029 - window_manager - DEBUG - 窗口详细信息:
+  - 位置: (-8, -8, 2568, 1395)
+  - 窗口样式: 0x05c70000
+  - 扩展样式: 0x00000100
+  - WS_VISIBLE: False
+2025-02-16 16:53:08,029 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:08,030 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:08,030 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:08,030 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x0000000000000000
+2025-02-16 16:53:08,030 - window_manager - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 16:53:08,030 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:53:08,031 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:53:08,031 - window_manager - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x000002588F001C30
+2025-02-16 16:53:08,031 - window_manager - DEBUG - 虚拟桌面检查结果:
+  - 是否在当前桌面: True
+  - 所在桌面 ID: 未知
+2025-02-16 16:53:08,031 - window_manager - DEBUG - COM API 检查显示窗口在当前桌面，但窗口不可见，可能在其他桌面
+2025-02-16 16:53:08,032 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 16:53:08,032 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 16:53:08,133 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:53:08,134 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 16:53:11,806 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 16:53:11,807 - gui - INFO - 1. 停止定时器...
+2025-02-16 16:53:11,807 - gui - INFO - 定时器已停止
+2025-02-16 16:53:11,807 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 16:53:11,808 - config_manager - INFO - 配置已保存
+2025-02-16 16:53:11,808 - gui - INFO - 窗口配置已保存
+2025-02-16 16:53:11,808 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 16:53:11,840 - gui - INFO - 已显示窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:53:11,840 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 16:53:11,841 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 16:53:11,841 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 16:53:11,841 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 16:53:11,841 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 16:53:11,841 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 16:53:11,842 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 16:53:11,843 - config_manager - INFO - 配置已保存
+2025-02-16 16:53:11,843 - config_manager - INFO - 配置已保存
+2025-02-16 16:53:11,844 - gui - INFO - 主窗口状态已保存
+2025-02-16 16:53:11,844 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 16:53:11,902 - gui - INFO - 托盘图标已移除
+2025-02-16 16:53:11,902 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 16:53:11,904 - config_manager - INFO - 配置已保存
+2025-02-16 16:53:11,905 - config_manager - INFO - 配置已保存
+2025-02-16 16:53:11,906 - gui - INFO - 主窗口已关闭
+2025-02-16 16:53:11,906 - gui - INFO - 8. 退出应用程序...
+2025-02-16 16:53:11,906 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 16:58:18,871 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 16:58:18,906 - window_manager - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 16:58:18,909 - window_manager - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 16:58:19,981 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 16:58:19,981 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 16:58:19,982 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 16:58:20,530 - config_manager - INFO - 配置已保存
+2025-02-16 16:58:20,541 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:58:20,542 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 16:58:20,542 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:58:20,542 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:58:20,543 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 16:58:20,543 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:58:20,543 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:58:20,543 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:58:20,543 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:58:22,372 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:58:22,372 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 16:58:22,372 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 16:58:22,373 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:58:22,382 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:58:23,534 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:58:23,534 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:58:23,534 - window_manager - DEBUG - 窗口不可见 (handle=1843200)
+2025-02-16 16:58:23,534 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 16:58:23,534 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 16:58:23,635 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:58:23,635 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 16:58:24,283 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:58:24,285 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:58:24,285 - window_manager - DEBUG - 窗口不可见 (handle=1843200)
+2025-02-16 16:58:24,285 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 16:58:24,285 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 16:58:24,387 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:58:24,387 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 16:58:25,242 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 16:58:25,244 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 16:58:25,244 - window_manager - DEBUG - 窗口不可见 (handle=1843200)
+2025-02-16 16:58:25,244 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 16:58:25,244 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 16:58:25,346 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 16:58:25,346 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 16:58:28,287 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 16:58:28,288 - gui - INFO - 1. 停止定时器...
+2025-02-16 16:58:28,289 - gui - INFO - 定时器已停止
+2025-02-16 16:58:28,290 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 16:58:28,291 - config_manager - INFO - 配置已保存
+2025-02-16 16:58:28,291 - gui - INFO - 窗口配置已保存
+2025-02-16 16:58:28,292 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 16:58:28,340 - gui - INFO - 已显示窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 16:58:28,341 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 16:58:28,341 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 16:58:28,341 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 16:58:28,342 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 16:58:28,342 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 16:58:28,342 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 16:58:28,343 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 16:58:28,345 - config_manager - INFO - 配置已保存
+2025-02-16 16:58:28,345 - config_manager - INFO - 配置已保存
+2025-02-16 16:58:28,346 - gui - INFO - 主窗口状态已保存
+2025-02-16 16:58:28,346 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 16:58:28,368 - gui - INFO - 托盘图标已移除
+2025-02-16 16:58:28,369 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 16:58:28,376 - config_manager - INFO - 配置已保存
+2025-02-16 16:58:28,377 - config_manager - INFO - 配置已保存
+2025-02-16 16:58:28,378 - gui - INFO - 主窗口已关闭
+2025-02-16 16:58:28,378 - gui - INFO - 8. 退出应用程序...
+2025-02-16 16:58:28,378 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:02:36,503 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 17:02:38,307 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 17:02:38,308 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 17:02:38,308 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 17:02:38,886 - config_manager - INFO - 配置已保存
+2025-02-16 17:02:38,897 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:02:38,898 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:02:38,898 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:02:38,899 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:02:38,901 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:02:38,902 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:02:38,902 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:02:38,903 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:02:38,904 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:02:41,294 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:02:41,294 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:02:41,294 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:02:41,295 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:02:41,307 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:02:41,644 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:02:41,645 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:02:41,645 - window_manager - DEBUG - 窗口不可见 (handle=1843200)
+2025-02-16 17:02:41,645 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 17:02:41,645 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:02:41,746 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:02:41,747 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:02:42,674 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:02:42,675 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:02:42,675 - window_manager - DEBUG - 窗口不可见 (handle=1843200)
+2025-02-16 17:02:42,675 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 17:02:42,676 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:02:42,776 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:02:42,777 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:02:43,046 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:02:43,047 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:02:43,047 - window_manager - DEBUG - 窗口不可见 (handle=1843200)
+2025-02-16 17:02:43,047 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 17:02:43,047 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:02:43,149 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:02:43,149 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:02:47,361 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 17:02:47,361 - gui - INFO - 1. 停止定时器...
+2025-02-16 17:02:47,363 - gui - INFO - 定时器已停止
+2025-02-16 17:02:47,363 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 17:02:47,364 - config_manager - INFO - 配置已保存
+2025-02-16 17:02:47,364 - gui - INFO - 窗口配置已保存
+2025-02-16 17:02:47,364 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 17:02:47,405 - gui - INFO - 已显示窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:02:47,405 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 17:02:47,406 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:02:47,406 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 17:02:47,406 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 17:02:47,406 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 17:02:47,407 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 17:02:47,407 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 17:02:47,408 - config_manager - INFO - 配置已保存
+2025-02-16 17:02:47,410 - config_manager - INFO - 配置已保存
+2025-02-16 17:02:47,410 - gui - INFO - 主窗口状态已保存
+2025-02-16 17:02:47,410 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 17:02:47,431 - gui - INFO - 托盘图标已移除
+2025-02-16 17:02:47,431 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 17:02:47,438 - config_manager - INFO - 配置已保存
+2025-02-16 17:02:47,439 - config_manager - INFO - 配置已保存
+2025-02-16 17:02:47,440 - gui - INFO - 主窗口已关闭
+2025-02-16 17:02:47,440 - gui - INFO - 8. 退出应用程序...
+2025-02-16 17:02:47,440 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:06:14,067 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 17:06:15,234 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 17:06:15,234 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 17:06:15,234 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 17:06:15,748 - config_manager - INFO - 配置已保存
+2025-02-16 17:06:15,757 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:15,758 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:06:15,759 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:15,759 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:15,760 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:15,760 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:15,761 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:15,761 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:15,762 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:17,784 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:17,785 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:17,785 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:17,785 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:17,797 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:18,763 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:18,763 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:06:18,763 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:18,764 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:18,764 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:18,764 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:18,803 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:22,081 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:22,083 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:22,083 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:22,084 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:22,097 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:24,054 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:24,054 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:06:24,055 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:24,055 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:24,055 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:24,056 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:24,068 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:25,023 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:25,023 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:25,024 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:25,024 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:25,033 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:25,712 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:25,712 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:06:25,713 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:25,713 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:25,713 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:25,713 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:25,725 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:27,195 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:27,196 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:27,196 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:27,197 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:27,206 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:28,374 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:28,376 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:06:28,376 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:28,377 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:28,377 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:28,377 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:28,391 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:32,115 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:32,116 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:32,116 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:32,116 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:32,127 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:32,933 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:32,933 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:06:32,933 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:32,935 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:32,935 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:32,935 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:32,949 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:43,669 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:43,669 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:43,670 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:43,670 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:43,681 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:44,956 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:44,960 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:06:44,961 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:44,962 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:44,962 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:44,962 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:45,009 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:46,416 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:46,416 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:06:46,416 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:46,416 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:46,425 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:46,693 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:06:46,693 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:06:46,695 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:06:46,695 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:46,695 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:06:46,696 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:46,723 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:06:54,852 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 17:06:54,852 - gui - INFO - 1. 停止定时器...
+2025-02-16 17:06:54,852 - gui - INFO - 定时器已停止
+2025-02-16 17:06:54,854 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 17:06:54,855 - config_manager - INFO - 配置已保存
+2025-02-16 17:06:54,855 - gui - INFO - 窗口配置已保存
+2025-02-16 17:06:54,855 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 17:06:54,856 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 17:06:54,856 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:06:54,856 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 17:06:54,856 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 17:06:54,856 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 17:06:54,857 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 17:06:54,857 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 17:06:54,858 - config_manager - INFO - 配置已保存
+2025-02-16 17:06:54,859 - config_manager - INFO - 配置已保存
+2025-02-16 17:06:54,859 - gui - INFO - 主窗口状态已保存
+2025-02-16 17:06:54,859 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 17:06:54,866 - gui - INFO - 托盘图标已移除
+2025-02-16 17:06:54,866 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 17:06:54,895 - gui - INFO - 主窗口已关闭
+2025-02-16 17:06:54,896 - gui - INFO - 8. 退出应用程序...
+2025-02-16 17:06:54,896 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:19:43,676 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 17:19:44,658 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 17:19:44,658 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 17:19:44,658 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 17:19:45,174 - config_manager - INFO - 配置已保存
+2025-02-16 17:19:45,191 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:19:45,193 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:19:46,639 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:19:46,640 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:19:46,641 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:19:46,641 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:19:46,654 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:19:47,238 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:19:47,239 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:19:47,239 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:19:47,239 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:19:47,239 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:19:47,239 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:19:47,250 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:00,889 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:20:00,889 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:20:00,889 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:20:00,891 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:00,899 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:01,541 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:20:01,543 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:20:01,543 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:20:01,543 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:01,544 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:20:01,544 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:01,551 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:03,309 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:20:03,309 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:20:03,309 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:20:03,309 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:03,318 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:03,829 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:20:03,829 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:20:03,829 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:20:03,830 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:03,830 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:20:03,830 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:03,845 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:04,463 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:20:04,464 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:20:04,464 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:20:04,464 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:04,475 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:05,628 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:20:05,628 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:20:05,629 - window_manager - DEBUG - 窗口状态检查 (handle=1843200):
+  - 位置: (-8, -8, 2568, 1395)
+  - 屏幕大小: 2560x1440
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+2025-02-16 17:20:05,629 - window_manager - INFO - 准备显示并激活窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:05,629 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:20:05,629 - window_manager - WARNING - 无法激活窗口，尝试仅显示: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:05,644 - window_manager - INFO - 窗口已显示但无法激活: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:20:18,476 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 17:20:18,477 - gui - INFO - 1. 停止定时器...
+2025-02-16 17:20:18,477 - gui - INFO - 定时器已停止
+2025-02-16 17:20:18,477 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 17:20:18,478 - config_manager - INFO - 配置已保存
+2025-02-16 17:20:18,478 - gui - INFO - 窗口配置已保存
+2025-02-16 17:20:18,478 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 17:20:18,479 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 17:20:18,479 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:20:18,479 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 17:20:18,479 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 17:20:18,479 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 17:20:18,480 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 17:20:18,480 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 17:20:18,480 - config_manager - INFO - 配置已保存
+2025-02-16 17:20:18,481 - config_manager - INFO - 配置已保存
+2025-02-16 17:20:18,481 - gui - INFO - 主窗口状态已保存
+2025-02-16 17:20:18,481 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 17:20:18,490 - gui - INFO - 托盘图标已移除
+2025-02-16 17:20:18,490 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 17:20:18,512 - gui - INFO - 主窗口已关闭
+2025-02-16 17:20:18,514 - gui - INFO - 8. 退出应用程序...
+2025-02-16 17:20:18,514 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:21:59,794 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 17:21:59,817 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:21:59,819 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 17:22:00,851 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 17:22:00,851 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 17:22:00,852 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 17:22:01,346 - config_manager - INFO - 配置已保存
+2025-02-16 17:22:01,359 - gui - INFO - 通过句柄找到窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:22:01,360 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:22:04,367 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:22:04,368 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15c70000
+  - IsVisible: True
+2025-02-16 17:22:04,368 - virtual_desktop - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation writing 0x0000000000000000
+2025-02-16 17:22:04,369 - window_manager - INFO - 准备隐藏窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:22:04,380 - window_manager - INFO - 隐藏窗口成功: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:22:04,835 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:22:04,835 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:22:04,835 - virtual_desktop - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 17:22:04,836 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:22:04,836 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 17:22:04,836 - virtual_desktop - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 17:22:04,837 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=1843200)
+2025-02-16 17:22:04,837 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 17:22:04,837 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:22:04,938 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:22:04,938 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:22:05,436 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:22:05,436 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:22:05,437 - virtual_desktop - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 17:22:05,437 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:22:05,437 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 17:22:05,438 - virtual_desktop - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 17:22:05,438 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=1843200)
+2025-02-16 17:22:05,438 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 17:22:05,439 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:22:05,540 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:22:05,540 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:22:05,909 - window_manager - INFO - 准备切换窗口 window_manager.py - flash-toggle - Cursor (handle: 1843200) 的显示状态
+2025-02-16 17:22:05,909 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-1, -1), (-1, -1), (657, 252, 1904, 1188))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05c70000
+  - IsVisible: False
+2025-02-16 17:22:05,909 - virtual_desktop - WARNING - 虚拟桌面管理器未初始化或已失效，尝试重新初始化...
+2025-02-16 17:22:05,910 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:22:05,910 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 17:22:05,910 - virtual_desktop - ERROR - COM 接口调用失败 (hwnd=1843200): exception: access violation reading 0xFFFFFFFFFFFFFFFF
+2025-02-16 17:22:05,910 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=1843200)
+2025-02-16 17:22:05,911 - window_manager - INFO - 窗口 window_manager.py - flash-toggle - Cursor 在其他虚拟桌面，尝试切换...
+2025-02-16 17:22:05,911 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:22:06,012 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:22:06,012 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:22:07,925 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 17:22:07,925 - gui - INFO - 1. 停止定时器...
+2025-02-16 17:22:07,926 - gui - INFO - 定时器已停止
+2025-02-16 17:22:07,926 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 17:22:07,927 - config_manager - INFO - 配置已保存
+2025-02-16 17:22:07,927 - gui - INFO - 窗口配置已保存
+2025-02-16 17:22:07,927 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 17:22:07,962 - gui - INFO - 已显示窗口: window_manager.py - flash-toggle - Cursor
+2025-02-16 17:22:07,963 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 17:22:07,963 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:22:07,963 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 17:22:07,964 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 17:22:07,964 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 17:22:07,964 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 17:22:07,964 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 17:22:07,966 - config_manager - INFO - 配置已保存
+2025-02-16 17:22:07,967 - config_manager - INFO - 配置已保存
+2025-02-16 17:22:07,967 - gui - INFO - 主窗口状态已保存
+2025-02-16 17:22:07,967 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 17:22:07,983 - gui - INFO - 托盘图标已移除
+2025-02-16 17:22:07,983 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 17:22:07,989 - config_manager - INFO - 配置已保存
+2025-02-16 17:22:07,990 - config_manager - INFO - 配置已保存
+2025-02-16 17:22:07,990 - gui - INFO - 主窗口已关闭
+2025-02-16 17:22:07,990 - gui - INFO - 8. 退出应用程序...
+2025-02-16 17:22:07,991 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:22:07,991 - comtypes - DEBUG - Calling CoUninitialize()
+2025-02-16 17:22:07,991 - comtypes - DEBUG - CoUninitialize() done.
+2025-02-16 17:34:16,721 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 17:34:16,750 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:34:16,750 - virtual_desktop - DEBUG - 初始化 COM 环境
+2025-02-16 17:34:16,752 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 17:34:17,594 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 17:34:17,594 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 17:34:17,595 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 17:34:18,068 - config_manager - INFO - 配置已保存
+2025-02-16 17:34:20,905 - config_manager - INFO - 配置已保存
+2025-02-16 17:34:27,779 - window_manager - INFO - 捕获窗口: virtual_desktop.py - flash-toggle - Cursor (handle: 1843200)
+2025-02-16 17:34:46,188 - window_manager - INFO - 捕获窗口: Debug - 文件资源管理器 (handle: 3606862)
+2025-02-16 17:34:50,431 - window_manager - INFO - 为窗口 Debug - 文件资源管理器 设置快捷键: alt+q
+2025-02-16 17:34:50,431 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:34:51,268 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:34:51,268 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 17:34:51,269 - virtual_desktop - ERROR - COM 接口调用失败 (hwnd=3606862): exception: access violation writing 0x0000000000000000
+Traceback (most recent call last):
+  File "C:\Projects\flash-toggle\virtual_desktop.py", line 252, in is_window_on_current_desktop
+    ret = self._manager.contents.IsWindowOnCurrentVirtualDesktop(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: exception: access violation writing 0x0000000000000000
+2025-02-16 17:34:51,270 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 17:34:51,290 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 17:36:15,725 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 17:36:15,726 - gui - INFO - 1. 停止定时器...
+2025-02-16 17:36:15,727 - gui - INFO - 定时器已停止
+2025-02-16 17:36:15,727 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 17:36:15,728 - config_manager - INFO - 配置已保存
+2025-02-16 17:36:15,729 - config_manager - INFO - 配置已保存
+2025-02-16 17:36:15,730 - gui - INFO - 窗口配置已保存
+2025-02-16 17:36:15,730 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 17:36:15,820 - gui - INFO - 已显示窗口: Debug - 文件资源管理器
+2025-02-16 17:36:15,821 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 17:36:15,821 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:36:15,821 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 17:36:15,822 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 17:36:15,822 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 17:36:15,822 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 17:36:15,822 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 17:36:15,823 - config_manager - INFO - 配置已保存
+2025-02-16 17:36:15,824 - config_manager - INFO - 配置已保存
+2025-02-16 17:36:15,824 - gui - INFO - 主窗口状态已保存
+2025-02-16 17:36:15,824 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 17:36:15,882 - gui - INFO - 托盘图标已移除
+2025-02-16 17:36:15,883 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 17:36:15,883 - config_manager - INFO - 配置已保存
+2025-02-16 17:36:15,885 - config_manager - INFO - 配置已保存
+2025-02-16 17:36:15,885 - gui - INFO - 主窗口已关闭
+2025-02-16 17:36:15,885 - gui - INFO - 8. 退出应用程序...
+2025-02-16 17:36:15,885 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:36:15,885 - comtypes - DEBUG - Calling CoUninitialize()
+2025-02-16 17:36:15,887 - comtypes - DEBUG - CoUninitialize() done.
+2025-02-16 17:36:17,836 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 17:36:17,863 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:36:17,863 - virtual_desktop - DEBUG - 初始化 COM 环境
+2025-02-16 17:36:17,867 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:18,367 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:36:18,367 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:18,869 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:36:18,869 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:18,869 - virtual_desktop - ERROR - 初始化虚拟桌面管理器失败: exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:20,166 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 17:36:20,167 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 17:36:20,167 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 17:36:20,835 - config_manager - INFO - 配置已保存
+2025-02-16 17:36:20,855 - gui - INFO - 通过句柄找到窗口: virtual_desktop.py - flash-toggle - Cursor
+2025-02-16 17:36:20,857 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 17:36:20,858 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:36:20,858 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:36:20,859 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 17:36:20,859 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:36:20,860 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:36:20,860 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:21,361 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:36:21,361 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:21,862 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:36:21,863 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:21,863 - virtual_desktop - ERROR - 重新初始化失败: exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:21,863 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:36:21,863 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 17:36:21,864 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:36:21,864 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 17:36:21,864 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 17:36:51,613 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:36:51,614 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 17:36:51,614 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:36:51,614 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:36:51,615 - virtual_desktop - ERROR - CoCreateInstance 失败，错误码: 0x-7ffbfe10, Windows错误: 87
+2025-02-16 17:36:51,615 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): [WinError 87] 参数错误。
+2025-02-16 17:36:52,117 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:36:52,117 - virtual_desktop - ERROR - CoCreateInstance 失败，错误码: 0x-7ffbfe10, Windows错误: 87
+2025-02-16 17:36:52,117 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): [WinError 87] 参数错误。
+2025-02-16 17:36:52,618 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:36:52,618 - virtual_desktop - ERROR - CoCreateInstance 失败，错误码: 0x-7ffbfe10, Windows错误: 87
+2025-02-16 17:36:52,619 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): [WinError 87] 参数错误。
+2025-02-16 17:36:52,619 - virtual_desktop - ERROR - 重新初始化失败: [WinError 87] 参数错误。
+2025-02-16 17:36:52,619 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:36:52,619 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 17:36:52,643 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 17:36:57,766 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:36:57,766 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 17:36:57,766 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:36:57,766 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:36:57,766 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:58,267 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:36:58,267 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:58,769 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:36:58,769 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:58,769 - virtual_desktop - ERROR - 重新初始化失败: exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:36:58,770 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:36:58,770 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 17:36:58,770 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 17:36:58,770 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:36:58,871 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:36:58,871 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:37:03,960 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:37:03,960 - window_manager - INFO - 为窗口 Debug - 文件资源管理器 设置快捷键: alt+q
+2025-02-16 17:37:03,960 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:37:04,887 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:37:04,889 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 17:37:04,889 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:37:04,889 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:37:04,889 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:05,390 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:37:05,390 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:05,892 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:37:05,892 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:05,892 - virtual_desktop - ERROR - 重新初始化失败: exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:05,892 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:37:05,893 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 17:37:05,893 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 17:37:05,893 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:37:05,993 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:37:05,993 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:37:16,171 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:37:16,172 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x05cf0000
+  - IsVisible: False
+2025-02-16 17:37:16,172 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:37:16,172 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:37:16,172 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:16,673 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:37:16,674 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:17,174 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:37:17,174 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:17,175 - virtual_desktop - ERROR - 重新初始化失败: exception: access violation writing 0x00007FFB12029378
+2025-02-16 17:37:17,175 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:37:17,175 - window_manager - DEBUG - 窗口不可见且未最小化 (handle=3606862)
+2025-02-16 17:37:17,175 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 17:37:17,175 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 17:37:17,276 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:37:17,278 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 17:37:27,116 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 17:37:27,117 - gui - INFO - 1. 停止定时器...
+2025-02-16 17:37:27,120 - gui - INFO - 定时器已停止
+2025-02-16 17:37:27,120 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 17:37:27,122 - config_manager - INFO - 配置已保存
+2025-02-16 17:37:27,123 - config_manager - INFO - 配置已保存
+2025-02-16 17:37:27,124 - gui - INFO - 窗口配置已保存
+2025-02-16 17:37:27,124 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 17:37:27,195 - gui - INFO - 已显示窗口: Debug - 文件资源管理器
+2025-02-16 17:37:27,196 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 17:37:27,196 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:37:27,196 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 17:37:27,196 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 17:37:27,197 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 17:37:27,197 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 17:37:27,197 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 17:37:27,198 - config_manager - INFO - 配置已保存
+2025-02-16 17:37:27,199 - config_manager - INFO - 配置已保存
+2025-02-16 17:37:27,199 - gui - INFO - 主窗口状态已保存
+2025-02-16 17:37:27,199 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 17:37:27,209 - gui - INFO - 托盘图标已移除
+2025-02-16 17:37:27,210 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 17:37:27,216 - config_manager - INFO - 配置已保存
+2025-02-16 17:37:27,217 - config_manager - INFO - 配置已保存
+2025-02-16 17:37:27,217 - gui - INFO - 主窗口已关闭
+2025-02-16 17:37:27,219 - gui - INFO - 8. 退出应用程序...
+2025-02-16 17:37:27,219 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:37:27,220 - comtypes - DEBUG - Calling CoUninitialize()
+2025-02-16 17:37:27,220 - comtypes - DEBUG - CoUninitialize() done.
+2025-02-16 17:46:51,282 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 17:46:51,316 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:46:51,316 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:46:51,317 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:46:51,318 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 17:46:52,178 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 17:46:52,178 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 17:46:52,178 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 17:46:52,729 - config_manager - INFO - 配置已保存
+2025-02-16 17:46:52,741 - gui - INFO - 通过句柄找到窗口: virtual_desktop.py - flash-toggle - Cursor
+2025-02-16 17:46:52,741 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 17:46:52,742 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 17:46:52,742 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:46:52,743 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 17:46:52,743 - virtual_desktop - ERROR - COM 接口调用失败 (hwnd=3606862): call takes exactly 2 arguments (3 given)
+Traceback (most recent call last):
+  File "C:\Projects\flash-toggle\virtual_desktop.py", line 216, in is_window_on_current_desktop
+    ret = self._manager.IsWindowOnCurrentVirtualDesktop(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: call takes exactly 2 arguments (3 given)
+2025-02-16 17:46:52,745 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 17:46:52,745 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:46:52,745 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 17:46:52,746 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 17:47:01,913 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:47:01,914 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 17:47:01,914 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:47:01,914 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:47:01,914 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:01,914 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:01,914 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:01,916 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:02,416 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:47:02,416 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:02,416 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:02,417 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:02,417 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:02,918 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:47:02,918 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:02,918 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:02,918 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:02,919 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:02,919 - virtual_desktop - ERROR - 重新初始化失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:02,919 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:47:02,919 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 17:47:02,929 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 17:47:05,002 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:47:05,003 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 17:47:05,003 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:47:05,004 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:47:05,004 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:05,004 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:05,004 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:05,004 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:05,506 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:47:05,506 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:05,506 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:05,507 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:05,507 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:06,008 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:47:06,008 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:06,008 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:06,008 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:06,008 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:06,009 - virtual_desktop - ERROR - 重新初始化失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:06,009 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:47:06,009 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 17:47:06,009 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 17:47:06,009 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:47:06,009 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 17:47:06,024 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 17:47:08,563 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:47:08,563 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 17:47:08,564 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:47:08,564 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:47:08,564 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:08,564 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:08,565 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:08,565 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:09,065 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:47:09,065 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:09,065 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:09,065 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:09,066 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:09,567 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:47:09,567 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:09,567 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:09,567 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:09,568 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:09,568 - virtual_desktop - ERROR - 重新初始化失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:09,568 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:47:09,568 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 17:47:09,592 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 17:47:11,149 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:47:11,150 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 17:47:11,150 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:47:11,150 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:47:11,151 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:11,151 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:11,151 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:11,152 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:11,653 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:47:11,653 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:11,653 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:11,653 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:11,653 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:12,155 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:47:12,155 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:12,155 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:12,156 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:12,156 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:12,156 - virtual_desktop - ERROR - 重新初始化失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:12,156 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:47:12,157 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 17:47:12,157 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 17:47:12,157 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 17:47:12,158 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 17:47:12,177 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 17:47:13,483 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 17:47:13,484 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 17:47:13,484 - virtual_desktop - WARNING - 虚拟桌面管理器接口无效，尝试重新初始化...
+2025-02-16 17:47:13,484 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 1 次)
+2025-02-16 17:47:13,484 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:13,485 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:13,485 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:13,485 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 1/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:13,986 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 2 次)
+2025-02-16 17:47:13,986 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:13,986 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:13,987 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:13,987 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 2/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:14,488 - virtual_desktop - DEBUG - 尝试初始化 COM 对象 (第 3 次)
+2025-02-16 17:47:14,488 - comtypes.client - DEBUG - {AA509086-5CA9-4C25-8F95-589D3C07B48A} -> {AA509086-5CA9-4C25-8F95-589D3C07B48A}
+2025-02-16 17:47:14,488 - comtypes.client - DEBUG - CoCreateInstance({AA509086-5CA9-4C25-8F95-589D3C07B48A}, clsctx=7, interface=<class 'virtual_desktop.IVirtualDesktopManager'>)
+2025-02-16 17:47:14,488 - virtual_desktop - ERROR - 创建 COM 对象失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:14,489 - virtual_desktop - ERROR - 初始化 COM 对象失败 (尝试 3/3): [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:14,489 - virtual_desktop - ERROR - 重新初始化失败: [WinError -2147221008] 尚未调用 CoInitialize。
+2025-02-16 17:47:14,489 - virtual_desktop - WARNING - 虚拟桌面管理器初始化失败，假定窗口在当前桌面
+2025-02-16 17:47:14,489 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 17:47:14,506 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 17:47:19,581 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 17:47:19,581 - gui - INFO - 1. 停止定时器...
+2025-02-16 17:47:19,581 - gui - INFO - 定时器已停止
+2025-02-16 17:47:19,582 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 17:47:19,583 - config_manager - INFO - 配置已保存
+2025-02-16 17:47:19,583 - config_manager - INFO - 配置已保存
+2025-02-16 17:47:19,584 - gui - INFO - 窗口配置已保存
+2025-02-16 17:47:19,584 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 17:47:19,664 - gui - INFO - 已显示窗口: Debug - 文件资源管理器
+2025-02-16 17:47:19,664 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 17:47:19,666 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 17:47:19,666 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 17:47:19,666 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 17:47:19,666 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 17:47:19,667 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 17:47:19,667 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 17:47:19,668 - config_manager - INFO - 配置已保存
+2025-02-16 17:47:19,669 - config_manager - INFO - 配置已保存
+2025-02-16 17:47:19,669 - gui - INFO - 主窗口状态已保存
+2025-02-16 17:47:19,669 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 17:47:19,674 - gui - INFO - 托盘图标已移除
+2025-02-16 17:47:19,674 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 17:47:19,681 - gui - INFO - 主窗口已关闭
+2025-02-16 17:47:19,682 - gui - INFO - 8. 退出应用程序...
+2025-02-16 17:47:19,682 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 17:47:19,682 - comtypes - DEBUG - Calling CoUninitialize()
+2025-02-16 17:47:19,683 - comtypes - DEBUG - CoUninitialize() done.
+2025-02-16 18:29:03,088 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 18:29:03,114 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 18:29:03,124 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 18:29:03,944 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 18:29:03,944 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 18:29:03,945 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 18:29:04,476 - config_manager - INFO - 配置已保存
+2025-02-16 18:29:04,504 - gui - INFO - 通过句柄找到窗口: virtual_desktop.py - flash-toggle - Cursor
+2025-02-16 18:29:04,505 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 18:29:04,505 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 18:29:04,506 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:29:04,506 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:29:04,537 - virtual_desktop - ERROR - 检查窗口虚拟桌面状态失败 (hwnd=3606862): No method matches given arguments for VirtualDesktopManager.IsWindowOnCurrentVirtualDesktop: (<class 'int'>)
+Python.Runtime.PythonException: 'int' value cannot be converted to System.IntPtr
+
+The above exception was the direct cause of the following exception:
+
+System.ArgumentException: 'int' value cannot be converted to System.IntPtr in method Boolean IsWindowOnCurrentVirtualDesktop(IntPtr) ---> Python.Runtime.PythonException: 'int' value cannot be converted to System.IntPtr
+   --- 内部异常堆栈跟踪的结尾 ---
+
+The above exception was the direct cause of the following exception:
+
+System.AggregateException: 发生一个或多个错误。 ---> System.ArgumentException: 'int' value cannot be converted to System.IntPtr in method Boolean IsWindowOnCurrentVirtualDesktop(IntPtr) ---> Python.Runtime.PythonException: 'int' value cannot be converted to System.IntPtr
+   --- 内部异常堆栈跟踪的结尾 ---
+   --- 内部异常堆栈跟踪的结尾 ---
+---> (内部异常 #0) System.ArgumentException: 'int' value cannot be converted to System.IntPtr in method Boolean IsWindowOnCurrentVirtualDesktop(IntPtr) ---> Python.Runtime.PythonException: 'int' value cannot be converted to System.IntPtr
+   --- 内部异常堆栈跟踪的结尾 ---<---
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\flash-toggle\virtual_desktop.py", line 143, in is_window_on_current_desktop
+    result = self._manager.IsWindowOnCurrentVirtualDesktop(hwnd)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No method matches given arguments for VirtualDesktopManager.IsWindowOnCurrentVirtualDesktop: (<class 'int'>)
+2025-02-16 18:29:04,539 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:29:04,539 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:29:04,539 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:29:04,540 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:30:00,170 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 18:30:00,171 - gui - INFO - 1. 停止定时器...
+2025-02-16 18:30:00,172 - gui - INFO - 定时器已停止
+2025-02-16 18:30:00,172 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 18:30:00,173 - config_manager - INFO - 配置已保存
+2025-02-16 18:30:00,174 - config_manager - INFO - 配置已保存
+2025-02-16 18:30:00,174 - gui - INFO - 窗口配置已保存
+2025-02-16 18:30:00,174 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 18:30:00,175 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 18:30:00,175 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 18:30:00,175 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 18:30:00,175 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 18:30:00,176 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 18:30:00,176 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 18:30:00,176 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 18:30:00,177 - config_manager - INFO - 配置已保存
+2025-02-16 18:30:00,178 - config_manager - INFO - 配置已保存
+2025-02-16 18:30:00,179 - gui - INFO - 主窗口状态已保存
+2025-02-16 18:30:00,179 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 18:30:00,184 - gui - INFO - 托盘图标已移除
+2025-02-16 18:30:00,185 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 18:30:00,269 - gui - INFO - 主窗口已关闭
+2025-02-16 18:30:00,270 - gui - INFO - 8. 退出应用程序...
+2025-02-16 18:30:00,279 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 18:30:26,954 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 18:30:26,991 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 18:30:27,003 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 18:30:28,015 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 18:30:28,016 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 18:30:28,016 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 18:30:28,671 - config_manager - INFO - 配置已保存
+2025-02-16 18:30:28,696 - gui - INFO - 通过句柄找到窗口: virtual_desktop.py - flash-toggle - Cursor
+2025-02-16 18:30:28,697 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 18:30:28,697 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 18:30:32,165 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:30:32,165 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:30:32,175 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:30:32,175 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:30:32,182 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:30:34,158 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:30:34,158 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:30:34,159 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:30:34,159 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 18:30:34,159 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:30:34,159 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:30:34,160 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:30:34,171 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:30:46,625 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:30:46,626 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:30:46,627 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:30:46,627 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:30:46,633 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:30:47,088 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:30:47,089 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:30:47,090 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:30:47,090 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 18:30:47,090 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:30:47,091 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:30:47,091 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:30:47,129 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:30:54,978 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:30:54,978 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:30:54,979 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 不在当前桌面
+2025-02-16 18:30:54,979 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=3606862)
+2025-02-16 18:30:54,979 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:30:54,980 - window_manager - DEBUG - 切换前状态: (-32000, -32000, -31824, -31970)
+2025-02-16 18:30:55,088 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:30:55,088 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-32000, -32000, -31824, -31970)
+  - 可见性: 0
+2025-02-16 18:31:05,168 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:31:05,169 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:31:05,170 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:31:05,170 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 18:31:05,170 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:31:05,170 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:31:07,694 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:31:07,695 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:31:07,695 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:31:07,696 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 18:31:07,696 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:31:07,696 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:31:07,696 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:31:07,708 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:31:10,795 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:31:10,795 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:31:10,796 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:31:10,796 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:31:10,809 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:31:11,855 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:31:11,856 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:31:11,856 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:31:11,857 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 18:31:11,857 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:31:11,858 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:31:11,858 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:31:11,873 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:31:12,400 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:31:12,401 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:31:12,402 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:31:12,402 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:31:12,418 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:31:14,590 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 18:31:14,590 - gui - INFO - 1. 停止定时器...
+2025-02-16 18:31:14,591 - gui - INFO - 定时器已停止
+2025-02-16 18:31:14,592 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 18:31:14,593 - config_manager - INFO - 配置已保存
+2025-02-16 18:31:14,594 - config_manager - INFO - 配置已保存
+2025-02-16 18:31:14,594 - gui - INFO - 窗口配置已保存
+2025-02-16 18:31:14,595 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 18:31:14,717 - gui - INFO - 已显示窗口: Debug - 文件资源管理器
+2025-02-16 18:31:14,717 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 18:31:14,717 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 18:31:14,717 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 18:31:14,718 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 18:31:14,718 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 18:31:14,718 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 18:31:14,718 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 18:31:14,720 - config_manager - INFO - 配置已保存
+2025-02-16 18:31:14,720 - config_manager - INFO - 配置已保存
+2025-02-16 18:31:14,720 - gui - INFO - 主窗口状态已保存
+2025-02-16 18:31:14,721 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 18:31:14,730 - gui - INFO - 托盘图标已移除
+2025-02-16 18:31:14,730 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 18:31:14,734 - gui - INFO - 主窗口已关闭
+2025-02-16 18:31:14,735 - gui - INFO - 8. 退出应用程序...
+2025-02-16 18:31:14,735 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
+2025-02-16 18:32:29,988 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 18:32:30,027 - virtual_desktop - DEBUG - 尝试初始化虚拟桌面管理器 (第 1 次)
+2025-02-16 18:32:30,037 - virtual_desktop - INFO - 虚拟桌面管理器初始化成功
+2025-02-16 18:32:30,986 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 18:32:30,986 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 18:32:30,987 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 18:32:31,490 - config_manager - INFO - 配置已保存
+2025-02-16 18:32:31,497 - gui - INFO - 通过句柄找到窗口: Debug - 文件资源管理器
+2025-02-16 18:32:31,498 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 18:32:31,499 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:32:31,499 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:32:31,588 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:32:31,588 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:32:31,588 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:32:31,589 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:32:31,589 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:32:46,445 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:32:46,445 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x34cf0000
+  - IsVisible: True
+2025-02-16 18:32:46,448 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:32:46,448 - window_manager - INFO - 准备隐藏窗口: Debug - 文件资源管理器
+2025-02-16 18:32:46,473 - window_manager - INFO - 隐藏窗口成功: Debug - 文件资源管理器
+2025-02-16 18:32:50,937 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:32:50,938 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 2, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-32000, -32000, -31824, -31970)
+  - Style: 0x24cf0000
+  - IsVisible: False
+2025-02-16 18:32:50,939 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 在当前桌面
+2025-02-16 18:32:50,940 - window_manager - DEBUG - 窗口已最小化 (handle=3606862)
+2025-02-16 18:32:50,941 - window_manager - INFO - 准备显示并激活窗口: Debug - 文件资源管理器
+2025-02-16 18:32:50,941 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:32:50,941 - window_manager - WARNING - 无法激活窗口，尝试仅显示: Debug - 文件资源管理器
+2025-02-16 18:32:50,963 - window_manager - INFO - 窗口已显示但无法激活: Debug - 文件资源管理器
+2025-02-16 18:32:56,568 - window_manager - INFO - 准备切换窗口 Debug - 文件资源管理器 (handle: 3606862) 的显示状态
+2025-02-16 18:32:56,569 - window_manager - DEBUG - 当前窗口状态:
+  - Placement: (2, 3, (-32000, -32000), (-1, -1), (-8, -8, 2568, 1395))
+  - Rect: (-8, -8, 2568, 1395)
+  - Style: 0x15cf0000
+  - IsVisible: True
+2025-02-16 18:32:56,569 - virtual_desktop - DEBUG - 窗口虚拟桌面检查成功 (hwnd=3606862): 不在当前桌面
+2025-02-16 18:32:56,569 - window_manager - DEBUG - 虚拟桌面 API 检测到窗口不在当前桌面 (handle=3606862)
+2025-02-16 18:32:56,570 - window_manager - INFO - 窗口 Debug - 文件资源管理器 在其他虚拟桌面，尝试切换...
+2025-02-16 18:32:56,570 - window_manager - DEBUG - 切换前状态: (-8, -8, 2568, 1395)
+2025-02-16 18:32:56,682 - window_manager - DEBUG - 设置前台窗口失败: module 'win32api' has no attribute 'AttachThreadInput'
+2025-02-16 18:32:56,682 - window_manager - DEBUG - 切换后状态:
+  - 结果: False
+  - 位置: (-8, -8, 2568, 1395)
+  - 可见性: 0
+2025-02-16 18:33:38,600 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 18:33:38,601 - gui - INFO - 1. 停止定时器...
+2025-02-16 18:33:38,601 - gui - INFO - 定时器已停止
+2025-02-16 18:33:38,601 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 18:33:38,602 - config_manager - INFO - 配置已保存
+2025-02-16 18:33:38,602 - gui - INFO - 窗口配置已保存
+2025-02-16 18:33:38,603 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 18:33:38,603 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 18:33:38,603 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 18:33:38,603 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 18:33:38,603 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 18:33:38,604 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 18:33:38,604 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop'
+2025-02-16 18:33:38,604 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 18:33:38,605 - config_manager - INFO - 配置已保存
+2025-02-16 18:33:38,606 - config_manager - INFO - 配置已保存
+2025-02-16 18:33:38,606 - gui - INFO - 主窗口状态已保存
+2025-02-16 18:33:38,606 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 18:33:38,614 - gui - INFO - 托盘图标已移除
+2025-02-16 18:33:38,614 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 18:33:38,645 - gui - INFO - 主窗口已关闭
+2025-02-16 18:33:38,646 - gui - INFO - 8. 退出应用程序...
+2025-02-16 18:33:38,646 - gui - INFO - === 程序退出流程完成，即将强制退出 ===
