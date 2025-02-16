@@ -34,3 +34,4 @@ wheels/
 
 # Project specific
 config.json 
+flash_toggle.log
