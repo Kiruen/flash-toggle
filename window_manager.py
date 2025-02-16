@@ -16,9 +16,13 @@
 
 import win32gui
 import win32con
+import win32api
+import win32process
+import ctypes
 from typing import Dict, Tuple, Optional
 import logging
 from dataclasses import dataclass
+import time
 
 @dataclass
 class WindowInfo:
@@ -66,6 +70,50 @@ class WindowManager:
             self._logger.error(f"捕获窗口失败: {str(e)}")
             return None
             
+    def _try_set_foreground_window(self, handle: int) -> bool:
+        """
+        尝试将窗口设置为前台窗口
+        
+        Args:
+            handle: 窗口句柄
+            
+        Returns:
+            bool: 是否成功
+        """
+        try:
+            # 获取当前前台窗口的线程ID
+            foreground_window = win32gui.GetForegroundWindow()
+            foreground_thread_id = win32process.GetWindowThreadProcessId(foreground_window)[0]
+            
+            # 获取目标窗口的线程ID
+            target_thread_id = win32process.GetWindowThreadProcessId(handle)[0]
+            
+            # 连接输入状态
+            win32api.AttachThreadInput(target_thread_id, foreground_thread_id, True)
+            
+            try:
+                # 显示窗口并尝试激活
+                win32gui.ShowWindow(handle, win32con.SW_SHOW)
+                win32gui.SetWindowPos(handle, win32con.HWND_TOP, 0, 0, 0, 0,
+                                    win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
+                win32gui.BringWindowToTop(handle)
+                
+                # 尝试多次设置前台窗口
+                for _ in range(3):
+                    if win32gui.SetForegroundWindow(handle):
+                        return True
+                    time.sleep(0.1)
+                    
+                return False
+                
+            finally:
+                # 断开输入状态连接
+                win32api.AttachThreadInput(target_thread_id, foreground_thread_id, False)
+                
+        except Exception as e:
+            self._logger.debug(f"设置前台窗口失败: {str(e)}")
+            return False
+            
     def toggle_window_visibility(self, handle: int) -> bool:
         """
         切换窗口的显示状态
@@ -81,20 +129,31 @@ class WindowManager:
                 return False
                 
             window = self._windows[handle]
+            
+            # 检查窗口是否仍然有效
+            if not win32gui.IsWindow(handle):
+                self._logger.warning(f"窗口已失效: {window.title}")
+                return False
+                
             if window.is_visible:
                 # 隐藏窗口
                 win32gui.ShowWindow(handle, win32con.SW_HIDE)
                 window.is_visible = False
                 self._logger.info(f"隐藏窗口: {window.title}")
+                return True
             else:
-                # 显示窗口
-                win32gui.ShowWindow(handle, win32con.SW_SHOW)
-                win32gui.SetForegroundWindow(handle)
-                window.is_visible = True
-                self._logger.info(f"显示窗口: {window.title}")
-                
-            return True
-            
+                # 显示并激活窗口
+                if self._try_set_foreground_window(handle):
+                    window.is_visible = True
+                    self._logger.info(f"显示窗口: {window.title}")
+                    return True
+                else:
+                    # 如果无法激活，至少尝试显示窗口
+                    win32gui.ShowWindow(handle, win32con.SW_SHOW)
+                    window.is_visible = True
+                    self._logger.warning(f"窗口已显示但无法激活: {window.title}")
+                    return True
+                    
         except Exception as e:
             self._logger.error(f"切换窗口可见性失败: {str(e)}")
             return False

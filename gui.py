@@ -17,14 +17,19 @@
 from PyQt5.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                            QPushButton, QLineEdit, QListWidget, QListWidgetItem,
                            QLabel, QSystemTrayIcon, QMenu, QMessageBox, QTabWidget,
-                           QGridLayout, QCheckBox)
-from PyQt5.QtCore import Qt, QSize, pyqtSignal, QPoint, QSize
-from PyQt5.QtGui import QIcon, QCloseEvent
+                           QGridLayout, QCheckBox, QStatusBar, QApplication)
+from PyQt5.QtCore import Qt, QSize, pyqtSignal, QPoint, QSize, QTimer
+from PyQt5.QtGui import QIcon, QCloseEvent, QColor, QBrush
 import keyboard
 from typing import Optional, Dict, Callable
 import logging
 from dataclasses import dataclass
 import win32gui
+import sys
+import win32con
+import os
+import time
+import signal
 
 from window_manager import WindowManager, WindowInfo
 from hotkey_manager import HotkeyManager
@@ -187,10 +192,20 @@ class MainWindow(QMainWindow):
         # 恢复保存的窗口配置
         self._restore_saved_windows(config)
         
+        # 设置定时检查窗口状态
+        self._check_timer = QTimer(self)
+        self._check_timer.timeout.connect(self._check_windows_status)
+        self._check_timer.start(5000)  # 每5秒检查一次
+        
     def _init_ui(self):
         """初始化用户界面"""
         self.setWindowTitle("Flash-Toggle")
         self.setMinimumSize(500, 600)
+        
+        # 创建状态栏
+        self.statusBar = QStatusBar()
+        self.setStatusBar(self.statusBar)
+        self.show_status("就绪")
         
         # 创建中央部件和标签页
         central_widget = QWidget()
@@ -241,9 +256,19 @@ class MainWindow(QMainWindow):
         
         # 创建底部按钮
         button_layout = QHBoxLayout()
+        
         clear_btn = QPushButton("清除列表")
         clear_btn.clicked.connect(self._on_clear_list)
         button_layout.addWidget(clear_btn)
+        
+        remove_btn = QPushButton("删除选中")
+        remove_btn.clicked.connect(self._on_remove_window)
+        button_layout.addWidget(remove_btn)
+        
+        cleanup_btn = QPushButton("清理无效窗口")
+        cleanup_btn.clicked.connect(self._cleanup_invalid_windows)
+        button_layout.addWidget(cleanup_btn)
+        
         layout.addLayout(button_layout)
         
     def _init_hotkey_tab(self, tab: QWidget):
@@ -307,7 +332,7 @@ class MainWindow(QMainWindow):
             
             # 保存配置
             self._config_manager.update_global_hotkey(name, hotkey)
-            QMessageBox.information(self, "成功", "快捷键设置成功")
+            self.show_status("快捷键设置成功")
             
     def _reset_global_hotkey(self, name: str):
         """
@@ -380,7 +405,7 @@ class MainWindow(QMainWindow):
         """处理设置快捷键事件"""
         item = self.window_list.currentItem()
         if not item:
-            QMessageBox.warning(self, "错误", "请先选择一个窗口")
+            self.show_status("请先选择一个窗口")
             return
             
         handle = item.data(Qt.UserRole)
@@ -390,7 +415,7 @@ class MainWindow(QMainWindow):
             
         hotkey = self.hotkey_input.text().strip()
         if not hotkey:
-            QMessageBox.warning(self, "错误", "请输入快捷键")
+            self.show_status("请输入快捷键")
             return
             
         # 如果已有快捷键，先解除绑定
@@ -404,7 +429,7 @@ class MainWindow(QMainWindow):
                 lambda: self._window_manager.toggle_window_visibility(handle)
             )
             self._update_window_item(handle)
-            QMessageBox.information(self, "成功", "快捷键设置成功")
+            self.show_status("快捷键设置成功")
             
     def _on_clear_hotkey(self):
         """处理清除快捷键事件"""
@@ -471,29 +496,120 @@ class MainWindow(QMainWindow):
         self.tray_icon.show()
         
     def _on_quit(self):
-        """处理退出事件"""
-        # 保存窗口配置
-        for handle, window in self._window_manager._windows.items():
-            self._config_manager.save_window_config(window.title, {
-                "hotkey": window.hotkey,
-                "is_visible": window.is_visible,
-                "is_topmost": window.is_topmost
-            })
+        """处理退出事件，确保程序完全退出并清理所有资源"""
+        try:
+            self._logger.info("=== 开始程序退出流程 ===")
             
-        # 清理资源
-        self._hotkey_manager.clear_all_hotkeys()
-        self.tray_icon.hide()
-        self.close()
-        QApplication.quit()  # 确保应用程序完全退出
+            # 1. 停止定时器
+            self._logger.info("1. 停止定时器...")
+            if hasattr(self, '_check_timer'):
+                self._check_timer.stop()
+                self._check_timer = None
+                self._logger.info("定时器已停止")
+            
+            # 2. 保存窗口配置
+            self._logger.info("2. 保存窗口配置...")
+            for handle, window in self._window_manager._windows.items():
+                self._config_manager.save_window_config(window.title, {
+                    "hotkey": window.hotkey,
+                    "is_visible": window.is_visible,
+                    "is_topmost": window.is_topmost
+                })
+            self._logger.info("窗口配置已保存")
+            
+            # 3. 恢复所有窗口状态
+            self._logger.info("3. 恢复所有窗口状态...")
+            for handle, window in self._window_manager._windows.items():
+                try:
+                    if not window.is_visible and win32gui.IsWindow(handle):
+                        win32gui.ShowWindow(handle, win32con.SW_SHOW)
+                        self._logger.info(f"已显示窗口: {window.title}")
+                    if window.is_topmost and win32gui.IsWindow(handle):
+                        win32gui.SetWindowPos(
+                            handle, win32con.HWND_NOTOPMOST, 0, 0, 0, 0,
+                            win32con.SWP_NOMOVE | win32con.SWP_NOSIZE
+                        )
+                        self._logger.info(f"已取消置顶: {window.title}")
+                except Exception as e:
+                    self._logger.error(f"恢复窗口状态失败: {window.title}, 错误: {str(e)}")
+            
+            # 4. 清理所有快捷键
+            self._logger.info("4. 清理所有快捷键...")
+            try:
+                # 先清理所有窗口的快捷键
+                for handle, window in self._window_manager._windows.items():
+                    if window.hotkey:
+                        self._hotkey_manager.unregister_hotkey(window.hotkey)
+                
+                # 清理所有全局快捷键
+                for hotkey in self._global_hotkeys.values():
+                    if hotkey.current:
+                        self._hotkey_manager.unregister_hotkey(hotkey.current)
+                    self._hotkey_manager.unregister_hotkey(hotkey.default)
+                
+                # 强制清理所有keyboard库的钩子
+                keyboard._listener.stop_if_exists()
+                keyboard._listener = None
+                keyboard._pressed_events.clear()
+                keyboard._physically_pressed_keys.clear()
+                keyboard._logically_pressed_keys.clear()
+                keyboard._hotkeys.clear()
+                keyboard._word_listeners.clear()
+                keyboard._word_buffer.clear()
+                
+                self._logger.info("快捷键已清理")
+            except Exception as e:
+                self._logger.error(f"清理快捷键时发生错误: {str(e)}")
+            
+            # 5. 保存主窗口状态
+            self._logger.info("5. 保存主窗口状态...")
+            self._save_window_state()
+            self._logger.info("主窗口状态已保存")
+            
+            # 6. 移除托盘图标
+            self._logger.info("6. 移除托盘图标...")
+            if hasattr(self, 'tray_icon'):
+                try:
+                    self.tray_icon.hide()
+                    self.tray_icon.setParent(None)
+                    self.tray_icon.deleteLater()
+                    self.tray_icon = None
+                    self._logger.info("托盘图标已移除")
+                except Exception as e:
+                    self._logger.error(f"移除托盘图标时发生错误: {str(e)}")
+            
+            # 7. 关闭主窗口
+            self._logger.info("7. 关闭主窗口...")
+            self.hide()
+            self.close()
+            self._logger.info("主窗口已关闭")
+            
+            # 8. 确保程序完全退出
+            self._logger.info("8. 退出应用程序...")
+            app = QApplication.instance()
+            app.closeAllWindows()
+            
+            # 9. 强制结束进程
+            self._logger.info("=== 程序退出流程完成，即将强制退出 ===")
+            
+            # 使用 sys.exit() 而不是 os._exit()，让Python有机会清理资源
+            sys.exit(0)
+            
+        except Exception as e:
+            self._logger.error(f"退出程序时发生错误: {str(e)}")
+            sys.exit(1)
         
     def closeEvent(self, event: QCloseEvent):
         """处理窗口关闭事件"""
-        if self.tray_icon.isVisible():
-            self.hide()
-            event.ignore()
-        else:
-            self._save_window_state()
-            event.accept()
+        if event.spontaneous():  # 用户点击关闭按钮
+            if self.tray_icon.isVisible():
+                self.hide()
+                event.ignore()
+                return
+                
+        # 程序真正退出时保存窗口状态
+        self._save_window_state()
+        event.accept()
             
     def _on_always_on_top_changed(self, state):
         """处理主窗口置顶状态变更"""
@@ -558,6 +674,17 @@ class MainWindow(QMainWindow):
                         lambda h=hwnd: self._window_manager.toggle_window_visibility(h)
                     )
                     
+                # 恢复窗口状态
+                if window_info.is_topmost:
+                    self._window_manager.toggle_window_topmost(hwnd)
+                if not window_info.is_visible:
+                    self._window_manager.toggle_window_visibility(hwnd)
+            else:
+                # 将未找到的窗口也添加到列表，但标记为无效
+                item = QListWidgetItem(f"{title} (未找到)")
+                item.setForeground(QBrush(QColor("red")))
+                self.window_list.addItem(item)
+                
     def _save_window_state(self):
         """保存窗口状态"""
         self._config_manager.update_main_window_config("position", [
@@ -588,3 +715,89 @@ class MainWindow(QMainWindow):
                 
         except Exception as e:
             self._logger.error(f"切换窗口置顶状态失败: {str(e)}") 
+
+    def show_status(self, message: str, timeout: int = 3000):
+        """
+        显示状态栏消息
+        
+        Args:
+            message: 消息内容
+            timeout: 显示时间（毫秒）
+        """
+        self.statusBar.showMessage(message, timeout)
+        
+    def _check_windows_status(self):
+        """检查所有窗口的状态"""
+        invalid_windows = []
+        for i in range(self.window_list.count()):
+            item = self.window_list.item(i)
+            handle = item.data(Qt.UserRole)
+            window_info = self._window_manager.get_window_info(handle)
+            
+            if not window_info or not win32gui.IsWindow(handle):
+                # 尝试通过标题重新查找窗口
+                title = item.text().split(" (")[0]  # 获取原始标题
+                new_hwnd = win32gui.FindWindow(None, title)
+                
+                if new_hwnd and win32gui.IsWindow(new_hwnd):
+                    # 更新窗口句柄
+                    window_info.handle = new_hwnd
+                    self._window_manager._windows[new_hwnd] = window_info
+                    del self._window_manager._windows[handle]
+                    item.setData(Qt.UserRole, new_hwnd)
+                    self.show_status(f"已更新窗口句柄: {title}")
+                else:
+                    # 标记为无效窗口
+                    item.setForeground(QBrush(QColor("red")))
+                    invalid_windows.append(title)
+                    
+        if invalid_windows:
+            self.show_status(f"发现 {len(invalid_windows)} 个无效窗口，可以点击\"清理无效窗口\"按钮清理")
+            
+    def _cleanup_invalid_windows(self):
+        """清理无效窗口"""
+        invalid_count = 0
+        for i in range(self.window_list.count() - 1, -1, -1):
+            item = self.window_list.item(i)
+            handle = item.data(Qt.UserRole)
+            title = item.text().split(" (")[0]
+            
+            if not win32gui.IsWindow(handle):
+                # 尝试通过标题重新查找窗口
+                new_hwnd = win32gui.FindWindow(None, title)
+                if not new_hwnd or not win32gui.IsWindow(new_hwnd):
+                    # 删除无效窗口
+                    self.window_list.takeItem(i)
+                    if handle in self._window_manager._windows:
+                        del self._window_manager._windows[handle]
+                    self._config_manager.remove_window_config(title)
+                    invalid_count += 1
+                    
+        if invalid_count > 0:
+            self.show_status(f"已清理 {invalid_count} 个无效窗口")
+        else:
+            self.show_status("没有发现无效窗口")
+            
+    def _on_remove_window(self):
+        """删除选中的窗口"""
+        item = self.window_list.currentItem()
+        if not item:
+            self.show_status("请先选择一个窗口")
+            return
+            
+        handle = item.data(Qt.UserRole)
+        window_info = self._window_manager.get_window_info(handle)
+        if window_info:
+            # 解除快捷键绑定
+            if window_info.hotkey:
+                self._hotkey_manager.unregister_hotkey(window_info.hotkey)
+                
+            # 从配置文件中移除
+            self._config_manager.remove_window_config(window_info.title)
+            
+            # 从管理器中移除
+            self._window_manager.remove_window(handle)
+            
+        # 从列表中移除
+        self.window_list.takeItem(self.window_list.row(item))
+        self.show_status("已删除选中窗口") 

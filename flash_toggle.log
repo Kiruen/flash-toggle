@@ -162,3 +162,135 @@
 2025-02-16 14:24:07,214 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
 2025-02-16 14:24:09,833 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
 2025-02-16 14:24:14,665 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:26:46,547 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:26:47,425 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:26:47,425 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 14:26:47,426 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 14:26:47,935 - config_manager - INFO - 配置已保存
+2025-02-16 14:38:18,133 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:38:19,319 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:38:19,319 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 14:38:19,319 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 14:38:19,714 - config_manager - INFO - 配置已保存
+2025-02-16 14:38:19,715 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 14:38:19,839 - window_manager - INFO - 取消置顶窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:38:24,285 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:38:24,735 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:38:50,271 - window_manager - INFO - 捕获窗口: 微信 (handle: 3808054)
+2025-02-16 14:39:26,136 - window_manager - INFO - 为窗口 微信 设置快捷键: space+w
+2025-02-16 14:39:26,136 - hotkey_manager - INFO - 成功注册快捷键: space+w
+2025-02-16 14:39:28,927 - window_manager - INFO - 隐藏窗口: 微信
+2025-02-16 14:39:29,893 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:31,380 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:32,446 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:32,865 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:33,627 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:36,390 - window_manager - INFO - 显示窗口: 微信
+2025-02-16 14:39:39,102 - window_manager - INFO - 隐藏窗口: 微信
+2025-02-16 14:39:39,488 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:40,161 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:40,712 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:41,132 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:41,465 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:39:42,254 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:40:19,015 - window_manager - INFO - 置顶窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:40:32,530 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:40:33,396 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:40:33,798 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:40:35,111 - window_manager - ERROR - 切换窗口可见性失败: (5, 'SetForegroundWindow', '拒绝访问。')
+2025-02-16 14:40:35,644 - window_manager - ERROR - 切换窗口可见性失败: (5, 'SetForegroundWindow', '拒绝访问。')
+2025-02-16 14:40:37,191 - window_manager - ERROR - 切换窗口可见性失败: (5, 'SetForegroundWindow', '拒绝访问。')
+2025-02-16 14:40:37,584 - window_manager - ERROR - 切换窗口可见性失败: (5, 'SetForegroundWindow', '拒绝访问。')
+2025-02-16 14:40:38,756 - window_manager - ERROR - 切换窗口可见性失败: (5, 'SetForegroundWindow', '拒绝访问。')
+2025-02-16 14:40:40,200 - window_manager - ERROR - 切换窗口可见性失败: (5, 'SetForegroundWindow', '拒绝访问。')
+2025-02-16 14:40:40,511 - window_manager - ERROR - 切换窗口可见性失败: (5, 'SetForegroundWindow', '拒绝访问。')
+2025-02-16 14:41:04,505 - window_manager - INFO - 取消置顶窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:41:18,695 - config_manager - INFO - 配置已保存
+2025-02-16 14:41:18,696 - config_manager - INFO - 配置已保存
+2025-02-16 14:42:29,158 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:42:30,066 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:42:30,471 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:43:57,404 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:43:58,554 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:43:58,554 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 14:43:58,554 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 14:43:59,017 - config_manager - INFO - 配置已保存
+2025-02-16 14:43:59,019 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 14:43:59,021 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:43:59,023 - hotkey_manager - INFO - 成功注册快捷键: space+w
+2025-02-16 14:43:59,134 - window_manager - WARNING - 窗口已显示但无法激活: 微信
+2025-02-16 14:44:02,795 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:03,192 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:03,733 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:04,021 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:04,251 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:04,484 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:09,199 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:10,009 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:11,666 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:11,999 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:16,112 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:16,474 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:18,174 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:18,517 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:44:49,941 - hotkey_manager - INFO - 成功解除快捷键绑定: space+w
+2025-02-16 14:44:49,942 - config_manager - INFO - 配置已保存
+2025-02-16 14:44:49,942 - window_manager - INFO - 移除窗口: 微信
+2025-02-16 14:44:56,998 - config_manager - INFO - 配置已保存
+2025-02-16 14:45:06,120 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:45:07,308 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:45:07,308 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 14:45:07,308 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 14:45:07,759 - config_manager - INFO - 配置已保存
+2025-02-16 14:45:07,760 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 14:45:09,277 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:45:09,803 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:45:14,880 - gui - INFO - 开始程序退出流程...
+2025-02-16 14:45:14,881 - config_manager - INFO - 配置已保存
+2025-02-16 14:47:05,378 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:47:06,599 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:47:06,600 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 14:47:06,600 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 14:47:07,058 - config_manager - INFO - 配置已保存
+2025-02-16 14:47:07,061 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 14:47:10,791 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 14:47:10,791 - gui - INFO - 1. 停止定时器...
+2025-02-16 14:47:10,791 - gui - INFO - 定时器已停止
+2025-02-16 14:47:10,793 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 14:47:10,794 - config_manager - INFO - 配置已保存
+2025-02-16 14:47:10,794 - gui - INFO - 窗口配置已保存
+2025-02-16 14:47:10,794 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 14:47:10,794 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 14:48:29,722 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:48:30,953 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:48:30,953 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 14:48:30,955 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 14:48:31,496 - config_manager - INFO - 配置已保存
+2025-02-16 14:48:31,496 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 14:48:32,966 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:48:33,339 - window_manager - WARNING - 窗口已显示但无法激活: gui.py - flash-toggle - Cursor
+2025-02-16 14:48:36,273 - gui - INFO - === 开始程序退出流程 ===
+2025-02-16 14:48:36,273 - gui - INFO - 1. 停止定时器...
+2025-02-16 14:48:36,276 - gui - INFO - 定时器已停止
+2025-02-16 14:48:36,276 - gui - INFO - 2. 保存窗口配置...
+2025-02-16 14:48:36,278 - config_manager - INFO - 配置已保存
+2025-02-16 14:48:36,278 - gui - INFO - 窗口配置已保存
+2025-02-16 14:48:36,278 - gui - INFO - 3. 恢复所有窗口状态...
+2025-02-16 14:48:36,278 - gui - INFO - 4. 清理所有快捷键...
+2025-02-16 14:48:36,279 - hotkey_manager - INFO - 成功解除快捷键绑定: alt+q
+2025-02-16 14:48:36,279 - hotkey_manager - INFO - 成功解除快捷键绑定: ctrl+shift+c
+2025-02-16 14:48:36,279 - hotkey_manager - INFO - 成功解除快捷键绑定: space+c
+2025-02-16 14:48:36,279 - hotkey_manager - INFO - 成功解除快捷键绑定: space+t
+2025-02-16 14:48:36,279 - gui - ERROR - 清理快捷键时发生错误: '_KeyboardListener' object has no attribute 'stop_if_exists'
+2025-02-16 14:48:36,279 - gui - INFO - 5. 保存主窗口状态...
+2025-02-16 14:48:36,281 - config_manager - INFO - 配置已保存
+2025-02-16 14:48:36,282 - config_manager - INFO - 配置已保存
+2025-02-16 14:48:36,283 - gui - INFO - 主窗口状态已保存
+2025-02-16 14:48:36,283 - gui - INFO - 6. 移除托盘图标...
+2025-02-16 14:48:36,319 - gui - INFO - 托盘图标已移除
+2025-02-16 14:48:36,319 - gui - INFO - 7. 关闭主窗口...
+2025-02-16 14:48:36,330 - config_manager - INFO - 配置已保存
+2025-02-16 14:48:36,331 - config_manager - INFO - 配置已保存
+2025-02-16 14:48:36,332 - gui - INFO - 主窗口已关闭
+2025-02-16 14:48:36,332 - gui - INFO - 8. 退出应用程序...
+2025-02-16 14:48:36,333 - gui - INFO - === 程序退出流程完成，即将强制退出 ===

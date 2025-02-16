@@ -6,14 +6,20 @@
     },
     "main_window": {
         "always_on_top": true,
-        "position": null,
-        "size": null
+        "position": [
+            960,
+            361
+        ],
+        "size": [
+            500,
+            600
+        ]
     },
     "saved_windows": {
         "gui.py - flash-toggle - Cursor": {
             "hotkey": "alt+q",
             "is_visible": true,
-            "is_topmost": true
+            "is_topmost": false
         }
     }
 }
