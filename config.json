@@ -1,0 +1,19 @@
+{
+    "global_hotkeys": {
+        "toggle_main": "ctrl+shift+c",
+        "capture": "space+c",
+        "toggle_topmost": "space+t"
+    },
+    "main_window": {
+        "always_on_top": true,
+        "position": null,
+        "size": null
+    },
+    "saved_windows": {
+        "gui.py - flash-toggle - Cursor": {
+            "hotkey": "alt+q",
+            "is_visible": true,
+            "is_topmost": true
+        }
+    }
+}

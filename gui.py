@@ -18,15 +18,17 @@ from PyQt5.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                            QPushButton, QLineEdit, QListWidget, QListWidgetItem,
                            QLabel, QSystemTrayIcon, QMenu, QMessageBox, QTabWidget,
                            QGridLayout, QCheckBox)
-from PyQt5.QtCore import Qt, QSize, pyqtSignal
-from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import Qt, QSize, pyqtSignal, QPoint, QSize
+from PyQt5.QtGui import QIcon, QCloseEvent
 import keyboard
 from typing import Optional, Dict, Callable
 import logging
 from dataclasses import dataclass
+import win32gui
 
 from window_manager import WindowManager, WindowInfo
 from hotkey_manager import HotkeyManager
+from config_manager import ConfigManager, AppConfig
 
 @dataclass
 class GlobalHotkey:
@@ -150,17 +152,28 @@ class MainWindow(QMainWindow):
         
         self._window_manager = window_manager
         self._hotkey_manager = hotkey_manager
+        self._config_manager = ConfigManager()
         self._logger = logging.getLogger(__name__)
+        
+        # 加载配置
+        config = self._config_manager.get_config()
         
         # 初始化全局快捷键配置
         self._global_hotkeys = {
             "toggle_main": GlobalHotkey(
-                "toggle_main", "显示/隐藏主窗口", "ctrl+shift+space", "",
+                "toggle_main", "显示/隐藏主窗口",
+                config.global_hotkeys["toggle_main"], "",
                 self._toggle_main_window
             ),
             "capture": GlobalHotkey(
-                "capture", "捕获当前窗口", "ctrl+shift+c", "",
+                "capture", "捕获当前窗口",
+                config.global_hotkeys["capture"], "",
                 self._on_capture_window
+            ),
+            "toggle_topmost": GlobalHotkey(
+                "toggle_topmost", "切换当前窗口置顶状态",
+                config.global_hotkeys["toggle_topmost"], "",
+                self._toggle_active_window_topmost
             )
         }
         
@@ -168,12 +181,16 @@ class MainWindow(QMainWindow):
         self._setup_tray_icon()
         self._setup_global_hotkeys()
         
+        # 恢复窗口状态
+        self._restore_window_state(config)
+        
+        # 恢复保存的窗口配置
+        self._restore_saved_windows(config)
+        
     def _init_ui(self):
         """初始化用户界面"""
         self.setWindowTitle("Flash-Toggle")
         self.setMinimumSize(500, 600)
-        # 默认设置窗口置顶
-        self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
         
         # 创建中央部件和标签页
         central_widget = QWidget()
@@ -287,6 +304,9 @@ class MainWindow(QMainWindow):
         if self._hotkey_manager.register_hotkey(hotkey, config.callback):
             self._hotkey_manager.unregister_hotkey(old_hotkey)
             config.current = hotkey
+            
+            # 保存配置
+            self._config_manager.update_global_hotkey(name, hotkey)
             QMessageBox.information(self, "成功", "快捷键设置成功")
             
     def _reset_global_hotkey(self, name: str):
@@ -452,32 +472,119 @@ class MainWindow(QMainWindow):
         
     def _on_quit(self):
         """处理退出事件"""
+        # 保存窗口配置
+        for handle, window in self._window_manager._windows.items():
+            self._config_manager.save_window_config(window.title, {
+                "hotkey": window.hotkey,
+                "is_visible": window.is_visible,
+                "is_topmost": window.is_topmost
+            })
+            
+        # 清理资源
         self._hotkey_manager.clear_all_hotkeys()
         self.tray_icon.hide()
         self.close()
+        QApplication.quit()  # 确保应用程序完全退出
         
-    def closeEvent(self, event):
-        """
-        重写关闭事件
-        
-        最小化到系统托盘而不是退出
-        """
+    def closeEvent(self, event: QCloseEvent):
+        """处理窗口关闭事件"""
         if self.tray_icon.isVisible():
             self.hide()
             event.ignore()
         else:
+            self._save_window_state()
             event.accept()
-
+            
     def _on_always_on_top_changed(self, state):
-        """
-        处理主窗口置顶状态变更
-        
-        Args:
-            state: 复选框状态
-        """
+        """处理主窗口置顶状态变更"""
+        is_top = state == Qt.Checked
         self.setWindowFlags(
             self.windowFlags() | Qt.WindowStaysOnTopHint
-            if state == Qt.Checked
+            if is_top
             else self.windowFlags() & ~Qt.WindowStaysOnTopHint
         )
-        self.show()  # 需要重新显示窗口以应用更改 
+        self.show()
+        
+        # 保存配置
+        self._config_manager.update_main_window_config("always_on_top", is_top)
+        
+    def _restore_window_state(self, config: AppConfig):
+        """
+        恢复窗口状态
+        
+        Args:
+            config: 应用程序配置
+        """
+        # 设置窗口置顶状态
+        self.always_on_top_checkbox.setChecked(config.main_window["always_on_top"])
+        self._on_always_on_top_changed(
+            Qt.Checked if config.main_window["always_on_top"] else Qt.Unchecked
+        )
+        
+        # 恢复窗口位置和大小
+        if config.main_window["position"]:
+            self.move(QPoint(*config.main_window["position"]))
+        if config.main_window["size"]:
+            self.resize(QSize(*config.main_window["size"]))
+            
+    def _restore_saved_windows(self, config: AppConfig):
+        """
+        恢复保存的窗口配置
+        
+        Args:
+            config: 应用程序配置
+        """
+        for title, window_config in config.saved_windows.items():
+            # 尝试找到窗口
+            hwnd = win32gui.FindWindow(None, title)
+            if hwnd and win32gui.IsWindow(hwnd):
+                # 创建窗口信息
+                window_info = WindowInfo(
+                    handle=hwnd,
+                    title=title,
+                    hotkey=window_config.get("hotkey", ""),
+                    is_visible=window_config.get("is_visible", True),
+                    is_topmost=window_config.get("is_topmost", False)
+                )
+                
+                # 添加到管理器
+                self._window_manager._windows[hwnd] = window_info
+                self._add_window_to_list(window_info)
+                
+                # 注册快捷键
+                if window_info.hotkey:
+                    self._hotkey_manager.register_hotkey(
+                        window_info.hotkey,
+                        lambda h=hwnd: self._window_manager.toggle_window_visibility(h)
+                    )
+                    
+    def _save_window_state(self):
+        """保存窗口状态"""
+        self._config_manager.update_main_window_config("position", [
+            self.pos().x(),
+            self.pos().y()
+        ])
+        self._config_manager.update_main_window_config("size", [
+            self.size().width(),
+            self.size().height()
+        ])
+        
+    def _toggle_active_window_topmost(self):
+        """切换当前活动窗口的置顶状态"""
+        try:
+            hwnd = win32gui.GetForegroundWindow()
+            if hwnd == self.winId():  # 忽略主窗口
+                return
+                
+            # 如果窗口未被管理，先捕获它
+            if hwnd not in self._window_manager._windows:
+                window_info = self._window_manager.capture_active_window()
+                if window_info:
+                    self._add_window_to_list(window_info)
+                    
+            # 切换置顶状态
+            if self._window_manager.toggle_window_topmost(hwnd):
+                self._update_window_item(hwnd)
+                
+        except Exception as e:
+            self._logger.error(f"切换窗口置顶状态失败: {str(e)}") 

@@ -66,3 +66,99 @@
 2025-02-16 14:11:18,463 - window_manager - INFO - 显示窗口: 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome
 2025-02-16 14:11:25,150 - hotkey_manager - INFO - 成功解除快捷键绑定: space+1
 2025-02-16 14:11:25,150 - window_manager - INFO - 为窗口 平时学的vs考试考的_哔哩哔哩_bilibili - Google Chrome 设置快捷键: 
+2025-02-16 14:19:28,999 - __main__ - INFO - Flash-Toggle 启动
+2025-02-16 14:19:30,399 - hotkey_manager - INFO - 成功注册快捷键: space+shift+space
+2025-02-16 14:19:30,399 - hotkey_manager - INFO - 成功注册快捷键: space+shift+c
+2025-02-16 14:19:30,400 - hotkey_manager - INFO - 成功注册快捷键: space+shift+t
+2025-02-16 14:19:30,799 - config_manager - INFO - 配置已保存
+2025-02-16 14:20:09,096 - hotkey_manager - INFO - 成功注册快捷键: space+w
+2025-02-16 14:20:09,097 - hotkey_manager - INFO - 成功解除快捷键绑定: space+shift+space
+2025-02-16 14:20:09,098 - config_manager - INFO - 配置已保存
+2025-02-16 14:20:20,621 - hotkey_manager - INFO - 成功注册快捷键: d+w
+2025-02-16 14:20:20,621 - hotkey_manager - INFO - 成功解除快捷键绑定: space+w
+2025-02-16 14:20:20,622 - config_manager - INFO - 配置已保存
+2025-02-16 14:20:36,745 - hotkey_manager - ERROR - 解除快捷键绑定失败: d+w, 错误: <bound method MainWindow._toggle_main_window of <gui.MainWindow object at 0x00000234E58B8CB0>>
+2025-02-16 14:20:36,748 - hotkey_manager - INFO - 成功注册快捷键: space+shift+space
+2025-02-16 14:20:47,897 - hotkey_manager - INFO - 成功注册快捷键: ctrl+shift+c
+2025-02-16 14:20:47,898 - hotkey_manager - INFO - 成功解除快捷键绑定: space+shift+space
+2025-02-16 14:20:47,898 - config_manager - INFO - 配置已保存
+2025-02-16 14:20:59,244 - hotkey_manager - INFO - 成功注册快捷键: space+c
+2025-02-16 14:20:59,244 - hotkey_manager - INFO - 成功解除快捷键绑定: space+shift+c
+2025-02-16 14:20:59,245 - config_manager - INFO - 配置已保存
+2025-02-16 14:21:09,912 - hotkey_manager - INFO - 成功注册快捷键: space+t
+2025-02-16 14:21:09,912 - hotkey_manager - INFO - 成功解除快捷键绑定: space+shift+t
+2025-02-16 14:21:09,914 - config_manager - INFO - 配置已保存
+2025-02-16 14:21:12,851 - window_manager - INFO - 捕获窗口: gui.py - flash-toggle - Cursor (handle: 532412)
+2025-02-16 14:21:12,854 - window_manager - INFO - 置顶窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:21:16,668 - window_manager - INFO - 取消置顶窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:21:33,665 - window_manager - INFO - 为窗口 gui.py - flash-toggle - Cursor 设置快捷键: space+q
+2025-02-16 14:21:33,665 - hotkey_manager - INFO - 成功注册快捷键: space+q
+2025-02-16 14:21:35,613 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:21:36,074 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:21:36,456 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:21:38,228 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:21:40,453 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:21:47,280 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:21:55,153 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:21:55,555 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:02,455 - window_manager - INFO - 置顶窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:03,370 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:04,454 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:22:06,219 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:22:07,456 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:22:11,585 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:13,916 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:14,378 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:15,406 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:15,746 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:16,184 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:16,492 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:17,484 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:17,758 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:18,201 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:19,005 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:22:20,499 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:22:22,305 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:22,730 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:23,249 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:47,822 - hotkey_manager - INFO - 成功解除快捷键绑定: space+q
+2025-02-16 14:22:47,822 - window_manager - INFO - 为窗口 gui.py - flash-toggle - Cursor 设置快捷键: alt+q
+2025-02-16 14:22:47,822 - hotkey_manager - INFO - 成功注册快捷键: alt+q
+2025-02-16 14:22:49,689 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:50,018 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:50,359 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:50,667 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:50,990 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:51,691 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
+2025-02-16 14:22:52,708 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:53,084 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:53,545 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:53,839 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:54,124 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:54,526 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:55,001 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:55,777 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:22:56,037 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:01,111 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:08,119 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:08,907 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:09,715 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:34,614 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:35,328 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:36,134 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:37,060 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:37,408 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:37,844 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:38,299 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:38,793 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:40,132 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:41,107 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:42,240 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:53,711 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:54,312 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:23:54,635 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:24:02,546 - config_manager - INFO - 配置已保存
+2025-02-16 14:24:06,842 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:24:07,214 - window_manager - INFO - 显示窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:24:09,833 - window_manager - INFO - 隐藏窗口: gui.py - flash-toggle - Cursor
+2025-02-16 14:24:14,665 - window_manager - ERROR - 切换窗口可见性失败: (0, 'SetForegroundWindow', 'No error message is available')
