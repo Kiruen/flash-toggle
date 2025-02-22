@@ -24,6 +24,7 @@ import logging
 from typing import Dict, List, Optional, Set
 from dataclasses import dataclass
 from virtual_desktop import VirtualDesktopManager
+from config_manager import ConfigManager
 
 @dataclass
 class WindowInfo:
@@ -44,15 +45,18 @@ class WindowIndexManager:
     负责维护所有窗口的索引，提供搜索功能
     """
     
-    def __init__(self, virtual_desktop_manager: VirtualDesktopManager):
+    def __init__(self, virtual_desktop_manager: VirtualDesktopManager, config_manager: ConfigManager):
         """
         初始化窗口索引管理器
         
         Args:
             virtual_desktop_manager: 虚拟桌面管理器实例
+            config_manager: 配置管理器实例
         """
         self._logger = logging.getLogger(__name__)
         self._virtual_desktop = virtual_desktop_manager
+        self._config_manager = config_manager
+        self._scan_interval = self._config_manager.get_config().window_search.get('scan_interval', 2)  # 从配置中加载扫描间隔
         
         # 窗口信息缓存
         self._windows: Dict[int, WindowInfo] = {}
@@ -72,7 +76,7 @@ class WindowIndexManager:
         """
         检查窗口是否有效
         
-        Args:
+        Args:cc
             hwnd: 窗口句柄
             
         Returns:
@@ -205,10 +209,11 @@ class WindowIndexManager:
         """窗口扫描循环"""
         while self._running:
             try:
+                self._scan_interval = self._config_manager.get_config().window_search.get('scan_interval', 2)  # 从配置中加载扫描间隔
                 self._scan_windows()
             except Exception as e:
                 self._logger.error(f"窗口扫描失败: {str(e)}")
-            time.sleep(2)  # 每2秒扫描一次
+            time.sleep(self._scan_interval)  # 每次扫描后根据配置的间隔休眠
             
     def get_all_windows(self) -> List[WindowInfo]:
         """

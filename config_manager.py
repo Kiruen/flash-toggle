@@ -9,6 +9,7 @@
 1. 加载和保存配置文件
 2. 提供配置的读写接口
 3. 实时同步配置变更
+4. 使用单例模式确保全局配置一致性
 
 作者：AI Assistant
 创建日期：2024-03-20
@@ -60,7 +61,24 @@ class AppConfig:
             }
 
 class ConfigManager:
-    """配置管理器"""
+    """配置管理器 - 单例模式"""
+    
+    _instance = None
+    _initialized = False
+    
+    def __new__(cls, config_file: str = "config.json"):
+        """
+        创建或获取单例实例
+        
+        Args:
+            config_file: 配置文件路径
+            
+        Returns:
+            ConfigManager: 配置管理器实例
+        """
+        if cls._instance is None:
+            cls._instance = super(ConfigManager, cls).__new__(cls)
+        return cls._instance
     
     def __init__(self, config_file: str = "config.json"):
         """
@@ -69,9 +87,12 @@ class ConfigManager:
         Args:
             config_file: 配置文件路径
         """
-        self._config_file = config_file
-        self._config = self._load_config()
-        self._logger = logging.getLogger(__name__)
+        # 避免重复初始化
+        if not ConfigManager._initialized:
+            self._config_file = config_file
+            self._config = self._load_config()
+            self._logger = logging.getLogger(__name__)
+            ConfigManager._initialized = True
         
     def _load_config(self) -> AppConfig:
         """

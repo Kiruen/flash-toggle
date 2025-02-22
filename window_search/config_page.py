@@ -50,14 +50,16 @@ class SearchConfigPage(QWidget):
         初始化配置页面
         
         Args:
-            window_index: 窗口索引管理器
+            window_index: 窗口索引管理器实例
             config: 初始配置
             parent: 父组件
         """
         super().__init__(parent)
         self._logger = logging.getLogger(__name__)
+        self._logger.debug("初始化搜索配置页面...")
         self._window_index = window_index
         self._config = config.copy()
+        self._logger.debug(f"初始配置: {self._config}")
         
         # 创建定时器用于更新窗口列表
         self._update_timer = QTimer(self)
@@ -70,6 +72,7 @@ class SearchConfigPage(QWidget):
         # 如果有窗口索引管理器，启动定时更新
         if self._window_index:
             self._update_timer.start()
+            self._logger.debug("窗口列表更新定时器已启动")
 
     def _init_ui(self):
         """初始化用户界面"""
@@ -339,29 +342,49 @@ class SearchConfigPage(QWidget):
 
     def _load_config(self):
         """从配置加载设置"""
+        self._logger.debug("开始加载搜索配置...")
+        self._logger.debug(f"当前配置内容: {self._config}")
+        
         # 快捷键
         hotkey = self._config.get("hotkey", "")
+        self._logger.debug(f"加载快捷键配置: {hotkey}")
         self._hotkey_button.setText(hotkey if hotkey else "点击设置快捷键...")
         
         # 搜索设置
-        self._search_delay.setValue(self._config.get("search_delay", 100))
-        self._scan_interval.setValue(self._config.get("scan_interval", 2))
+        search_delay = self._config.get("search_delay", 100)
+        scan_interval = self._config.get("scan_interval", 2)
+        self._logger.debug(f"加载搜索延迟: {search_delay}ms")
+        self._logger.debug(f"加载扫描间隔: {scan_interval}秒")
+        self._search_delay.setValue(search_delay)
+        self._scan_interval.setValue(scan_interval)
         
         # 界面设置
-        self._show_process.setChecked(self._config.get("show_process", True))
-        self._show_desktop.setChecked(self._config.get("show_desktop", True))
-        self._show_icon.setChecked(self._config.get("show_icon", True))
+        show_process = self._config.get("show_process", True)
+        show_desktop = self._config.get("show_desktop", True)
+        show_icon = self._config.get("show_icon", True)
+        self._logger.debug(f"加载界面设置: 进程={show_process}, 桌面={show_desktop}, 图标={show_icon}")
+        self._show_process.setChecked(show_process)
+        self._show_desktop.setChecked(show_desktop)
+        self._show_icon.setChecked(show_icon)
+        
+        self._logger.debug("搜索配置加载完成")
         
     def _save_config(self):
         """保存设置到配置"""
-        self._config.update({
+        self._logger.debug("开始保存搜索配置...")
+        
+        new_config = {
             "hotkey": self._hotkey_button.text(),
             "search_delay": self._search_delay.value(),
             "scan_interval": self._scan_interval.value(),
             "show_process": self._show_process.isChecked(),
             "show_desktop": self._show_desktop.isChecked(),
             "show_icon": self._show_icon.isChecked()
-        })
+        }
+        
+        self._logger.debug(f"新的配置内容: {new_config}")
+        self._config.update(new_config)
+        self._logger.debug("搜索配置保存完成")
         
     def _on_config_changed(self):
         """处理配置变更"""

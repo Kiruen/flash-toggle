@@ -25,6 +25,7 @@ from hotkey_manager import HotkeyManager
 from window_search import WindowIndexManager, SearchWindow
 from virtual_desktop import VirtualDesktopManager
 from gui import MainWindow
+from config_manager import ConfigManager
 
 def setup_logging():
     """配置日志系统"""
@@ -54,8 +55,11 @@ def main():
         hotkey_manager = HotkeyManager()
         virtual_desktop_manager = VirtualDesktopManager()
         
+        # 创建配置管理器实例（单例）
+        config_manager = ConfigManager()
+        
         # 创建窗口搜索管理器
-        window_index = WindowIndexManager(virtual_desktop_manager)
+        window_index = WindowIndexManager(virtual_desktop_manager, config_manager)
         
         # 创建搜索窗口
         search_window = SearchWindow(window_index)
