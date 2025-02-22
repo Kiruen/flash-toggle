@@ -94,29 +94,33 @@ class VirtualDesktopManager:
             else:
                 raise
             
-    def _ensure_initialized(self) -> bool:
+    def _ensure_initialized(self, silent: bool = False) -> bool:
         """
         确保管理器已正确初始化
         
-        如果初始化失败或对象无效，会尝试重新初始化。
-        
+        Args:
+            silent: 是否静默执行（不输出日志）
+            
         Returns:
             bool: 是否成功初始化
         """
         try:
             if not self._initialized or not self._manager:
-                self._logger.warning("虚拟桌面管理器无效，尝试重新初始化...")
+                if not silent:
+                    self._logger.warning("虚拟桌面管理器无效，尝试重新初始化...")
                 try:
                     self._init_attempts = 0  # 重置尝试次数
                     self._init_manager()
                 except Exception as e:
-                    self._logger.error(f"重新初始化失败: {str(e)}")
+                    if not silent:
+                        self._logger.error(f"重新初始化失败: {str(e)}")
                     return False
                     
             return True
             
         except Exception as e:
-            self._logger.error(f"检查初始化状态失败: {str(e)}")
+            if not silent:
+                self._logger.error(f"检查初始化状态失败: {str(e)}")
             return False
             
     def is_window_on_current_desktop(self, hwnd: int) -> bool:
@@ -161,12 +165,13 @@ class VirtualDesktopManager:
             self._logger.error(f"检查窗口虚拟桌面状态失败 (hwnd={hwnd}): {str(e)}", exc_info=True)
             return True
             
-    def get_window_desktop_id(self, hwnd: int) -> Optional[str]:
+    def get_window_desktop_id(self, hwnd: int, silent: bool = False) -> Optional[str]:
         """
         获取窗口所在的虚拟桌面 ID
         
         Args:
             hwnd: 窗口句柄
+            silent: 是否静默执行（不输出日志）
             
         Returns:
             Optional[str]: 虚拟桌面 ID，如果获取失败则返回 None
@@ -178,7 +183,8 @@ class VirtualDesktopManager:
                 
             # 确保窗口句柄有效
             if not hwnd or not win32gui.IsWindow(hwnd):
-                self._logger.warning(f"无效的窗口句柄: {hwnd}")
+                if not silent:
+                    self._logger.warning(f"无效的窗口句柄: {hwnd}")
                 return None
                 
             # 调用 C# 方法
@@ -196,18 +202,21 @@ class VirtualDesktopManager:
                         # 如果失败，尝试使用字符串转换
                         guid_str = str(desktop_id)
                         
-                    self._logger.debug(f"获取窗口虚拟桌面 ID 成功 (hwnd={hwnd}): {guid_str}")
+                    if not silent:
+                        self._logger.debug(f"获取窗口虚拟桌面 ID 成功 (hwnd={hwnd}): {guid_str}")
                     return guid_str
                 return None
                 
             except Exception as e:
-                self._logger.error(f"获取窗口虚拟桌面 ID 失败 (hwnd={hwnd}): {str(e)}", exc_info=True)
+                if not silent:
+                    self._logger.error(f"获取窗口虚拟桌面 ID 失败 (hwnd={hwnd}): {str(e)}", exc_info=True)
                 # 发生错误时重新初始化管理器
                 self._initialized = False
                 return None
                 
         except Exception as e:
-            self._logger.error(f"获取窗口虚拟桌面 ID 失败 (hwnd={hwnd}): {str(e)}", exc_info=True)
+            if not silent:
+                self._logger.error(f"获取窗口虚拟桌面 ID 失败 (hwnd={hwnd}): {str(e)}", exc_info=True)
             return None
             
     def move_window_to_desktop(self, hwnd: int, desktop_id: str) -> bool:
@@ -247,6 +256,37 @@ class VirtualDesktopManager:
                 
         except Exception as e:
             self._logger.error(f"移动窗口到虚拟桌面失败: {str(e)}", exc_info=True)
+            return False
+            
+    def switch_desktop(self, desktop_id: str) -> bool:
+        """
+        切换到指定虚拟桌面
+        
+        Args:
+            desktop_id: 目标虚拟桌面的 GUID
+            
+        Returns:
+            bool: 是否成功切换
+        """
+        try:
+            # 确保管理器有效
+            if not self._ensure_initialized():
+                return False
+                
+            # 调用 C# 方法
+            try:
+                self._manager.SwitchDesktop(desktop_id)
+                self._logger.info(f"成功切换到虚拟桌面 {desktop_id}")
+                return True
+                
+            except Exception as e:
+                self._logger.error(f"切换虚拟桌面失败: {str(e)}", exc_info=True)
+                # 发生错误时重新初始化管理器
+                self._initialized = False
+                return False
+                
+        except Exception as e:
+            self._logger.error(f"切换虚拟桌面失败: {str(e)}", exc_info=True)
             return False
             
     def __del__(self):

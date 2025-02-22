@@ -241,6 +241,7 @@ class WindowManager:
             bool: 操作是否成功
         """
         try:
+            # 检查窗口是否存在于管理器中
             if handle not in self._windows:
                 self._logger.warning(f"窗口未被管理: {handle}")
                 return False

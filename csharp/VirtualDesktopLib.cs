@@ -4,6 +4,21 @@ using System.Runtime.InteropServices;
 namespace VirtualDesktopLib
 {
     /// <summary>
+    /// COM IServiceProvider 接口定义
+    /// </summary>
+    [ComImport]
+    [Guid("6D5140C1-7436-11CE-8034-00AA006009FA")]
+    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    internal interface IServiceProvider
+    {
+        [PreserveSig]
+        int QueryService(
+            ref Guid guidService,
+            ref Guid riid,
+            out object ppvObject);
+    }
+
+    /// <summary>
     /// 虚拟桌面管理器接口
     /// </summary>
     [ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown), Guid("a5cd92ff-29be-454c-8d04-d82879fb3f1b")]
@@ -28,6 +43,27 @@ namespace VirtualDesktopLib
             [MarshalAs(UnmanagedType.LPStruct)]
             [In] Guid CurrentDesktop
         );
+    }
+
+    /// <summary>
+    /// 虚拟桌面管理器内部接口
+    /// </summary>
+    [ComImport]
+    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    [Guid("F31574D6-B682-4CDC-BD56-1827860ABEC6")]
+    internal interface IVirtualDesktopManagerInternal
+    {
+        int GetCount();
+        void MoveViewToDesktop(object pView, object desktop);
+        bool CanViewMoveDesktops(object pView);
+        object GetCurrentDesktop();
+        void GetDesktops(out object ppDesktops);
+        [PreserveSig]
+        int GetAdjacentDesktop(object desktop, int direction, out object ppDesktop);
+        void SwitchDesktop(object desktop);
+        object CreateDesktop();
+        void RemoveDesktop(object desktop, object fallback);
+        void FindDesktop(ref Guid desktopId, out object ppDesktop);
     }
 
     /// <summary>
@@ -102,6 +138,39 @@ namespace VirtualDesktopLib
             if (hr != 0)
             {
                 Marshal.ThrowExceptionForHR(hr);
+            }
+        }
+
+        /// <summary>
+        /// 切换到指定虚拟桌面
+        /// </summary>
+        /// <param name="desktopId">目标虚拟桌面 GUID</param>
+        public void SwitchDesktop(Guid desktopId)
+        {
+            CheckDisposed();
+            // 使用 Windows Shell COM API 切换桌面
+            Type shellType = Type.GetTypeFromCLSID(new Guid("C2F03A33-21F5-47FA-B4BB-156362A2F239"));
+            object shell = Activator.CreateInstance(shellType);
+            try
+            {
+                IServiceProvider serviceProvider = (IServiceProvider)shell;
+                if (serviceProvider != null)
+                {
+                    object virtualDesktopManager;
+                    Guid IID_IVirtualDesktopManagerInternal = new Guid("F31574D6-B682-4CDC-BD56-1827860ABEC6");
+                    int hr = serviceProvider.QueryService(ref IID_IVirtualDesktopManagerInternal, ref IID_IVirtualDesktopManagerInternal, out virtualDesktopManager);
+                    if (hr >= 0)
+                    {
+                        IVirtualDesktopManagerInternal manager = (IVirtualDesktopManagerInternal)virtualDesktopManager;
+                        object desktop;
+                        manager.FindDesktop(ref desktopId, out desktop);
+                        manager.SwitchDesktop(desktop);
+                    }
+                }
+            }
+            finally
+            {
+                Marshal.ReleaseComObject(shell);
             }
         }
 

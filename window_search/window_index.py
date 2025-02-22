@@ -125,31 +125,27 @@ class WindowIndexManager:
         
     def _scan_windows(self):
         """扫描所有窗口"""
-        # 获取所有顶层窗口
-        def enum_windows_callback(hwnd: int, windows: Set[int]):
-            if self._is_valid_window(hwnd):
-                windows.add(hwnd)
-            return True
+        try:
+            valid_count = 0
+            invalid_count = 0
             
-        windows = set()
-        win32gui.EnumWindows(enum_windows_callback, windows)
-        
-        # 更新窗口信息
-        valid_count = 0
-        invalid_count = 0
-        
-        with self._lock:
-            # 移除已不存在的窗口
-            for hwnd in list(self._windows.keys()):
-                if hwnd not in windows:
-                    del self._windows[hwnd]
-            
-            # 更新或添加窗口信息
-            for hwnd in windows:
+            # 获取所有顶级窗口
+            def enum_windows_callback(hwnd, _):
+                nonlocal valid_count, invalid_count
+                
                 try:
-                    # 获取窗口标题
+                    # 跳过不可见窗口
+                    style = win32gui.GetWindowLong(hwnd, win32con.GWL_STYLE)
+                    if not (style & win32con.WS_VISIBLE):
+                        invalid_count += 1
+                        return True
+                        
+                    # 跳过无标题窗口
                     title = win32gui.GetWindowText(hwnd)
-                    
+                    if not title:
+                        invalid_count += 1
+                        return True
+                        
                     # 获取进程信息
                     _, process_id = win32process.GetWindowThreadProcessId(hwnd)
                     try:
@@ -157,22 +153,26 @@ class WindowIndexManager:
                         process_name = process.name()
                     except:
                         process_name = "未知进程"
-                    
+                        
                     # 获取窗口状态
-                    style = win32gui.GetWindowLong(hwnd, win32con.GWL_STYLE)
                     is_visible = bool(style & win32con.WS_VISIBLE)
                     is_minimized = bool(style & win32con.WS_MINIMIZE)
                     
-                    # 获取虚拟桌面ID
+                    # 获取虚拟桌面ID（静默模式）
                     try:
-                        desktop_id = self._virtual_desktop.get_window_desktop_id(hwnd)
+                        # 确保虚拟桌面管理器初始化（静默模式）
+                        if not self._virtual_desktop._ensure_initialized(silent=True):
+                            invalid_count += 1
+                            return True
+                            
+                        desktop_id = self._virtual_desktop.get_window_desktop_id(hwnd, silent=True)
                         if not desktop_id:  # 如果获取失败，跳过该窗口
                             invalid_count += 1
-                            continue
+                            return True
                     except:
                         invalid_count += 1
-                        continue
-                    
+                        return True
+                        
                     # 更新窗口信息
                     self._windows[hwnd] = WindowInfo(
                         hwnd=hwnd,
@@ -189,9 +189,17 @@ class WindowIndexManager:
                 except Exception as e:
                     self._logger.error(f"更新窗口信息失败 (hwnd={hwnd}): {str(e)}")
                     invalid_count += 1
-                    continue
-        
-        self._logger.debug(f"窗口扫描完成: 有效={valid_count}, 失效={invalid_count}")
+                    
+                return True
+                
+            # 枚举所有顶级窗口
+            win32gui.EnumWindows(enum_windows_callback, None)
+            
+            # 记录扫描结果
+            self._logger.info(f"窗口扫描完成: 有效={valid_count}, 无效={invalid_count}")
+            
+        except Exception as e:
+            self._logger.error(f"窗口扫描失败: {str(e)}", exc_info=True)
         
     def _scan_loop(self):
         """窗口扫描循环"""
