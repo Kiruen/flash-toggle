@@ -256,6 +256,63 @@ class SearchWindow(QWidget):
         
     def _init_ui(self):
         """初始化用户界面"""
+        self.setStyleSheet("""
+            QWidget {
+                background-color: #2E2E2E;  /* 背景色 */
+                color: #FFFFFF;  /* 字体颜色 */
+            }
+            QLineEdit {
+                background-color: #3E3E3E;  /* 输入框背景色 */
+                color: #FFFFFF;  /* 输入框字体颜色 */
+                border: 1px solid #555;
+                padding: 5px;
+                border-radius: 3px;
+            }
+            QLineEdit:focus {
+                border-color: #0078D7;
+            }
+            QLabel {
+                color: #E0E0E0;
+            }
+            QListWidget {
+                background-color: #3E3E3E;  /* 列表背景色 */
+                color: #E0E0E0;  /* 更新为更亮的字体颜色 */
+                border: 1px solid #555;
+                border-radius: 3px;
+            }
+            QListWidget::item {
+                padding: 8px;
+                border-radius: 3px;
+            }
+            QListWidget::item:selected {
+                background: rgba(0, 120, 215, 0.3);
+                border: none;
+            }
+            QListWidget::item:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+            QScrollBar:vertical {
+                background-color: #2E2E2E;
+                width: 12px;
+                margin: 0;
+            }
+            QScrollBar::handle:vertical {
+                background-color: #4E4E4E;
+                min-height: 20px;
+                border-radius: 6px;
+            }
+            QScrollBar::handle:vertical:hover {
+                background-color: #5E5E5E;
+            }
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                height: 0;
+                background: none;
+            }
+            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+                background: none;
+            }
+        """)
+        
         # 设置窗口属性
         self.setWindowTitle("搜索窗口")
         self.setWindowFlags(
@@ -275,9 +332,9 @@ class SearchWindow(QWidget):
         search_container.setObjectName("searchContainer")
         search_container.setStyleSheet("""
             QWidget#searchContainer {
-                background: white;
+                background: #3E3E3E;
                 border-radius: 8px;
-                border: 1px solid #e0e0e0;
+                border: 1px solid #555;
             }
         """)
         search_layout = QHBoxLayout(search_container)
@@ -285,7 +342,7 @@ class SearchWindow(QWidget):
         
         # 添加搜索图标
         search_icon = QLabel("🔍", self)
-        search_icon.setStyleSheet("font-size: 16px; color: #666;")
+        search_icon.setStyleSheet("font-size: 16px; color: #888;")
         search_layout.addWidget(search_icon)
         
         # 创建搜索框
@@ -303,16 +360,19 @@ class SearchWindow(QWidget):
             QLineEdit:focus {
                 outline: none;
             }
+            QLineEdit::placeholder {
+                color: #888;
+            }
         """)
         search_layout.addWidget(self._search_input)
         
         # 添加快捷键提示
         shortcut_label = QLabel("ESC关闭", self)
         shortcut_label.setStyleSheet("""
-            color: #999;
+            color: #888;
             font-size: 12px;
             padding: 2px 8px;
-            background: #f5f5f5;
+            background: #4E4E4E;
             border-radius: 4px;
         """)
         search_layout.addWidget(shortcut_label)
@@ -324,9 +384,9 @@ class SearchWindow(QWidget):
         list_container.setObjectName("listContainer")
         list_container.setStyleSheet("""
             QWidget#listContainer {
-                background: white;
+                background: #3E3E3E;
                 border-radius: 8px;
-                border: 1px solid #e0e0e0;
+                border: 1px solid #555;
             }
         """)
         list_layout = QVBoxLayout(list_container)
@@ -346,34 +406,16 @@ class SearchWindow(QWidget):
                 outline: none;
             }
             QListWidget::item {
-                padding: 2px;
+                padding: 8px;
                 border-radius: 6px;
+                color: #FFFFFF;
             }
             QListWidget::item:selected {
-                background: rgba(0, 120, 215, 0.1);
+                background: rgba(0, 120, 215, 0.3);
                 border: none;
             }
             QListWidget::item:hover {
-                background: rgba(0, 0, 0, 0.05);
-            }
-            QScrollBar:vertical {
-                border: none;
-                background: transparent;
-                width: 8px;
-                margin: 0;
-            }
-            QScrollBar::handle:vertical {
-                background: #ccc;
-                border-radius: 4px;
-                min-height: 20px;
-            }
-            QScrollBar::handle:vertical:hover {
-                background: #999;
-            }
-            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
-            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
-                border: none;
-                background: none;
+                background: rgba(255, 255, 255, 0.1);
             }
         """)
         list_layout.addWidget(self._window_list)
@@ -381,9 +423,9 @@ class SearchWindow(QWidget):
         layout.addWidget(list_container)
         
         # 设置窗口样式
-        self.setStyleSheet("""
+        self.setStyleSheet(self.styleSheet() + """
             SearchWindow {
-                background: rgba(255, 255, 255, 180);  /* 半透明背景 */
+                background: rgba(46, 46, 46, 0.95);  /* 半透明深色背景 */
             }
         """)
         

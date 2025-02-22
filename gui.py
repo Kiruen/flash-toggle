@@ -214,6 +214,132 @@ class MainWindow(QMainWindow):
         
     def _init_ui(self):
         """初始化用户界面"""
+        self.setStyleSheet("""
+            QWidget {
+                background-color: #2E2E2E;
+                color: #FFFFFF;
+            }
+            QGroupBox {
+                background-color: #3E3E3E;
+                border: 1px solid #555;
+                margin-top: 12px;
+                padding-top: 12px;
+            }
+            QGroupBox::title {
+                color: #FFFFFF;
+                subcontrol-origin: margin;
+                left: 10px;
+                padding: 0 5px;
+            }
+            QLabel {
+                color: #FFFFFF;
+            }
+            QPushButton {
+                background-color: #3E3E3E;
+                color: #FFFFFF;
+                border: 1px solid #555;
+                padding: 5px 15px;
+                border-radius: 3px;
+            }
+            QPushButton:hover {
+                background-color: #4E4E4E;
+            }
+            QPushButton:pressed {
+                background-color: #2E2E2E;
+            }
+            QSpinBox {
+                background-color: #3E3E3E;
+                color: #FFFFFF;
+                border: 1px solid #555;
+                padding: 3px;
+                border-radius: 3px;
+            }
+            QSpinBox::up-button, QSpinBox::down-button {
+                background-color: #4E4E4E;
+                border: none;
+            }
+            QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+                background-color: #5E5E5E;
+            }
+            QCheckBox {
+                color: #FFFFFF;
+                spacing: 5px;
+            }
+            QCheckBox::indicator {
+                width: 15px;
+                height: 15px;
+                background-color: #3E3E3E;
+                border: 1px solid #555;
+                border-radius: 3px;
+            }
+            QCheckBox::indicator:checked {
+                background-color: #0078D7;
+            }
+            QCheckBox::indicator:hover {
+                border-color: #888;
+            }
+            QTableWidget {
+                background-color: #3E3E3E;
+                color: #FFFFFF;
+                border: 1px solid #555;
+                border-radius: 3px;
+                gridline-color: #555;
+            }
+            QTableWidget::item {
+                padding: 5px;
+            }
+            QTableWidget::item:selected {
+                background-color: rgba(0, 120, 215, 0.3);
+            }
+            QHeaderView::section {
+                background-color: #4E4E4E;
+                color: #FFFFFF;
+                padding: 5px;
+                border: none;
+                border-right: 1px solid #555;
+                border-bottom: 1px solid #555;
+            }
+            QScrollBar:vertical {
+                background-color: #2E2E2E;
+                width: 12px;
+                margin: 0;
+            }
+            QScrollBar::handle:vertical {
+                background-color: #4E4E4E;
+                min-height: 20px;
+                border-radius: 6px;
+            }
+            QScrollBar::handle:vertical:hover {
+                background-color: #5E5E5E;
+            }
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                height: 0;
+                background: none;
+            }
+            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+                background: none;
+            }
+            QTabWidget::pane {
+                border: 1px solid #555;
+                background-color: #2E2E2E;
+            }
+            QTabBar::tab {
+                background-color: #3E3E3E;
+                color: #FFFFFF;
+                padding: 8px 15px;
+                border: 1px solid #555;
+                border-bottom: none;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            QTabBar::tab:selected {
+                background-color: #2E2E2E;
+                border-bottom: none;
+            }
+            QTabBar::tab:hover:!selected {
+                background-color: #4E4E4E;
+            }
+        """)
         self.setWindowTitle("Flash-Toggle")
         self.setMinimumSize(500, 600)
         
