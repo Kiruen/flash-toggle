@@ -213,6 +213,28 @@ class WindowListItem(QWidget):
         # 设置最小高度
         self.setMinimumHeight(50)
 
+class SearchInput(QLineEdit):
+    """
+    自定义搜索输入框
+    
+    实现了焦点丢失事件的处理和传播
+    """
+    # 定义一个信号，用于通知父容器焦点丢失事件
+    focus_lost = pyqtSignal()
+    
+    def focusOutEvent(self, event):
+        """
+        处理焦点丢失事件
+        
+        当输入框失去焦点时：
+        1. 清空输入内容
+        2. 发送焦点丢失信号
+        3. 调用父类方法以确保事件正确传播
+        """
+        self.clear()  # 清空输入框内容
+        self.focus_lost.emit()  # 发送焦点丢失信号
+        super().focusOutEvent(event)  # 确保事件继续传播
+
 class SearchWindow(QWidget):
     """
     窗口搜索界面
@@ -355,9 +377,10 @@ class SearchWindow(QWidget):
         search_layout.addWidget(search_icon)
         
         # 创建搜索框
-        self._search_input = QLineEdit(self)
+        self._search_input = SearchInput(self)  # 使用自定义的 SearchInput
         self._search_input.setPlaceholderText("输入窗口标题搜索...")
         self._search_input.textChanged.connect(self._on_search_text_changed)
+        self._search_input.focus_lost.connect(self.hide)  # 连接焦点丢失信号到隐藏方法
         self._search_input.installEventFilter(self)
         self._search_input.setFixedHeight(30)  # 固定输入框高度
         self._search_input.setStyleSheet("""
@@ -649,4 +672,9 @@ class SearchWindow(QWidget):
             self.show()
             self.activateWindow()
             self.raise_()
-            self._search_input.setFocus() 
+            self._search_input.setFocus()
+
+    def focusOutEvent(self, event):
+        """处理焦点丢失事件"""
+        super().focusOutEvent(event)
+        self.hide()  # 隐藏窗口 
