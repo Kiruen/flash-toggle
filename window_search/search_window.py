@@ -270,7 +270,10 @@ class SearchWindow(QWidget):
         self._search_timer = QTimer(self)
         self._search_timer.setSingleShot(True)
         self._search_timer.timeout.connect(self._do_search)
-        
+        self._is_locked = False  # 锁定状态
+        self._lock_timer = QTimer(self)  # 用于解除锁定
+        self._lock_timer.setSingleShot(True)
+        self._lock_timer.timeout.connect(self.unlock)
         # 连接显示信号
         self.show_requested.connect(self._do_show)
         
@@ -485,28 +488,33 @@ class SearchWindow(QWidget):
     def _do_search(self):
         """执行搜索"""
         query = self._search_input.text().strip()
-        
+        keywords = query.split()  # 按空格分隔关键词
+
         # 清空列表
         self._window_list.clear()
-        
+
         if not query:
             # 隐藏结果列表容器
             self._list_container.hide()
             self.resize(600, 75)  # 调整为固定的初始高度（包含边距）
             return
-            
+
         # 搜索窗口
-        results = self._window_index.search_windows(query)
-        
+        results = self._window_index.search_windows(keywords)
+
+        # 按命中关键词数量排序
+        results.sort(key=lambda x: x['match_count'], reverse=True)
+
         # 添加结果到列表
-        for window in results:
+        for result in results:
+            window = result['window']  # 获取窗口对象
             item = QListWidgetItem(self._window_list)
             item.setData(Qt.ItemDataRole.UserRole, window)
             widget = WindowListItem(window, self._window_list)
             item.setSizeHint(widget.sizeHint())
             self._window_list.addItem(item)
             self._window_list.setItemWidget(item, widget)
-            
+
         # 如果有结果，显示结果列表并调整窗口大小
         if self._window_list.count() > 0:
             self._list_container.show()
@@ -516,7 +524,7 @@ class SearchWindow(QWidget):
             # 如果没有结果，隐藏结果列表
             self._list_container.hide()
             self.resize(600, 75)  # 保持固定的初始高度
-            
+
     def _on_item_activated(self, item: QListWidgetItem):
         """
         处理列表项激活
@@ -596,6 +604,10 @@ class SearchWindow(QWidget):
                 return True
                 
             elif key in (Qt.Key.Key_Up, Qt.Key.Key_Down):
+                if self._is_locked:
+                    return True
+                self._is_locked = True
+                self._lock_timer.start(100)
                 # 获取当前选中项
                 current = self._window_list.currentRow()
                 count = self._window_list.count()
@@ -684,3 +696,13 @@ class SearchWindow(QWidget):
         self._search_input.clear()  # 按下 ESC 键时清空输入框
         self._list_container.hide()
         self.hide()  # 隐藏窗口
+
+    def unlock(self):
+        """解除锁定"""
+        self._is_locked = False  # 解除锁定状态
+
+    def highlight_keywords(self, text: str, keywords: List[str]) -> str:
+        """高亮关键词"""
+        for keyword in keywords:
+            text = text.replace(keyword, f'<b>{keyword}</b>')  # 使用 HTML 标签高亮
+        return text

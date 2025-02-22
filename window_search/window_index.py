@@ -21,10 +21,11 @@ import psutil
 import threading
 import time
 import logging
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional, Set, Any
 from dataclasses import dataclass
 from virtual_desktop import VirtualDesktopManager
 from config_manager import ConfigManager
+import pinyin
 
 @dataclass
 class WindowInfo:
@@ -225,33 +226,29 @@ class WindowIndexManager:
         with self._lock:
             return list(self._windows.values())
             
-    def search_windows(self, query: str) -> List[WindowInfo]:
-        """
-        搜索窗口
-        
-        Args:
-            query: 搜索关键词
-            
-        Returns:
-            List[WindowInfo]: 匹配的窗口列表
-        """
-        query = query.lower()
+    def search_windows(self, keywords: List[str]) -> List[Dict[str, Any]]:
+        """搜索窗口，支持多关键词和拼音搜索"""
         results = []
+        # 将关键词转换为小写
+        keywords = [keyword.lower() for keyword in keywords]
         
-        with self._lock:
-            for window in self._windows.values():
-                # 匹配窗口标题
-                if query in window.title.lower():
-                    results.append(window)
-                    continue
-                    
-                # 匹配进程名
-                if query in window.process_name.lower():
-                    results.append(window)
-                    continue
-        
-        # 按最后活动时间排序
-        results.sort(key=lambda w: w.last_active, reverse=True)
+        for window in self.get_all_windows():
+            match_count = 0
+            # 检查窗口标题（转换为小写）
+            title = window.title.lower()
+            if any(keyword in title for keyword in keywords):
+                match_count += sum(keyword in title for keyword in keywords)
+                
+            # 检查拼音（转换为小写）
+            pinyin_title = pinyin.get(title, format="strip").lower()
+            if any(keyword in pinyin_title for keyword in keywords):
+                match_count += sum(keyword in pinyin_title for keyword in keywords)
+                
+            if match_count > 0:
+                results.append({
+                    'window': window,
+                    'match_count': match_count
+                })
         return results
         
     def stop(self):
