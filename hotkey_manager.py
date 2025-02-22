@@ -315,4 +315,20 @@ class HotkeyManager:
             Dict[str, Callable]: 快捷键和对应回调函数的字典
         """
         with self._lock:
-            return self._hotkeys.copy() 
+            return self._hotkeys.copy()
+
+    def get_hotkey_for_callback(self, callback: Callable) -> Optional[str]:
+        """
+        获取与给定回调函数匹配的快捷键
+        
+        Args:
+            callback: 要查找的回调函数
+        
+        Returns:
+            Optional[str]: 匹配的快捷键，如果未找到则返回 None
+        """
+        with self._lock:
+            for hotkey, registered_callback in self._hotkeys.items():
+                if registered_callback == callback:
+                    return hotkey
+        return None 

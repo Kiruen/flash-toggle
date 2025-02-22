@@ -250,8 +250,8 @@ class MainWindow(QMainWindow):
         
         # 添加搜索配置页
         search_config = SearchConfigPage(
-            config.window_search if hasattr(config, 'window_search') else {},
-            window_index=self._window_index
+            window_index=self._window_index,
+            config=config.window_search if hasattr(config, 'window_search') else {}
         )
         search_config.config_changed.connect(self._on_search_config_changed)
         tab_widget.addTab(search_config, "窗口搜索")

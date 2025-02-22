@@ -4,11 +4,11 @@
 """
 窗口搜索配置页面
 
-该模块实现了窗口搜索功能的配置界面，包括：
-1. 快捷键设置
-2. 搜索选项配置
-3. 界面外观设置
-4. 窗口索引列表
+该模块实现了窗口搜索的配置界面，包括：
+1. 搜索设置
+2. 界面设置
+3. 快捷键设置
+4. 窗口索引管理
 
 作者：AI Assistant
 创建日期：2024-03-20
@@ -17,48 +17,47 @@
 import logging
 from typing import Optional, Dict, Any
 from PyQt5.QtWidgets import (
-    QWidget, QVBoxLayout, QHBoxLayout, QLabel,
-    QPushButton, QSpinBox, QCheckBox, QGroupBox,
-    QFormLayout, QTableWidget, QTableWidgetItem,
-    QHeaderView
+    QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QGroupBox,
+    QLabel, QPushButton, QSpinBox, QCheckBox, QTableWidget,
+    QTableWidgetItem, QHeaderView, QTabWidget, QSizePolicy
 )
 from PyQt5.QtCore import Qt, pyqtSignal, QTimer
 
 from .window_index import WindowIndexManager
+from hotkey_manager import HotkeyDialog
 
 class SearchConfigPage(QWidget):
     """
     窗口搜索配置页面
     
-    提供以下配置选项：
-    - 搜索快捷键
-    - 搜索延迟
-    - 窗口扫描间隔
-    - 界面外观选项
-    - 窗口索引列表
+    包含以下配置项：
+    - 搜索设置（延迟、扫描间隔等）
+    - 界面设置（显示内容、样式等）
+    - 快捷键设置
+    - 窗口索引管理
     """
     
     # 配置变更信号
-    config_changed = pyqtSignal(dict)  # 当配置发生变化时发出
+    config_changed = pyqtSignal(dict)
     
     def __init__(
         self,
+        window_index: WindowIndexManager,
         config: Dict[str, Any],
-        window_index: Optional[WindowIndexManager] = None,
-        parent: Optional[QWidget] = None
+        parent: QWidget = None
     ):
         """
         初始化配置页面
         
         Args:
-            config: 当前配置
-            window_index: 窗口索引管理器实例
+            window_index: 窗口索引管理器
+            config: 初始配置
             parent: 父组件
         """
         super().__init__(parent)
         self._logger = logging.getLogger(__name__)
-        self._config = config.copy()
         self._window_index = window_index
+        self._config = config.copy()
         
         # 创建定时器用于更新窗口列表
         self._update_timer = QTimer(self)
@@ -74,34 +73,27 @@ class SearchConfigPage(QWidget):
 
     def _init_ui(self):
         """初始化用户界面"""
-        # 创建主布局
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(20, 20, 20, 20)
-        layout.setSpacing(20)
         
-        # 添加标题
-        title = QLabel("窗口搜索设置", self)
-        title.setStyleSheet("""
-            font-size: 16pt;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        """)
-        layout.addWidget(title)
+        # 创建标签页
+        tab_widget = QTabWidget(self)
         
-        # 创建快捷键设置组
-        hotkey_group = QGroupBox("快捷键设置", self)
-        hotkey_layout = QFormLayout(hotkey_group)
+        # 1. 基本设置标签页
+        basic_tab = QWidget()
+        basic_layout = QVBoxLayout(basic_tab)
         
-        # 搜索快捷键
+        # 快捷键设置组
+        hotkey_group = QGroupBox("快捷键设置", basic_tab)
+        hotkey_layout = QHBoxLayout(hotkey_group)
+        
         self._hotkey_button = QPushButton("点击设置快捷键...", self)
         self._hotkey_button.clicked.connect(self._on_hotkey_clicked)
-        hotkey_layout.addRow("搜索快捷键:", self._hotkey_button)
+        hotkey_layout.addWidget(self._hotkey_button)
         
-        layout.addWidget(hotkey_group)
+        basic_layout.addWidget(hotkey_group)
         
-        # 创建搜索设置组
-        search_group = QGroupBox("搜索设置", self)
+        # 搜索设置组
+        search_group = QGroupBox("搜索设置", basic_tab)
         search_layout = QFormLayout(search_group)
         
         # 搜索延迟
@@ -109,23 +101,27 @@ class SearchConfigPage(QWidget):
         self._search_delay.setRange(0, 1000)
         self._search_delay.setSingleStep(50)
         self._search_delay.setSuffix(" ms")
-        self._search_delay.setToolTip("输入时延迟多久开始搜索")
+        self._search_delay.setToolTip("输入后等待多久开始搜索")
         self._search_delay.valueChanged.connect(self._on_config_changed)
         search_layout.addRow("搜索延迟:", self._search_delay)
         
-        # 窗口扫描间隔
+        # 扫描间隔
         self._scan_interval = QSpinBox(self)
         self._scan_interval.setRange(1, 10)
-        self._scan_interval.setSingleStep(1)
         self._scan_interval.setSuffix(" 秒")
         self._scan_interval.setToolTip("多久扫描一次所有窗口")
         self._scan_interval.valueChanged.connect(self._on_config_changed)
         search_layout.addRow("扫描间隔:", self._scan_interval)
         
-        layout.addWidget(search_group)
+        basic_layout.addWidget(search_group)
+        basic_layout.addStretch()
         
-        # 创建界面设置组
-        ui_group = QGroupBox("界面设置", self)
+        # 2. 显示设置标签页
+        display_tab = QWidget()
+        display_layout = QVBoxLayout(display_tab)
+        
+        # 界面设置组
+        ui_group = QGroupBox("显示内容", display_tab)
         ui_layout = QFormLayout(ui_group)
         
         # 显示进程信息
@@ -146,11 +142,14 @@ class SearchConfigPage(QWidget):
         self._show_icon.stateChanged.connect(self._on_config_changed)
         ui_layout.addRow(self._show_icon)
         
-        layout.addWidget(ui_group)
+        display_layout.addWidget(ui_group)
+        display_layout.addStretch()
         
-        # 创建窗口索引列表组
-        index_group = QGroupBox("窗口索引列表", self)
-        index_layout = QVBoxLayout(index_group)
+        # 3. 窗口索引标签页
+        index_tab = QWidget()
+        index_layout = QVBoxLayout(index_tab)
+        index_layout.setContentsMargins(10, 10, 10, 10)  # 设置边距
+        index_layout.setSpacing(10)  # 设置间距
         
         # 创建表格
         self._window_table = QTableWidget(self)
@@ -158,6 +157,11 @@ class SearchConfigPage(QWidget):
         self._window_table.setHorizontalHeaderLabels([
             "窗口标题", "进程名", "PID", "虚拟桌面", "状态"
         ])
+        
+        # 设置表格大小策略
+        self._window_table.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self._window_table.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self._window_table.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         
         # 设置表格样式
         header = self._window_table.horizontalHeader()
@@ -185,8 +189,15 @@ class SearchConfigPage(QWidget):
             }
         """)
         
-        index_layout.addWidget(self._window_table)
-        layout.addWidget(index_group)
+        # 将表格添加到布局中，并设置拉伸因子
+        index_layout.addWidget(self._window_table, 1)  # 设置拉伸因子为1
+        
+        # 添加标签页
+        tab_widget.addTab(basic_tab, "基本设置")
+        tab_widget.addTab(display_tab, "显示设置")
+        tab_widget.addTab(index_tab, "窗口索引")
+        
+        layout.addWidget(tab_widget, 1)  # 设置标签页的拉伸因子为1
         
         # 添加说明文本
         help_text = QLabel(
@@ -198,11 +209,9 @@ class SearchConfigPage(QWidget):
             color: #666;
             font-size: 9pt;
             margin-top: 10px;
+            padding: 10px;
         """)
         layout.addWidget(help_text)
-        
-        # 添加弹性空间
-        layout.addStretch()
 
     def _load_config(self):
         """从配置加载设置"""
@@ -237,7 +246,6 @@ class SearchConfigPage(QWidget):
         
     def _on_hotkey_clicked(self):
         """处理快捷键按钮点击"""
-        from hotkey_manager import HotkeyDialog
         dialog = HotkeyDialog(self)
         if dialog.exec():
             hotkey = dialog.get_hotkey()
