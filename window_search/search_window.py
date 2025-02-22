@@ -323,26 +323,35 @@ class SearchWindow(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground)  # 启用透明背景
         
         # 创建主布局
-        layout = QVBoxLayout(self)
-        layout.setContentsMargins(15, 15, 15, 15)  # 增加边距
-        layout.setSpacing(10)
+        self._main_layout = QVBoxLayout(self)
+        self._main_layout.setContentsMargins(15, 15, 15, 15)  # 增加边距
+        self._main_layout.setSpacing(10)
         
         # 创建搜索框容器（用于添加阴影效果）
         search_container = QWidget(self)
         search_container.setObjectName("searchContainer")
+        search_container.setFixedHeight(45)  # 固定搜索框容器的高度
         search_container.setStyleSheet("""
             QWidget#searchContainer {
                 background: #3E3E3E;
                 border-radius: 8px;
                 border: 1px solid #555;
+                min-height: 45px;
+                max-height: 45px;
             }
         """)
         search_layout = QHBoxLayout(search_container)
-        search_layout.setContentsMargins(12, 8, 12, 8)
+        search_layout.setContentsMargins(12, 0, 12, 0)  # 移除垂直方向的边距
+        search_layout.setSpacing(8)  # 减小间距使布局更紧凑
         
         # 添加搜索图标
         search_icon = QLabel("🔍", self)
-        search_icon.setStyleSheet("font-size: 16px; color: #888;")
+        search_icon.setStyleSheet("""
+            font-size: 16px;
+            color: #888;
+            padding: 0;
+            margin: 0;
+        """)
         search_layout.addWidget(search_icon)
         
         # 创建搜索框
@@ -350,12 +359,15 @@ class SearchWindow(QWidget):
         self._search_input.setPlaceholderText("输入窗口标题搜索...")
         self._search_input.textChanged.connect(self._on_search_text_changed)
         self._search_input.installEventFilter(self)
+        self._search_input.setFixedHeight(30)  # 固定输入框高度
         self._search_input.setStyleSheet("""
             QLineEdit {
                 border: none;
                 padding: 4px;
                 font-size: 14px;
                 background: transparent;
+                min-height: 30px;
+                max-height: 30px;
             }
             QLineEdit:focus {
                 outline: none;
@@ -374,22 +386,23 @@ class SearchWindow(QWidget):
             padding: 2px 8px;
             background: #4E4E4E;
             border-radius: 4px;
+            margin: 0;
         """)
         search_layout.addWidget(shortcut_label)
         
-        layout.addWidget(search_container)
+        self._main_layout.addWidget(search_container)
         
         # 创建结果列表容器
-        list_container = QWidget(self)
-        list_container.setObjectName("listContainer")
-        list_container.setStyleSheet("""
+        self._list_container = QWidget(self)
+        self._list_container.setObjectName("listContainer")
+        self._list_container.setStyleSheet("""
             QWidget#listContainer {
                 background: #3E3E3E;
                 border-radius: 8px;
                 border: 1px solid #555;
             }
         """)
-        list_layout = QVBoxLayout(list_container)
+        list_layout = QVBoxLayout(self._list_container)
         list_layout.setContentsMargins(1, 1, 1, 1)
         
         # 创建候选列表
@@ -420,7 +433,9 @@ class SearchWindow(QWidget):
         """)
         list_layout.addWidget(self._window_list)
         
-        layout.addWidget(list_container)
+        # 默认隐藏结果列表容器
+        self._list_container.hide()
+        self._main_layout.addWidget(self._list_container)
         
         # 设置窗口样式
         self.setStyleSheet(self.styleSheet() + """
@@ -430,7 +445,7 @@ class SearchWindow(QWidget):
         """)
         
         # 设置初始大小
-        self.resize(600, 500)  # 增加窗口大小
+        self.resize(600, 75)  # 使用固定的初始高度
         
     def _on_search_text_changed(self, text: str):
         """
@@ -451,6 +466,9 @@ class SearchWindow(QWidget):
         self._window_list.clear()
         
         if not query:
+            # 隐藏结果列表容器
+            self._list_container.hide()
+            self.resize(600, 75)  # 调整为固定的初始高度（包含边距）
             return
             
         # 搜索窗口
@@ -465,9 +483,15 @@ class SearchWindow(QWidget):
             self._window_list.addItem(item)
             self._window_list.setItemWidget(item, widget)
             
-        # 如果有结果，选中第一项
+        # 如果有结果，显示结果列表并调整窗口大小
         if self._window_list.count() > 0:
+            self._list_container.show()
+            self.resize(600, min(500, 75 + self._window_list.count() * 60))  # 调整基础高度
             self._window_list.setCurrentRow(0)
+        else:
+            # 如果没有结果，隐藏结果列表
+            self._list_container.hide()
+            self.resize(600, 75)  # 保持固定的初始高度
             
     def _on_item_activated(self, item: QListWidgetItem):
         """
@@ -591,10 +615,12 @@ class SearchWindow(QWidget):
         self._search_input.setFocus()
         
     def hideEvent(self, event):
-        """窗口隐藏时，清空搜索框和列表"""
+        """窗口隐藏时，清空搜索框和列表，并隐藏结果列表容器"""
         super().hideEvent(event)
         self._search_input.clear()
         self._window_list.clear()
+        self._list_container.hide()
+        self.resize(600, 75)  # 使用固定的初始高度
         
     def center_on_screen(self):
         """将窗口居中显示"""
