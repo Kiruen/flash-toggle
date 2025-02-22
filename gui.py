@@ -34,6 +34,7 @@ import signal
 from window_manager import WindowManager, WindowInfo
 from hotkey_manager import HotkeyManager
 from config_manager import ConfigManager, AppConfig
+from window_search import WindowIndexManager, SearchWindow, SearchConfigPage
 
 @dataclass
 class GlobalHotkey:
@@ -145,18 +146,30 @@ class HotkeyInput(QLineEdit):
 class MainWindow(QMainWindow):
     """主窗口类"""
     
-    def __init__(self, window_manager: WindowManager, hotkey_manager: HotkeyManager):
+    def __init__(
+        self,
+        window_manager: WindowManager,
+        hotkey_manager: HotkeyManager,
+        window_index: WindowIndexManager,
+        search_window: SearchWindow,
+        parent: Optional[QWidget] = None
+    ):
         """
         初始化主窗口
         
         Args:
             window_manager: 窗口管理器实例
             hotkey_manager: 快捷键管理器实例
+            window_index: 窗口索引管理器实例
+            search_window: 搜索窗口实例
+            parent: 父窗口实例
         """
-        super().__init__()
+        super().__init__(parent)
         
         self._window_manager = window_manager
         self._hotkey_manager = hotkey_manager
+        self._window_index = window_index
+        self._search_window = search_window
         self._config_manager = ConfigManager()
         self._logger = logging.getLogger(__name__)
         
@@ -182,9 +195,11 @@ class MainWindow(QMainWindow):
             )
         }
         
+        # 初始化界面
         self._init_ui()
-        self._setup_tray_icon()
-        self._setup_global_hotkeys()
+        
+        # 加载配置
+        self._load_config()
         
         # 恢复窗口状态
         self._restore_window_state(config)
@@ -229,6 +244,30 @@ class MainWindow(QMainWindow):
         settings_tab = QWidget()
         tab_widget.addTab(settings_tab, "其他设置")
         self._init_settings_tab(settings_tab)
+        
+        # 获取配置
+        config = self._config_manager.get_config()
+        
+        # 添加搜索配置页
+        search_config = SearchConfigPage(
+            config.window_search if hasattr(config, 'window_search') else {},
+            window_index=self._window_index
+        )
+        search_config.config_changed.connect(self._on_search_config_changed)
+        tab_widget.addTab(search_config, "窗口搜索")
+        
+        # 注册搜索快捷键
+        if hasattr(config, 'window_search'):
+            hotkey = config.window_search.get("hotkey", "")
+            if hotkey:
+                self._hotkey_manager.register_hotkey(
+                    hotkey,
+                    self._show_search_window,
+                    "显示窗口搜索"
+                )
+                
+        # 设置托盘图标
+        self._setup_tray_icon()
         
     def _init_window_tab(self, tab: QWidget):
         """初始化窗口管理标签页"""
@@ -883,3 +922,44 @@ class MainWindow(QMainWindow):
         """
         if reason == QSystemTrayIcon.DoubleClick:
             self.show_and_activate()  # 双击时显示主窗口 
+
+    def _show_search_window(self):
+        """显示搜索窗口"""
+        # 使用线程安全的方式显示搜索窗口
+        self._search_window.request_show()
+        
+    def _on_search_config_changed(self, config: dict):
+        """处理搜索配置变更"""
+        # 更新配置
+        self._config_manager.update_config("window_search", config)
+        self._config_manager.save_config()
+        
+        # 更新窗口索引管理器的扫描间隔
+        self._window_index._scan_interval = config.get("scan_interval", 2.0)
+        
+        # 更新搜索窗口的延迟
+        self._search_window._search_delay = config.get("search_delay", 100)
+        
+        # 更新快捷键
+        old_hotkey = self._hotkey_manager.get_hotkey_for_callback(self._show_search_window)
+        new_hotkey = config.get("hotkey", "")
+        
+        if old_hotkey != new_hotkey:
+            if old_hotkey:
+                self._hotkey_manager.unregister_hotkey(old_hotkey)
+            if new_hotkey:
+                self._hotkey_manager.register_hotkey(
+                    new_hotkey,
+                    self._show_search_window,
+                    "显示窗口搜索"
+                )
+                
+    def _load_config(self):
+        """加载配置"""
+        # 实现加载配置的逻辑
+        pass
+
+    def _save_config(self):
+        """保存配置"""
+        # 实现保存配置的逻辑
+        pass 

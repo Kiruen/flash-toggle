@@ -1,3 +1,4 @@
 PyQt5==5.15.9
 keyboard==0.13.5
 pywin32==306 
+psutil>=6.0.0

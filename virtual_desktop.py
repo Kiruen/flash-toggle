@@ -143,7 +143,7 @@ class VirtualDesktopManager:
             # 调用 C# 方法
             try:
                 # 将 Python int 转换为 C# IntPtr
-                handle = IntPtr(hwnd)
+                handle = IntPtr(int(hwnd))  # 确保 hwnd 是 int 类型
                 result = self._manager.IsWindowOnCurrentVirtualDesktop(handle)
                 self._logger.debug(
                     f"窗口虚拟桌面检查成功 (hwnd={hwnd}): "
@@ -184,11 +184,21 @@ class VirtualDesktopManager:
             # 调用 C# 方法
             try:
                 # 将 Python int 转换为 C# IntPtr
-                handle = IntPtr(hwnd)
+                handle = IntPtr(int(hwnd))  # 确保 hwnd 是 int 类型
                 desktop_id = self._manager.GetWindowDesktopId(handle)
-                guid_str = str(desktop_id)
-                self._logger.debug(f"获取窗口虚拟桌面 ID 成功 (hwnd={hwnd}): {guid_str}")
-                return guid_str
+                
+                # 特殊处理 System.Guid 类型
+                if desktop_id is not None:
+                    try:
+                        # 尝试直接获取 GUID 字符串
+                        guid_str = desktop_id.ToString()
+                    except:
+                        # 如果失败，尝试使用字符串转换
+                        guid_str = str(desktop_id)
+                        
+                    self._logger.debug(f"获取窗口虚拟桌面 ID 成功 (hwnd={hwnd}): {guid_str}")
+                    return guid_str
+                return None
                 
             except Exception as e:
                 self._logger.error(f"获取窗口虚拟桌面 ID 失败 (hwnd={hwnd}): {str(e)}", exc_info=True)
@@ -224,7 +234,7 @@ class VirtualDesktopManager:
             # 调用 C# 方法
             try:
                 # 将 Python int 转换为 C# IntPtr
-                handle = IntPtr(hwnd)
+                handle = IntPtr(int(hwnd))  # 确保 hwnd 是 int 类型
                 self._manager.MoveWindowToDesktop(handle, desktop_id)
                 self._logger.info(f"成功将窗口移动到虚拟桌面 {desktop_id}")
                 return True

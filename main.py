@@ -9,6 +9,7 @@ Flash-Toggle 主程序入口
 1. 捕获活动窗口并管理
 2. 为窗口配置显示/隐藏快捷键
 3. 提供图形界面和系统托盘支持
+4. 窗口快速搜索和跳转
 
 作者：AI Assistant
 创建日期：2024-03-20
@@ -21,6 +22,8 @@ from PyQt5.QtCore import Qt
 
 from window_manager import WindowManager
 from hotkey_manager import HotkeyManager
+from window_search import WindowIndexManager, SearchWindow
+from virtual_desktop import VirtualDesktopManager
 from gui import MainWindow
 
 def setup_logging():
@@ -49,9 +52,17 @@ def main():
         # 创建管理器实例
         window_manager = WindowManager()
         hotkey_manager = HotkeyManager()
+        virtual_desktop_manager = VirtualDesktopManager()
+        
+        # 创建窗口搜索管理器
+        window_index = WindowIndexManager(virtual_desktop_manager)
+        
+        # 创建搜索窗口
+        search_window = SearchWindow(window_index)
+        search_window.window_selected.connect(window_manager.toggle_window_visibility)
         
         # 创建主窗口
-        main_window = MainWindow(window_manager, hotkey_manager)
+        main_window = MainWindow(window_manager, hotkey_manager, window_index, search_window)
         main_window.show()
         
         # 启动应用

@@ -29,6 +29,8 @@ class AppConfig:
     main_window: Dict[str, Any] = None
     # 已保存的窗口配置
     saved_windows: Dict[str, Dict[str, Any]] = None
+    # 窗口搜索配置
+    window_search: Dict[str, Any] = None
     
     def __post_init__(self):
         """初始化默认值"""
@@ -47,6 +49,15 @@ class AppConfig:
             }
         if self.saved_windows is None:
             self.saved_windows = {}
+        if self.window_search is None:
+            self.window_search = {
+                "hotkey": "alt+space",  # 默认快捷键
+                "search_delay": 100,    # 搜索延迟（毫秒）
+                "scan_interval": 2.0,   # 扫描间隔（秒）
+                "show_process": True,   # 显示进程名
+                "show_desktop": True,   # 显示虚拟桌面信息
+                "show_icon": True       # 显示窗口图标
+            }
 
 class ConfigManager:
     """配置管理器"""
@@ -83,6 +94,20 @@ class ConfigManager:
                         }
                         # 使用默认值更新现有配置
                         data['main_window'] = {**default_main_window, **data['main_window']}
+                        
+                    # 确保window_search中包含所有必要的字段
+                    if 'window_search' in data:
+                        default_window_search = {
+                            "hotkey": "alt+space",
+                            "search_delay": 100,
+                            "scan_interval": 2.0,
+                            "show_process": True,
+                            "show_desktop": True,
+                            "show_icon": True
+                        }
+                        # 使用默认值更新现有配置
+                        data['window_search'] = {**default_window_search, **data['window_search']}
+                        
                     return AppConfig(**data)
         except Exception as e:
             self._logger.error(f"加载配置文件失败: {str(e)}")
@@ -129,6 +154,20 @@ class ConfigManager:
         self._config.main_window[key] = value
         self.save_config()
         
+    def update_config(self, section: str, config: Dict[str, Any]):
+        """
+        更新指定部分的配置
+        
+        Args:
+            section: 配置部分名称
+            config: 新的配置
+        """
+        if hasattr(self._config, section):
+            setattr(self._config, section, config)
+            self.save_config()
+        else:
+            self._logger.error(f"配置部分不存在: {section}")
+            
     def save_window_config(self, title: str, config: Dict[str, Any]):
         """
         保存窗口配置
