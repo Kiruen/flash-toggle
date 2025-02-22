@@ -221,6 +221,7 @@ class SearchInput(QLineEdit):
     """
     # 定义一个信号，用于通知父容器焦点丢失事件
     focus_lost = pyqtSignal()
+    esc_pressed = pyqtSignal()
     
     def focusOutEvent(self, event):
         """
@@ -231,9 +232,9 @@ class SearchInput(QLineEdit):
         2. 发送焦点丢失信号
         3. 调用父类方法以确保事件正确传播
         """
-        self.clear()  # 清空输入框内容
         self.focus_lost.emit()  # 发送焦点丢失信号
         super().focusOutEvent(event)  # 确保事件继续传播
+
 
 class SearchWindow(QWidget):
     """
@@ -257,7 +258,6 @@ class SearchWindow(QWidget):
     ):
         """
         初始化搜索窗口
-        
         Args:
             window_index: 窗口索引管理器
             parent: 父组件
@@ -275,6 +275,7 @@ class SearchWindow(QWidget):
         self.show_requested.connect(self._do_show)
         
         self._init_ui()
+        # self._previous_search_text = ""  # 用于保存之前的搜索文本
         
     def _init_ui(self):
         """初始化用户界面"""
@@ -589,9 +590,9 @@ class SearchWindow(QWidget):
         """
         if obj == self._search_input and isinstance(event, QKeyEvent):
             key = event.key()
-            
+
             if key == Qt.Key.Key_Escape:
-                self.hide()
+                self.reset_content()
                 return True
                 
             elif key in (Qt.Key.Key_Up, Qt.Key.Key_Down):
@@ -631,20 +632,19 @@ class SearchWindow(QWidget):
         return super().eventFilter(obj, event)
         
     def showEvent(self, event):
-        """窗口显示时，清空搜索框并设置焦点"""
+        """窗口显示时，恢复输入框内容"""
         super().showEvent(event)
-        self._search_input.clear()
-        self._window_list.clear()
+        # self._search_input.setText(self._previous_search_text)  # 恢复之前的搜索文本
         self._search_input.setFocus()
         
     def hideEvent(self, event):
-        """窗口隐藏时，清空搜索框和列表，并隐藏结果列表容器"""
+        """窗口隐藏时，保存输入框内容"""
         super().hideEvent(event)
-        self._search_input.clear()
-        self._window_list.clear()
-        self._list_container.hide()
+        # self._previous_search_text = self._search_input.text()  # 保存当前输入框内容
+        # self._window_list.clear()
+        # self._list_container.hide()  # 隐藏结果列表
         self.resize(600, 75)  # 使用固定的初始高度
-        
+
     def center_on_screen(self):
         """将窗口居中显示"""
         # 获取屏幕几何信息
@@ -677,4 +677,10 @@ class SearchWindow(QWidget):
     def focusOutEvent(self, event):
         """处理焦点丢失事件"""
         super().focusOutEvent(event)
-        self.hide()  # 隐藏窗口 
+        self.hide()  # 隐藏窗口
+
+    def reset_content(self):
+        """重置内容"""
+        self._search_input.clear()  # 按下 ESC 键时清空输入框
+        self._list_container.hide()
+        self.hide()  # 隐藏窗口
