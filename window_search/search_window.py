@@ -19,7 +19,7 @@ import logging
 from typing import List, Optional, Callable
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QLineEdit, QListWidget,
-    QListWidgetItem, QLabel, QHBoxLayout, QFrame
+    QListWidgetItem, QLabel, QHBoxLayout, QFrame, QMenu, QInputDialog
 )
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 from PyQt5.QtGui import QKeyEvent, QIcon, QPixmap
@@ -154,7 +154,7 @@ class WindowListItem(QWidget):
         info_layout.addWidget(title_label)
         
         # 添加进程信息
-        process_info = QLabel(f"{window.process_name} (PID: {window.process_id})", self)
+        process_info = QLabel(f"{window.process_name} (PID: {window.process_id}) (tags: {window.tags if len(window.tags) <= 30 else window.tags[:30] + '...'})", self)
         process_info.setStyleSheet("""
             font-size: 11px;
             color: #666;
@@ -458,6 +458,8 @@ class SearchWindow(QWidget):
                 background: rgba(255, 255, 255, 0.1);
             }
         """)
+        self._window_list.setContextMenuPolicy(Qt.CustomContextMenu)
+        self._window_list.customContextMenuRequested.connect(self._show_context_menu)
         list_layout.addWidget(self._window_list)
         
         # 默认隐藏结果列表容器
@@ -706,3 +708,23 @@ class SearchWindow(QWidget):
         for keyword in keywords:
             text = text.replace(keyword, f'<b>{keyword}</b>')  # 使用 HTML 标签高亮
         return text
+
+    def _show_context_menu(self, pos):
+        """显示右键菜单"""
+        menu = QMenu(self)
+        edit_tag_action = menu.addAction("编辑标签")
+        action = menu.exec_(self._window_list.mapToGlobal(pos))
+        if action == edit_tag_action:
+            self._open_tag_input_dialog()  # 打开标签编辑对话框
+
+    def _open_tag_input_dialog(self):
+        """打开标签输入对话框"""
+        current_item = self._window_list.currentItem()
+        if current_item:
+            window = current_item.data(Qt.ItemDataRole.UserRole)
+            if window is not None:
+                # 使用多行文本框显示当前标签
+                text, ok = QInputDialog.getMultiLineText(self, '编辑标签', '输入标签:', window.tags)
+                if ok and text:
+                    window.tags = text  # 更新标签
+                    self._logger.info(f'窗口 {window.title} 更新标签: {text}')

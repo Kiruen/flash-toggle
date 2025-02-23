@@ -408,8 +408,14 @@ class MainWindow(QMainWindow):
         # 创建窗口列表
         self.window_list = QListWidget()
         self.window_list.itemClicked.connect(self._on_window_selected)
+        self.window_list.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.window_list.customContextMenuRequested.connect(self._show_context_menu)
         layout.addWidget(QLabel("已捕获的窗口:"))
         layout.addWidget(self.window_list)
+        
+        # 右键菜单
+        self.window_list.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.window_list.customContextMenuRequested.connect(self._show_context_menu)
         
         # 创建快捷键配置区域
         hotkey_layout = QHBoxLayout()
@@ -1088,4 +1094,12 @@ class MainWindow(QMainWindow):
     def _save_config(self):
         """保存配置"""
         # 实现保存配置的逻辑
-        pass 
+        pass
+
+    def _show_context_menu(self, pos):
+        """显示右键菜单"""
+        menu = QMenu(self)
+        add_tag_action = menu.addAction("添加标签")
+        action = menu.exec_(self.window_list.mapToGlobal(pos))
+        if action == add_tag_action:
+            self._open_tag_input_dialog() 

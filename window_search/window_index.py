@@ -22,7 +22,7 @@ import threading
 import time
 import logging
 from typing import Dict, List, Optional, Set, Any
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from virtual_desktop import VirtualDesktopManager
 from config_manager import ConfigManager
 import pinyin
@@ -38,6 +38,7 @@ class WindowInfo:
     is_visible: bool  # 是否可见
     is_minimized: bool  # 是否最小化
     last_active: float  # 最后活动时间
+    tags: str = ""  # 窗口标签，默认为空字符串
 
 class WindowIndexManager:
     """
@@ -179,16 +180,28 @@ class WindowIndexManager:
                         return True
                         
                     # 更新窗口信息
-                    self._windows[hwnd] = WindowInfo(
-                        hwnd=hwnd,
-                        title=title,
-                        process_id=process_id,
-                        process_name=process_name,
-                        desktop_id=desktop_id,
-                        is_visible=is_visible,
-                        is_minimized=is_minimized,
-                        last_active=time.time()
-                    )
+                    if hwnd in self._windows:
+                        # 如果窗口已存在，仅更新需要实时反映的属性
+                        existing_window = self._windows[hwnd]
+                        existing_window.title = title
+                        existing_window.process_id = process_id
+                        existing_window.process_name = process_name
+                        existing_window.desktop_id = desktop_id
+                        existing_window.is_visible = is_visible
+                        existing_window.is_minimized = is_minimized
+                        existing_window.last_active = time.time()
+                    else:
+                        # 如果是新窗口，创建新的WindowInfo对象
+                        self._windows[hwnd] = WindowInfo(
+                            hwnd=hwnd,
+                            title=title,
+                            process_id=process_id,
+                            process_name=process_name,
+                            desktop_id=desktop_id,
+                            is_visible=is_visible,
+                            is_minimized=is_minimized,
+                            last_active=time.time()
+                        )
                     valid_count += 1
                     
                 except Exception as e:
@@ -234,15 +247,14 @@ class WindowIndexManager:
         
         for window in self.get_all_windows():
             match_count = 0
-            # 检查窗口标题（转换为小写）
+            # 检查窗口标题、标签及他们的拼音（转换为小写）
             title = window.title.lower()
-            if any(keyword in title for keyword in keywords):
-                match_count += sum(keyword in title for keyword in keywords)
-                
-            # 检查拼音（转换为小写）
+            tags = window.tags.lower()
             pinyin_title = pinyin.get(title, format="strip").lower()
-            if any(keyword in pinyin_title for keyword in keywords):
-                match_count += sum(keyword in pinyin_title for keyword in keywords)
+            pinyin_tags = pinyin.get(tags, format="strip").lower()
+            for keyword in keywords:
+                if keyword.lower() in title or keyword.lower() in tags or keyword.lower() in pinyin_title or keyword.lower() in pinyin_tags:
+                    match_count += 1
                 
             if match_count > 0:
                 results.append({
