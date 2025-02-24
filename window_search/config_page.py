@@ -19,11 +19,13 @@ from typing import Optional, Dict, Any
 from PyQt5.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QGroupBox,
     QLabel, QPushButton, QSpinBox, QCheckBox, QTableWidget,
-    QTableWidgetItem, QHeaderView, QTabWidget, QSizePolicy
+    QTableWidgetItem, QHeaderView, QTabWidget, QSizePolicy,
+    QMenu
 )
 from PyQt5.QtCore import Qt, pyqtSignal, QTimer
 
 from .window_index import WindowIndexManager
+from .window_actions import jump_to_window, edit_window_tags
 from hotkey_manager import HotkeyDialog
 
 class SearchConfigPage(QWidget):
@@ -300,6 +302,13 @@ class SearchConfigPage(QWidget):
         header.setSectionResizeMode(3, QHeaderView.ResizeToContents)
         header.setSectionResizeMode(4, QHeaderView.ResizeToContents)
         
+        # 设置右键菜单策略
+        self._window_table.setContextMenuPolicy(Qt.CustomContextMenu)
+        self._window_table.customContextMenuRequested.connect(self._show_context_menu)
+        
+        # 连接双击事件
+        self._window_table.itemDoubleClicked.connect(self._on_item_double_clicked)
+        
         self._window_table.setStyleSheet("""
             QTableWidget {
                 border: 1px solid #ccc;
@@ -441,4 +450,56 @@ class SearchConfigPage(QWidget):
             if not window.is_visible:
                 status.append("隐藏")
             status_text = "、".join(status) if status else "正常"
-            self._window_table.setItem(i, 4, QTableWidgetItem(status_text)) 
+            self._window_table.setItem(i, 4, QTableWidgetItem(status_text))
+            
+    def _show_context_menu(self, pos):
+        """
+        显示右键菜单
+        
+        Args:
+            pos: 鼠标位置
+        """
+        # 获取当前选中的行
+        current_row = self._window_table.currentRow()
+        if current_row < 0:
+            return
+            
+        # 获取窗口信息
+        windows = self._window_index.get_all_windows()
+        if current_row >= len(windows):
+            return
+            
+        window = windows[current_row]
+        
+        # 创建菜单
+        menu = QMenu(self)
+        jump_action = menu.addAction("跳转到窗口")
+        edit_tags_action = menu.addAction("编辑标签")
+        
+        # 显示菜单并处理选择
+        action = menu.exec_(self._window_table.viewport().mapToGlobal(pos))
+        
+        if action == jump_action:
+            jump_to_window(window)
+        elif action == edit_tags_action:
+            if edit_window_tags(window, self._window_index, self):
+                self._update_window_list()
+                
+    def _on_item_double_clicked(self, item):
+        """
+        处理双击事件
+        
+        Args:
+            item: 被双击的表格项
+        """
+        # 获取当前行
+        current_row = self._window_table.row(item)
+        
+        # 获取窗口信息
+        windows = self._window_index.get_all_windows()
+        if current_row >= len(windows):
+            return
+            
+        # 跳转到窗口
+        window = windows[current_row]
+        jump_to_window(window)
