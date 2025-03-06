@@ -1056,9 +1056,9 @@ class MainWindow(QMainWindow):
             self.show_and_activate()  # 双击时显示主窗口 
 
     def _show_search_window(self):
-        """显示搜索窗口"""
-        # 使用线程安全的方式显示搜索窗口
-        self._search_window.request_show()
+        """切换搜索窗口的显示/隐藏状态"""
+        # 使用线程安全的方式切换搜索窗口的可见性
+        self._search_window.request_toggle()
         
     def _on_search_config_changed(self, config: dict):
         """处理搜索配置变更"""

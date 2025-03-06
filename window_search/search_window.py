@@ -127,15 +127,21 @@ class WindowListItem(QWidget):
                 
                 # 设置图标
                 icon_label.setPixmap(pixmap)
-                icon_label.setFixedSize(24, 24)  # 增大图标尺寸
+                # 设置固定尺寸，确保图标不会太大
+                icon_label.setFixedSize(10, 10)
+                icon_label.setScaledContents(True)
             else:
                 # 使用默认图标
                 icon_label.setText("🪟")
-                icon_label.setStyleSheet("font-size: 16px;")  # 增大默认图标
+                icon_label.setStyleSheet("font-size: 14px;")
+                icon_label.setFixedSize(10, 10)
                 
         except Exception as e:
             logging.warning(f"获取窗口图标失败: {str(e)}")
-            
+            icon_label.setText("🪟")
+            icon_label.setStyleSheet("font-size: 14px;")
+            icon_label.setFixedSize(16, 16)
+        
         layout.addWidget(icon_label)
         
         # 创建标题和进程信息容器
@@ -268,6 +274,8 @@ class SearchWindow(QWidget):
     # 自定义信号
     window_selected = pyqtSignal(int)  # 当用户选择一个窗口时发出，发送窗口句柄
     show_requested = pyqtSignal()  # 请求显示窗口的信号
+    hide_requested = pyqtSignal()  # 请求隐藏窗口的信号
+    toggle_requested = pyqtSignal()  # 请求切换窗口可见性的信号
     
     def __init__(
         self,
@@ -294,6 +302,8 @@ class SearchWindow(QWidget):
         self._lock_timer.timeout.connect(self.unlock)
         # 连接显示信号
         self.show_requested.connect(self._do_show)
+        self.hide_requested.connect(self.hide)
+        self.toggle_requested.connect(self.toggle_visibility)
         
         self._init_ui()
         # self._previous_search_text = ""  # 用于保存之前的搜索文本
@@ -652,6 +662,7 @@ class SearchWindow(QWidget):
                 current = self._window_list.currentItem()
                 if current:
                     self._on_item_activated(current)
+                    self.reset_content()
                 return True
                 
             elif key == Qt.Key.Key_Tab:
@@ -698,6 +709,21 @@ class SearchWindow(QWidget):
     def request_show(self):
         """从任何线程安全地请求显示窗口"""
         self.show_requested.emit()
+        
+    def request_hide(self):
+        """从任何线程安全地请求隐藏窗口"""
+        self.hide_requested.emit()
+        
+    def request_toggle(self):
+        """从任何线程安全地请求切换窗口可见性"""
+        self.toggle_requested.emit()
+        
+    def toggle_visibility(self):
+        """切换窗口可见性"""
+        if self.isVisible():
+            self.hide()
+        else:
+            self._do_show()
         
     def _do_show(self):
         """在主线程中实际显示窗口"""
