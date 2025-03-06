@@ -557,6 +557,46 @@ class SearchWindow(QWidget):
             self._list_container.hide()
             self.resize(600, 75)  # 保持固定的初始高度
 
+    def _shake_window(self, hwnd):
+        """
+        让窗口轻微抖动
+        
+        Args:
+            hwnd: 窗口句柄
+        """
+        try:
+            import win32gui
+            import win32con
+            import time
+            
+            # 获取窗口当前位置
+            rect = win32gui.GetWindowRect(hwnd)
+            x, y = rect[0], rect[1]
+            
+            # 定义抖动参数
+            shake_distance = 3  # 抖动距离（像素）
+            shake_count = 3     # 抖动次数
+            shake_interval = 0.05  # 每次移动的间隔时间（秒）
+            
+            # 执行抖动动画
+            for _ in range(shake_count):
+                # 向右移动
+                win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, x + shake_distance, y, 0, 0,
+                                    win32con.SWP_NOSIZE | win32con.SWP_NOZORDER)
+                time.sleep(shake_interval)
+                
+                # 向左移动
+                win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, x - shake_distance, y, 0, 0,
+                                    win32con.SWP_NOSIZE | win32con.SWP_NOZORDER)
+                time.sleep(shake_interval)
+                
+            # 恢复原位置
+            win32gui.SetWindowPos(hwnd, win32con.HWND_TOP, x, y, 0, 0,
+                                win32con.SWP_NOSIZE | win32con.SWP_NOZORDER)
+                                
+        except Exception as e:
+            self._logger.error(f"窗口抖动动画失败: {str(e)}")
+
     def _on_item_activated(self, item: QListWidgetItem):
         """
         处理列表项激活
@@ -607,6 +647,9 @@ class SearchWindow(QWidget):
             
             # 隐藏搜索窗口
             self.hide()
+            
+            # 添加窗口抖动动画
+            self._shake_window(window.hwnd)
             
         except Exception as e:
             self._logger.error(f"激活窗口失败: {str(e)}", exc_info=True)
