@@ -40,6 +40,8 @@ class WindowListItem(QWidget):
     def __init__(
         self,
         window: WindowInfo,
+        matched_title: str = None,
+        is_history_match: bool = False,
         parent: Optional[QWidget] = None
     ):
         """
@@ -47,6 +49,8 @@ class WindowListItem(QWidget):
         
         Args:
             window: 窗口元数据
+            matched_title: 匹配的标题
+            is_history_match: 是否为历史标题匹配
             parent: 父组件
         """
         super().__init__(parent)
@@ -68,7 +72,7 @@ class WindowListItem(QWidget):
             
             # 获取窗口图标
             icon_handle = win32gui.SendMessage(
-                window.handle,
+                window.hwnd,
                 win32con.WM_GETICON,
                 win32con.ICON_SMALL,
                 0
@@ -76,7 +80,7 @@ class WindowListItem(QWidget):
             
             if not icon_handle:  # 如果获取小图标失败，尝试获取大图标
                 icon_handle = win32gui.SendMessage(
-                    window.handle,
+                    window.hwnd,
                     win32con.WM_GETICON,
                     win32con.ICON_BIG,
                     0
@@ -84,7 +88,7 @@ class WindowListItem(QWidget):
                 
             if not icon_handle:  # 如果仍然失败，使用窗口类的图标
                 icon_handle = win32gui.GetClassLong(
-                    window.handle,
+                    window.hwnd,
                     win32con.GCL_HICON
                 )
                 
@@ -152,6 +156,20 @@ class WindowListItem(QWidget):
         # 设置最大宽度
         title_label.setMaximumWidth(400)
         info_layout.addWidget(title_label)
+        
+        # 如果有匹配的历史标题，显示它
+        if is_history_match and matched_title and matched_title != window.title:
+            history_label = QLabel(f"历史标题匹配: {matched_title}", self)
+            history_label.setStyleSheet("""
+                font-size: 11px;
+                color: #906020;
+                background-color: #FFF2D9;
+                padding: 2px 5px;
+                border-radius: 3px;
+            """)
+            history_label.setWordWrap(True)
+            history_label.setMaximumWidth(400)
+            info_layout.addWidget(history_label)
         
         # 添加进程信息
         process_info = QLabel(f"{window.process_name} (PID: {window.process_id}) (tags: {window.tags if len(window.tags) <= 30 else window.tags[:30] + '...'})", self)
@@ -504,15 +522,17 @@ class SearchWindow(QWidget):
         # 搜索窗口
         results = self._window_index.search_windows(keywords)
 
-        # 按命中关键词数量排序
-        results.sort(key=lambda x: x['match_count'], reverse=True)
+        # 结果已经在 search_windows 方法中按匹配分数和活动时间排序
 
         # 添加结果到列表
         for result in results:
             window = result['window']  # 获取窗口对象
+            matched_title = result.get('matched_title', window.title)
+            is_history_match = result.get('is_history_match', False)
+            
             item = QListWidgetItem(self._window_list)
             item.setData(Qt.ItemDataRole.UserRole, window)
-            widget = WindowListItem(window, self._window_list)
+            widget = WindowListItem(window, matched_title, is_history_match, self._window_list)
             item.setSizeHint(widget.sizeHint())
             self._window_list.addItem(item)
             self._window_list.setItemWidget(item, widget)

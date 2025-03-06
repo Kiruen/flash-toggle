@@ -39,6 +39,7 @@ class WindowInfo:
     is_minimized: bool  # 是否最小化
     last_active: float  # 最后活动时间
     tags: str = ""  # 窗口标签，默认为空字符串
+    history_titles: Set[str] = field(default_factory=set)  # 历史标题集合
 
 class WindowIndexManager:
     """
@@ -190,9 +191,11 @@ class WindowIndexManager:
                         existing_window.is_visible = is_visible
                         existing_window.is_minimized = is_minimized
                         existing_window.last_active = time.time()
+                        # 添加当前标题到历史标题集合中
+                        existing_window.history_titles.add(title)
                     else:
-                        # 如果是新窗口，创建新的WindowInfo对象
-                        self._windows[hwnd] = WindowInfo(
+                        # 创建新的窗口信息对象
+                        window_info = WindowInfo(
                             hwnd=hwnd,
                             title=title,
                             process_id=process_id,
@@ -202,6 +205,9 @@ class WindowIndexManager:
                             is_minimized=is_minimized,
                             last_active=time.time()
                         )
+                        # 初始化历史标题集合
+                        window_info.history_titles.add(title)
+                        self._windows[hwnd] = window_info
                     valid_count += 1
                     
                 except Exception as e:
@@ -240,27 +246,73 @@ class WindowIndexManager:
             return list(self._windows.values())
             
     def search_windows(self, keywords: List[str]) -> List[Dict[str, Any]]:
-        """搜索窗口，支持多关键词和拼音搜索"""
+        """
+        搜索窗口，支持多关键词和拼音搜索
+        
+        Args:
+            keywords: 搜索关键词列表
+            
+        Returns:
+            List[Dict[str, Any]]: 搜索结果列表，包含窗口信息、匹配分数、匹配的标题和是否为历史标题
+        """
         results = []
         # 将关键词转换为小写
         keywords = [keyword.lower() for keyword in keywords]
         
         for window in self.get_all_windows():
             match_count = 0
+            matched_title = ""
+            is_history_match = False
+            
             # 检查窗口标题、标签及他们的拼音（转换为小写）
             title = window.title.lower()
             tags = window.tags.lower()
             pinyin_title = pinyin.get(title, format="strip").lower()
             pinyin_tags = pinyin.get(tags, format="strip").lower()
+            
+            # 首先检查当前标题和标签
             for keyword in keywords:
-                if keyword.lower() in title or keyword.lower() in tags or keyword.lower() in pinyin_title or keyword.lower() in pinyin_tags:
+                # 在当前标题中搜索
+                if keyword.lower() in title or keyword.lower() in pinyin_title:
                     match_count += 1
+                    if not matched_title:
+                        matched_title = window.title
+                    continue
                 
+                # 在标签中搜索
+                if keyword.lower() in tags or keyword.lower() in pinyin_tags:
+                    match_count += 1
+                    continue
+            
+            # 如果当前标题没有匹配，则检查历史标题
+            if match_count == 0:
+                # 逐个检查历史标题
+                for hist_title in window.history_titles:
+                    if hist_title == window.title:
+                        continue  # 跳过当前标题，因为已经检查过了
+                    
+                    hist_title_lower = hist_title.lower()
+                    pinyin_hist = pinyin.get(hist_title_lower, format="strip").lower()
+                    
+                    for keyword in keywords:
+                        if keyword.lower() in hist_title_lower or keyword.lower() in pinyin_hist:
+                            match_count += 1
+                            if not matched_title:
+                                matched_title = hist_title
+                                is_history_match = True
+                            break
+            
             if match_count > 0:
                 results.append({
                     'window': window,
-                    'match_count': match_count
+                    'match_count': match_count,
+                    'matched_title': matched_title or window.title,
+                    'is_history_match': is_history_match,
+                    'last_active': window.last_active
                 })
+        
+        # 先按匹配分数排序，再按活动时间排序
+        results.sort(key=lambda x: (x['match_count'], x['last_active']), reverse=True)
         return results
         
     def stop(self):

@@ -57,24 +57,18 @@ def edit_window_tags(
         parent: 父组件
         
     Returns:
-        bool: 是否成功编辑标签
+        bool: 是否成功编辑
     """
-    try:
-        # 显示输入对话框
-        tags, ok = QInputDialog.getText(
-            parent,
-            "编辑标签",
-            "请输入窗口标签（多个标签用空格分隔）：",
-            text=window.tags
-        )
+    text, ok = QInputDialog.getText(
+        parent,
+        "编辑标签",
+        "输入窗口标签（多个标签用空格分隔）：",
+        text=window.tags
+    )
+    
+    if ok:
+        tags = text.strip()
+        window_index.update_window_tags(window.hwnd, tags)
+        return True
         
-        if ok:
-            # 更新标签
-            window_index.update_window_tags(window.handle, tags)
-            return True
-            
-        return False
-        
-    except Exception as e:
-        logging.error(f"编辑窗口标签失败: {str(e)}")
-        return False
+    return False
