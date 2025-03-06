@@ -17,10 +17,12 @@
 from .window_index import WindowInfo, WindowIndexManager
 from .search_window import SearchWindow
 from .config_page import SearchConfigPage
+from .window_history import WindowHistoryManager
 
 __all__ = [
     'WindowInfo',
     'WindowIndexManager',
     'SearchWindow',
-    'SearchConfigPage'
+    'SearchConfigPage',
+    'WindowHistoryManager'
 ] 

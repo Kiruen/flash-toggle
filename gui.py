@@ -17,7 +17,7 @@
 from PyQt5.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                            QPushButton, QLineEdit, QListWidget, QListWidgetItem,
                            QLabel, QSystemTrayIcon, QMenu, QMessageBox, QTabWidget,
-                           QGridLayout, QCheckBox, QStatusBar, QApplication)
+                           QGridLayout, QCheckBox, QStatusBar, QApplication, QGroupBox)
 from PyQt5.QtCore import Qt, QSize, pyqtSignal, QPoint, QSize, QTimer
 from PyQt5.QtGui import QIcon, QCloseEvent, QColor, QBrush
 import keyboard
@@ -34,7 +34,7 @@ import signal
 from window_manager import WindowManager, WindowInfo
 from hotkey_manager import HotkeyManager
 from config_manager import ConfigManager, AppConfig
-from window_search import WindowIndexManager, SearchWindow, SearchConfigPage
+from window_search import WindowIndexManager, SearchWindow, SearchConfigPage, WindowHistoryManager
 
 @dataclass
 class GlobalHotkey:
@@ -48,19 +48,52 @@ class GlobalHotkey:
 class HotkeyInput(QLineEdit):
     """快捷键输入框"""
     
-    hotkey_changed = pyqtSignal(str) 
+    hotkey_changed = pyqtSignal(str, str)  # 发送 hotkey_id 和 hotkey
     
-    def __init__(self, parent=None):
+    def __init__(
+        self,
+        hotkey_id: str = "",
+        description: str = "",
+        initial_hotkey: str = "",
+        callback: Optional[Callable] = None,
+        parent: Optional[QWidget] = None
+    ):
+        """
+        初始化快捷键输入框
+        
+        Args:
+            hotkey_id: 快捷键ID
+            description: 快捷键描述
+            initial_hotkey: 初始快捷键
+            callback: 快捷键触发时的回调函数
+            parent: 父组件
+        """
         super().__init__(parent)
-        self.setReadOnly(True)
-        self.setPlaceholderText("点击此处按下快捷键")
+        self._hotkey_id = hotkey_id
+        self._description = description
+        self._callback = callback
         self._keys = set()
+        
+        self.setReadOnly(True)
+        self.setPlaceholderText("点击此处按下快捷键 (ESC或退格键清除)")
+        self.setToolTip(f"{description}\n当前快捷键: {initial_hotkey or '未设置'}\n按ESC或退格键可清除快捷键")
+        
+        if initial_hotkey:
+            self.setText(initial_hotkey)
         
     def keyPressEvent(self, event):
         """处理按键按下事件"""
         if event.key() == Qt.Key_Escape:
             self.clear()
             self._keys.clear()
+            self.hotkey_changed.emit(self._hotkey_id, "")
+            return
+            
+        # 添加对退格键的处理
+        if event.key() == Qt.Key_Backspace:
+            self.clear()
+            self._keys.clear()
+            self.hotkey_changed.emit(self._hotkey_id, "")
             return
             
         key = event.key()
@@ -74,7 +107,7 @@ class HotkeyInput(QLineEdit):
         if key in self._keys:
             self._keys.remove(key)
             if not self._keys:  # 所有按键都已释放
-                self.hotkey_changed.emit(self.text())
+                self.hotkey_changed.emit(self._hotkey_id, self.text())
                 
     def _update_text(self):
         """更新显示的快捷键文本"""
@@ -173,6 +206,9 @@ class MainWindow(QMainWindow):
         self._config_manager = ConfigManager()
         self._logger = logging.getLogger(__name__)
         
+        # 初始化窗口历史管理器
+        self._window_history = WindowHistoryManager()
+        
         # 加载配置
         config = self._config_manager.get_config()
         
@@ -180,26 +216,47 @@ class MainWindow(QMainWindow):
         self._global_hotkeys = {
             "toggle_main": GlobalHotkey(
                 "toggle_main", "显示/隐藏主窗口",
-                config.global_hotkeys["toggle_main"], "",
+                config.global_hotkeys.get("toggle_main", "ctrl+shift+c"),
+                "",
                 self._toggle_main_window
             ),
             "capture": GlobalHotkey(
                 "capture", "捕获当前窗口",
-                config.global_hotkeys["capture"], "",
+                config.global_hotkeys.get("capture", "space+c"),
+                "",
                 self._on_capture_window
             ),
             "toggle_topmost": GlobalHotkey(
                 "toggle_topmost", "切换当前窗口置顶状态",
-                config.global_hotkeys["toggle_topmost"], "",
+                config.global_hotkeys.get("toggle_topmost", "space+t"),
+                "",
                 self._toggle_active_window_topmost
+            ),
+            "search": GlobalHotkey(
+                "search", "显示窗口搜索",
+                config.global_hotkeys.get("search", "alt+space"),
+                "",
+                self._show_search_window
+            ),
+            "prev_window": GlobalHotkey(
+                "prev_window", "跳转到前一个窗口",
+                config.global_hotkeys.get("prev_window", "ctrl+alt+left"),
+                "",
+                self._window_history.jump_to_previous
+            ),
+            "next_window": GlobalHotkey(
+                "next_window", "跳转到后一个窗口",
+                config.global_hotkeys.get("next_window", "ctrl+alt+right"),
+                "",
+                self._window_history.jump_to_next
             )
         }
         
         # 初始化界面
         self._init_ui()
         
-        # 加载配置
-        self._load_config()
+        # 注册所有全局快捷键
+        self._setup_global_hotkeys()
         
         # 恢复窗口状态
         self._restore_window_state(config)
@@ -382,16 +439,6 @@ class MainWindow(QMainWindow):
         search_config.config_changed.connect(self._on_search_config_changed)
         tab_widget.addTab(search_config, "窗口搜索")
         
-        # 注册搜索快捷键
-        if hasattr(config, 'window_search'):
-            hotkey = config.window_search.get("hotkey", "")
-            if hotkey:
-                self._hotkey_manager.register_hotkey(
-                    hotkey,
-                    self._show_search_window,
-                    "显示窗口搜索"
-                )
-                
         # 设置托盘图标
         self._setup_tray_icon()
         
@@ -413,22 +460,30 @@ class MainWindow(QMainWindow):
         layout.addWidget(QLabel("已捕获的窗口:"))
         layout.addWidget(self.window_list)
         
-        # 右键菜单
-        self.window_list.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.window_list.customContextMenuRequested.connect(self._show_context_menu)
-        
         # 创建快捷键配置区域
-        hotkey_layout = QHBoxLayout()
-        self.hotkey_input = HotkeyInput()
-        self.hotkey_input.hotkey_changed.connect(self._on_hotkey_input_changed)
+        hotkey_group = QGroupBox("窗口快捷键", self)
+        hotkey_layout = QVBoxLayout(hotkey_group)
+        
+        # 窗口快捷键输入框
+        self.hotkey_input = HotkeyInput(
+            hotkey_id="window_hotkey",
+            description="为选中的窗口设置快捷键",
+            parent=self
+        )
+        self.hotkey_input.hotkey_changed.connect(self._on_window_hotkey_changed)
+        hotkey_layout.addWidget(self.hotkey_input)
+        
+        # 快捷键操作按钮
+        button_layout = QHBoxLayout()
         self.set_hotkey_btn = QPushButton("设置快捷键")
         self.set_hotkey_btn.clicked.connect(self._on_set_hotkey)
         self.clear_hotkey_btn = QPushButton("清除快捷键")
         self.clear_hotkey_btn.clicked.connect(self._on_clear_hotkey)
-        hotkey_layout.addWidget(self.hotkey_input)
-        hotkey_layout.addWidget(self.set_hotkey_btn)
-        hotkey_layout.addWidget(self.clear_hotkey_btn)
-        layout.addLayout(hotkey_layout)
+        button_layout.addWidget(self.set_hotkey_btn)
+        button_layout.addWidget(self.clear_hotkey_btn)
+        hotkey_layout.addLayout(button_layout)
+        
+        layout.addWidget(hotkey_group)
         
         # 创建底部按钮
         button_layout = QHBoxLayout()
@@ -449,35 +504,119 @@ class MainWindow(QMainWindow):
         
     def _init_hotkey_tab(self, tab: QWidget):
         """初始化快捷键设置标签页"""
-        layout = QGridLayout(tab)
+        layout = QVBoxLayout(tab)
         
         # 添加说明标签
-        layout.addWidget(QLabel("全局快捷键设置:"), 0, 0, 1, 2)
+        layout.addWidget(QLabel("全局快捷键设置:"))
         
-        # 为每个全局快捷键创建设置行
-        row = 1
-        for hotkey in self._global_hotkeys.values():
-            layout.addWidget(QLabel(f"{hotkey.description}:"), row, 0)
-            
-            hotkey_layout = QHBoxLayout()
-            hotkey_input = HotkeyInput()
-            hotkey_input.setText(hotkey.current or hotkey.default)
-            hotkey_input.hotkey_changed.connect(
-                lambda h, n=hotkey.name: self._on_global_hotkey_changed(n, h)
-            )
-            
-            clear_btn = QPushButton("重置")
-            clear_btn.clicked.connect(
-                lambda _, n=hotkey.name: self._reset_global_hotkey(n)
-            )
-            
-            hotkey_layout.addWidget(hotkey_input)
-            hotkey_layout.addWidget(clear_btn)
-            layout.addLayout(hotkey_layout, row, 1)
-            row += 1
-            
-        # 添加弹性空间
-        layout.setRowStretch(row, 1)
+        # 全局快捷键设置组
+        hotkey_group = QGroupBox("全局快捷键", self)
+        hotkey_layout = QVBoxLayout(hotkey_group)
+        
+        # 获取配置
+        config = self._config_manager.get_config()
+        
+        # 主窗口快捷键
+        toggle_main_layout = QHBoxLayout()
+        self._toggle_main_hotkey = HotkeyInput(
+            hotkey_id="toggle_main",
+            description="显示/隐藏主窗口",
+            initial_hotkey=config.global_hotkeys.get("toggle_main", ""),
+            callback=self._toggle_main_window,
+            parent=self
+        )
+        self._toggle_main_hotkey.hotkey_changed.connect(self._on_global_hotkey_changed)
+        toggle_main_layout.addWidget(QLabel("显示/隐藏主窗口:"))
+        toggle_main_layout.addWidget(self._toggle_main_hotkey)
+        hotkey_layout.addLayout(toggle_main_layout)
+        
+        # 捕获窗口快捷键
+        capture_layout = QHBoxLayout()
+        self._capture_hotkey = HotkeyInput(
+            hotkey_id="capture",
+            description="捕获当前窗口",
+            initial_hotkey=config.global_hotkeys.get("capture", ""),
+            callback=self._on_capture_window,
+            parent=self
+        )
+        self._capture_hotkey.hotkey_changed.connect(self._on_global_hotkey_changed)
+        capture_layout.addWidget(QLabel("捕获当前窗口:"))
+        capture_layout.addWidget(self._capture_hotkey)
+        hotkey_layout.addLayout(capture_layout)
+        
+        # 切换置顶快捷键
+        toggle_topmost_layout = QHBoxLayout()
+        self._toggle_topmost_hotkey = HotkeyInput(
+            hotkey_id="toggle_topmost",
+            description="切换当前窗口置顶状态",
+            initial_hotkey=config.global_hotkeys.get("toggle_topmost", ""),
+            callback=self._toggle_active_window_topmost,
+            parent=self
+        )
+        self._toggle_topmost_hotkey.hotkey_changed.connect(self._on_global_hotkey_changed)
+        toggle_topmost_layout.addWidget(QLabel("切换窗口置顶:"))
+        toggle_topmost_layout.addWidget(self._toggle_topmost_hotkey)
+        hotkey_layout.addLayout(toggle_topmost_layout)
+        
+        # 搜索窗口快捷键
+        search_layout = QHBoxLayout()
+        self._search_hotkey = HotkeyInput(
+            hotkey_id="search",
+            description="显示窗口搜索",
+            initial_hotkey=config.global_hotkeys.get("search", ""),
+            callback=self._show_search_window,
+            parent=self
+        )
+        self._search_hotkey.hotkey_changed.connect(self._on_global_hotkey_changed)
+        search_layout.addWidget(QLabel("显示窗口搜索:"))
+        search_layout.addWidget(self._search_hotkey)
+        hotkey_layout.addLayout(search_layout)
+        
+        # 前一个窗口快捷键
+        prev_window_layout = QHBoxLayout()
+        self._prev_window_hotkey = HotkeyInput(
+            hotkey_id="prev_window",
+            description="跳转到前一个窗口",
+            initial_hotkey=config.global_hotkeys.get("prev_window", ""),
+            callback=self._window_history.jump_to_previous,
+            parent=self
+        )
+        self._prev_window_hotkey.hotkey_changed.connect(self._on_global_hotkey_changed)
+        prev_window_layout.addWidget(QLabel("跳转到前一个窗口:"))
+        prev_window_layout.addWidget(self._prev_window_hotkey)
+        hotkey_layout.addLayout(prev_window_layout)
+        
+        # 后一个窗口快捷键
+        next_window_layout = QHBoxLayout()
+        self._next_window_hotkey = HotkeyInput(
+            hotkey_id="next_window",
+            description="跳转到后一个窗口",
+            initial_hotkey=config.global_hotkeys.get("next_window", ""),
+            callback=self._window_history.jump_to_next,
+            parent=self
+        )
+        self._next_window_hotkey.hotkey_changed.connect(self._on_global_hotkey_changed)
+        next_window_layout.addWidget(QLabel("跳转到后一个窗口:"))
+        next_window_layout.addWidget(self._next_window_hotkey)
+        hotkey_layout.addLayout(next_window_layout)
+        
+        # 添加到主布局
+        layout.addWidget(hotkey_group)
+        
+        # 添加说明文本
+        help_text = QLabel(
+            "提示：按ESC键或退格键可以清除快捷键。\n"
+            "设置快捷键后会立即生效。",
+            self
+        )
+        help_text.setStyleSheet("""
+            color: #666;
+            font-size: 9pt;
+            margin-top: 10px;
+            padding: 10px;
+        """)
+        layout.addWidget(help_text)
+        layout.addStretch()
         
     def _init_settings_tab(self, tab: QWidget):
         """初始化其他设置标签页"""
@@ -504,48 +643,35 @@ class MainWindow(QMainWindow):
         
     def _setup_global_hotkeys(self):
         """设置全局快捷键"""
-        for hotkey in self._global_hotkeys.values():
-            self._hotkey_manager.register_hotkey(
-                hotkey.current or hotkey.default,
-                hotkey.callback
-            )
+        # 注册所有全局快捷键
+        for name, hotkey in self._global_hotkeys.items():
+            if hotkey.default:
+                self._hotkey_manager.register_hotkey(
+                    hotkey.default,
+                    hotkey.callback,
+                    name
+                )
             
-    def _on_global_hotkey_changed(self, name: str, hotkey: str):
+    def _on_global_hotkey_changed(self, hotkey_id: str, hotkey: str):
         """
         处理全局快捷键变更
         
         Args:
-            name: 快捷键配置名称
+            hotkey_id: 快捷键ID
             hotkey: 新的快捷键
         """
-        if not hotkey or not self._hotkey_manager.is_valid_hotkey(hotkey):
-            return
-            
-        config = self._global_hotkeys[name]
-        old_hotkey = config.current or config.default
+        self._logger.debug(f"全局快捷键变更: {hotkey_id} = {hotkey}")
         
-        # 更新快捷键
-        if self._hotkey_manager.register_hotkey(hotkey, config.callback):
-            self._hotkey_manager.unregister_hotkey(old_hotkey)
-            config.current = hotkey
-            
-            # 保存配置
-            self._config_manager.update_global_hotkey(name, hotkey)
-            self.show_status("快捷键设置成功")
-            
-    def _reset_global_hotkey(self, name: str):
-        """
-        重置全局快捷键为默认值
+        # 更新配置
+        self._config_manager.update_global_hotkey(hotkey_id, hotkey)
         
-        Args:
-            name: 快捷键配置名称
-        """
-        config = self._global_hotkeys[name]
-        if config.current:
-            self._hotkey_manager.unregister_hotkey(config.current)
-            config.current = ""
-            self._hotkey_manager.register_hotkey(config.default, config.callback)
+        # 更新快捷键注册
+        if hotkey_id in self._global_hotkeys:
+            self._global_hotkeys[hotkey_id].current = hotkey
             
+        # 保存配置
+        self._config_manager.save_config()
+        
     def _add_window_to_list(self, window_info: WindowInfo):
         """
         将窗口添加到列表中
@@ -600,6 +726,20 @@ class MainWindow(QMainWindow):
         else:
             self.set_hotkey_btn.setEnabled(False)
             
+    def _on_window_hotkey_changed(self, hotkey_id: str, hotkey: str):
+        """
+        处理窗口快捷键变更
+        
+        Args:
+            hotkey_id: 快捷键ID（在窗口快捷键中未使用）
+            hotkey: 新的快捷键
+        """
+        if self._hotkey_manager.is_valid_hotkey(hotkey):
+            self.set_hotkey_btn.setEnabled(True)
+            self.hotkey_input.setText(hotkey)  # 保持输入框显示当前快捷键
+        else:
+            self.set_hotkey_btn.setEnabled(False)
+            
     def _on_set_hotkey(self):
         """处理设置快捷键事件"""
         item = self.window_list.currentItem()
@@ -642,7 +782,10 @@ class MainWindow(QMainWindow):
             self._hotkey_manager.unregister_hotkey(window_info.hotkey)
             self._window_manager.set_window_hotkey(handle, "")
             self.hotkey_input.clear()
+            # 确保发出信号
+            self.hotkey_input.hotkey_changed.emit("window_hotkey", "")
             self._update_window_item(handle)
+            self.show_status("快捷键已清除")
             
     def _toggle_main_window(self):
         """切换主窗口显示状态"""
@@ -1072,20 +1215,16 @@ class MainWindow(QMainWindow):
         # 更新搜索窗口的延迟
         self._search_window._search_delay = config.get("search_delay", 100)
         
-        # 更新快捷键
-        old_hotkey = self._hotkey_manager.get_hotkey_for_callback(self._show_search_window)
-        new_hotkey = config.get("hotkey", "")
+    def _on_window_activated(self, hwnd: int):
+        """
+        处理窗口激活事件
         
-        if old_hotkey != new_hotkey:
-            if old_hotkey:
-                self._hotkey_manager.unregister_hotkey(old_hotkey)
-            if new_hotkey:
-                self._hotkey_manager.register_hotkey(
-                    new_hotkey,
-                    self._show_search_window,
-                    "显示窗口搜索"
-                )
-                
+        Args:
+            hwnd: 窗口句柄
+        """
+        # 记录窗口激活历史
+        self._window_history.record_window_activation(hwnd)
+
     def _load_config(self):
         """加载配置"""
         # 实现加载配置的逻辑

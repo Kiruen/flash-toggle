@@ -39,7 +39,10 @@ class AppConfig:
             self.global_hotkeys = {
                 "toggle_main": "ctrl+shift+c",    # 显示/隐藏主窗口
                 "capture": "space+c",             # 捕获窗口
-                "toggle_topmost": "space+t"       # 切换窗口置顶状态
+                "toggle_topmost": "space+t",      # 切换窗口置顶状态
+                "search": "alt+space",            # 显示搜索窗口
+                "prev_window": "ctrl+alt+left",   # 跳转到前一个窗口
+                "next_window": "ctrl+alt+right"   # 跳转到后一个窗口
             }
         if self.main_window is None:
             self.main_window = {
@@ -52,7 +55,6 @@ class AppConfig:
             self.saved_windows = {}
         if self.window_search is None:
             self.window_search = {
-                "hotkey": "alt+space",  # 默认快捷键
                 "search_delay": 100,    # 搜索延迟（毫秒）
                 "scan_interval": 2.0,   # 扫描间隔（秒）
                 "show_process": True,   # 显示进程名
@@ -119,7 +121,6 @@ class ConfigManager:
                     # 确保window_search中包含所有必要的字段
                     if 'window_search' in data:
                         default_window_search = {
-                            "hotkey": "alt+space",
                             "search_delay": 100,
                             "scan_interval": 2.0,
                             "show_process": True,
