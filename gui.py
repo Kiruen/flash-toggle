@@ -35,6 +35,7 @@ from window_manager import WindowManager, WindowInfo
 from hotkey_manager import HotkeyManager
 from config_manager import ConfigManager, AppConfig
 from window_search import WindowIndexManager, SearchWindow, SearchConfigPage, WindowHistoryManager
+from window_search.history_page import HistoryPage
 
 @dataclass
 class GlobalHotkey:
@@ -267,7 +268,7 @@ class MainWindow(QMainWindow):
         # 设置定时检查窗口状态
         self._check_timer = QTimer(self)
         self._check_timer.timeout.connect(self._check_windows_status)
-        self._check_timer.start(5000)  # 每5秒检查一次
+        self._check_timer.start(500)  # 每5秒检查一次
         
     def _init_ui(self):
         """初始化用户界面"""
@@ -438,6 +439,13 @@ class MainWindow(QMainWindow):
         )
         search_config.config_changed.connect(self._on_search_config_changed)
         tab_widget.addTab(search_config, "窗口搜索")
+        
+        # 添加历史记录页面
+        history_page = HistoryPage(
+            window_history=self._window_history,
+            parent=self
+        )
+        tab_widget.addTab(history_page, "历史记录")
         
         # 设置托盘图标
         self._setup_tray_icon()
@@ -1103,6 +1111,17 @@ class MainWindow(QMainWindow):
         
     def _check_windows_status(self):
         """检查所有窗口的状态"""
+        # 记录当前激活的窗口
+        try:
+            active_hwnd = win32gui.GetForegroundWindow()
+            if active_hwnd and win32gui.IsWindow(active_hwnd):
+                # 忽略主窗口
+                if active_hwnd != int(self.winId()):
+                    self._window_history.record_window_activation(active_hwnd)
+        except Exception as e:
+            self._logger.error(f"记录活动窗口失败: {str(e)}")
+
+        # 原有的窗口状态检查逻辑
         invalid_windows = []
         for i in range(self.window_list.count()):
             item = self.window_list.item(i)
