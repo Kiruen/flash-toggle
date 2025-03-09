@@ -8,6 +8,7 @@
 1. 记录窗口激活历史
 2. 前后跳转功能
 3. 循环跳转支持
+4. 智能历史管理（类似 IDEA 的前进后退行为）
 
 作者：AI Assistant
 创建日期：2024-03-21
@@ -17,6 +18,8 @@ import logging
 from typing import Optional, List
 import win32gui
 import win32con
+import win32process
+import win32api
 from collections import deque
 import time
 
@@ -24,7 +27,12 @@ class WindowHistoryManager:
     """
     窗口激活历史管理器
     
-    使用双端队列记录窗口激活历史，支持前后循环跳转
+    使用双端队列记录窗口激活历史，支持前后跳转。
+    实现类似 IDEA 的智能历史管理：
+    1. 在历史中间位置访问新位置时，会删除当前位置到栈顶的所有记录
+    2. 连续访问同一位置只记录一次
+    3. 有最大历史记录限制
+    4. 在历史中导航时不会记录新的历史
     """
     
     def __init__(self, max_history: int = 50):
@@ -49,15 +57,71 @@ class WindowHistoryManager:
         if self._is_jumping or not hwnd or not win32gui.IsWindow(hwnd):
             return
             
-        # 只有当连续激活同一个窗口时才去重
-        if self._history and self._history[-1] == hwnd:
+        # 连续访问同一位置只记录一次
+        if self._history and self._history[self._current_index] == hwnd:
             return
             
-        # 添加到历史
+        # 如果当前不在栈顶，删除当前位置之后的所有记录
+        if self._current_index < len(self._history) - 1:
+            while len(self._history) > self._current_index + 1:
+                self._history.pop()
+                
+        # 添加新记录
         self._history.append(hwnd)
         self._current_index = len(self._history) - 1
         self._logger.debug(f"记录窗口激活: {hwnd}, 当前历史索引: {self._current_index}")
         
+    def _try_set_foreground_window(self, hwnd: int) -> bool:
+        """
+        尝试将窗口设置为前台窗口
+        
+        Args:
+            hwnd: 窗口句柄
+            
+        Returns:
+            bool: 是否成功
+        """
+        try:
+            # 获取当前前台窗口的线程ID
+            foreground_window = win32gui.GetForegroundWindow()
+            foreground_thread_id = win32process.GetWindowThreadProcessId(foreground_window)[0]
+            
+            # 获取目标窗口的线程ID
+            target_thread_id = win32process.GetWindowThreadProcessId(hwnd)[0]
+            
+            # 连接输入状态
+            win32process.AttachThreadInput(target_thread_id, foreground_thread_id, True)
+            
+            try:
+                # 显示窗口并尝试激活
+                if win32gui.IsIconic(hwnd):  # 如果窗口最小化，先恢复
+                    win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+                else:
+                    win32gui.ShowWindow(hwnd, win32con.SW_SHOW)
+                    
+                # 将窗口置于前台
+                result = win32gui.SetForegroundWindow(hwnd)
+                
+                # 如果直接设置失败，尝试使用 ALT 键模拟
+                if not result:
+                    # 模拟按下 ALT 键
+                    win32api.keybd_event(win32con.VK_MENU, 0, 0, 0)
+                    win32gui.SetForegroundWindow(hwnd)
+                    # 释放 ALT 键
+                    win32api.keybd_event(win32con.VK_MENU, 0, win32con.KEYEVENTF_KEYUP, 0)
+                    
+                # 等待窗口激活
+                time.sleep(0.1)
+                return True
+                
+            finally:
+                # 断开输入状态
+                win32process.AttachThreadInput(target_thread_id, foreground_thread_id, False)
+                
+        except Exception as e:
+            self._logger.error(f"设置前台窗口失败 (hwnd={hwnd}): {str(e)}")
+            return False
+            
     def _jump_to_window(self, hwnd: int) -> bool:
         """
         跳转到指定窗口
@@ -75,24 +139,8 @@ class WindowHistoryManager:
             if not win32gui.IsWindow(hwnd):
                 return False
                 
-            # 激活窗口
-            if win32gui.IsIconic(hwnd):  # 如果窗口最小化，先恢复
-                win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-            else:
-                win32gui.ShowWindow(hwnd, win32con.SW_SHOW)
-                
-            # 将窗口置于前台
-            win32gui.SetForegroundWindow(hwnd)
-            
-            # 等待一小段时间，确保窗口已经激活
-            time.sleep(0.1)
-            
-            # 记录新激活的窗口
-            active_hwnd = win32gui.GetForegroundWindow()
-            if active_hwnd and win32gui.IsWindow(active_hwnd):
-                self.record_window_activation(active_hwnd)
-                
-            return True
+            # 尝试激活窗口
+            return self._try_set_foreground_window(hwnd)
             
         except Exception as e:
             self._logger.error(f"跳转到窗口失败 (hwnd={hwnd}): {str(e)}")
@@ -108,21 +156,22 @@ class WindowHistoryManager:
         Returns:
             bool: 是否跳转成功
         """
-        if not self._history:
+        if not self._history or self._current_index <= 0:
             return False
             
-        # 计算目标索引（循环）
-        target_index = (self._current_index - 1) % len(self._history)
-        hwnd = self._history[target_index]
+        # 移动到前一个位置
+        self._current_index -= 1
+        hwnd = self._history[self._current_index]
         
         # 如果窗口无效，从历史中移除并重试
         if not win32gui.IsWindow(hwnd):
             self._history.remove(hwnd)
+            if self._current_index >= len(self._history):
+                self._current_index = len(self._history) - 1
             return self.jump_to_previous() if self._history else False
             
         # 跳转到目标窗口
         if self._jump_to_window(hwnd):
-            self._current_index = target_index
             self._logger.debug(f"跳转到前一个窗口: {hwnd}, 新索引: {self._current_index}")
             return True
             
@@ -135,12 +184,12 @@ class WindowHistoryManager:
         Returns:
             bool: 是否跳转成功
         """
-        if not self._history:
+        if not self._history or self._current_index >= len(self._history) - 1:
             return False
             
-        # 计算目标索引（循环）
-        target_index = (self._current_index + 1) % len(self._history)
-        hwnd = self._history[target_index]
+        # 移动到后一个位置
+        self._current_index += 1
+        hwnd = self._history[self._current_index]
         
         # 如果窗口无效，从历史中移除并重试
         if not win32gui.IsWindow(hwnd):
@@ -149,7 +198,6 @@ class WindowHistoryManager:
             
         # 跳转到目标窗口
         if self._jump_to_window(hwnd):
-            self._current_index = target_index
             self._logger.debug(f"跳转到后一个窗口: {hwnd}, 新索引: {self._current_index}")
             return True
             

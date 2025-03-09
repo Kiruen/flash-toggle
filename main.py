@@ -19,6 +19,7 @@ import sys
 import logging
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import Qt
+from window_instances import WindowInstances
 
 from window_manager import WindowManager
 from hotkey_manager import HotkeyManager
@@ -50,24 +51,13 @@ def main():
         app = QApplication(sys.argv)
         app.setQuitOnLastWindowClosed(False)  # 关闭窗口时不退出应用
         
-        # 创建管理器实例
-        window_manager = WindowManager()
-        hotkey_manager = HotkeyManager()
-        virtual_desktop_manager = VirtualDesktopManager()
+        # 初始化所有窗口和管理器实例
+        WindowInstances.initialize()
         
-        # 创建配置管理器实例（单例）
-        config_manager = ConfigManager()
-        
-        # 创建窗口搜索管理器
-        window_index = WindowIndexManager(virtual_desktop_manager, config_manager)
-        
-        # 创建搜索窗口
-        search_window = SearchWindow(window_index)
-        search_window.window_selected.connect(window_manager.toggle_window_visibility)
-        
-        # 创建主窗口
-        main_window = MainWindow(window_manager, hotkey_manager, window_index, search_window)
-        main_window.show()
+        # 显示主窗口
+        main_window = WindowInstances.main_window()
+        if main_window:
+            main_window.show()
         
         # 启动应用
         sys.exit(app.exec_())

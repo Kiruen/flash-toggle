@@ -174,6 +174,28 @@ namespace VirtualDesktopLib
             }
         }
 
+        /// <summary>
+        /// 切换到指定虚拟桌面（接受字符串形式的 GUID）
+        /// </summary>
+        /// <param name="desktopIdStr">目标虚拟桌面 GUID 字符串</param>
+        public void SwitchDesktop(string desktopIdStr)
+        {
+            if (string.IsNullOrEmpty(desktopIdStr))
+            {
+                throw new ArgumentNullException(nameof(desktopIdStr));
+            }
+
+            try
+            {
+                Guid desktopId = Guid.Parse(desktopIdStr);
+                SwitchDesktop(desktopId);
+            }
+            catch (FormatException ex)
+            {
+                throw new ArgumentException($"Invalid GUID format: {desktopIdStr}", nameof(desktopIdStr), ex);
+            }
+        }
+
         private void CheckDisposed()
         {
             if (_disposed)

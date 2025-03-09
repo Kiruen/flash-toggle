@@ -618,29 +618,7 @@ class SearchWindow(QWidget):
             return
             
         try:
-            # 1. 如果窗口在其他虚拟桌面，先切换到对应桌面
-            if not self._window_index._virtual_desktop.is_window_on_current_desktop(window.hwnd):
-                # 获取窗口所在的虚拟桌面ID
-                desktop_id = window.desktop_id
-                if desktop_id:
-                    # 切换到目标虚拟桌面
-                    self._window_index._virtual_desktop.switch_desktop(desktop_id)
-                    # 等待一小段时间让系统完成切换
-                    import time
-                    time.sleep(0.1)
-                    
-            # 2. 显示并激活窗口
-            import win32gui
-            import win32con
-            
-            # 如果窗口被最小化，恢复它
-            if window.is_minimized:
-                win32gui.ShowWindow(window.hwnd, win32con.SW_RESTORE)
-            else:
-                win32gui.ShowWindow(window.hwnd, win32con.SW_SHOW)
-                
-            # 将窗口置于前台
-            win32gui.SetForegroundWindow(window.hwnd)
+            self.activate_window(window)
             
             # 发送窗口句柄
             self.window_selected.emit(window.hwnd)
@@ -653,6 +631,35 @@ class SearchWindow(QWidget):
             
         except Exception as e:
             self._logger.error(f"激活窗口失败: {str(e)}", exc_info=True)
+        
+            
+    def activate_window(self, window: WindowInfo):
+        """激活窗口"""
+        # 1. 如果窗口在其他虚拟桌面，先切换到对应桌面
+        if not self._window_index._virtual_desktop.is_window_on_current_desktop(window.hwnd):
+            # 获取窗口所在的虚拟桌面ID
+            desktop_id = window.desktop_id
+            if desktop_id:
+                self._logger.info(f"切换到虚拟桌面 {desktop_id}")
+                # 切换到目标虚拟桌面
+                self._window_index._virtual_desktop.switch_desktop(desktop_id)
+                # 等待一小段时间让系统完成切换
+                import time
+                time.sleep(0.1)
+                
+        # 2. 显示并激活窗口
+        import win32gui
+        import win32con
+        
+        # 如果窗口被最小化，恢复它
+        if window.is_minimized:
+            win32gui.ShowWindow(window.hwnd, win32con.SW_RESTORE)
+        else:
+            win32gui.ShowWindow(window.hwnd, win32con.SW_SHOW)
+            
+        # 将窗口置于前台
+        win32gui.SetForegroundWindow(window.hwnd)
+            
             
     def eventFilter(self, obj: QWidget, event) -> bool:
         """

@@ -1115,8 +1115,12 @@ class MainWindow(QMainWindow):
         try:
             active_hwnd = win32gui.GetForegroundWindow()
             if active_hwnd and win32gui.IsWindow(active_hwnd):
-                # 忽略主窗口
-                if active_hwnd != int(self.winId()):
+                # 获取本程序所有窗口句柄
+                from window_instances import WindowInstances
+                app_windows = WindowInstances.get_all_app_window_handles()
+                
+                # 如果不是本程序的窗口，则记录激活
+                if active_hwnd not in app_windows:
                     self._window_history.record_window_activation(active_hwnd)
         except Exception as e:
             self._logger.error(f"记录活动窗口失败: {str(e)}")
